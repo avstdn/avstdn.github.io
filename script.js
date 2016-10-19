@@ -404,11 +404,11 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
   crit4.innerHTML = criterion1;
   crit5.innerHTML = criterion2;
   crit6.innerHTML = criterion3;
-  console.log(Math.floor(criterion1));
+  console.log(criterion1);
   console.log(index1);
-  console.log(Math.floor(criterion2));
+  console.log(criterion2);
   console.log(index2);
-  console.log(Math.floor(criterion3));
+  console.log(criterion3);
   console.log(index3);
 
   var count = 0;
