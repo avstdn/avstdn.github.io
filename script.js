@@ -370,23 +370,23 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 ////////////////////////////////////////////////////////////////////
 //////////////////////// LEFT PANEL ////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-// $('#up').hide();
-// $('.leftPanel').hide();
-// 	$(function() {
-// 		$(window).scroll(function() {
-// 			if($(this).scrollTop() == 0) {
-// 				$('#up').fadeOut();
-// 				$('.leftPanel').fadeOut();
-// 			}
-// 			else { 
-// 				$('#up').fadeIn();
-// 				$('.leftPanel').fadeIn();
-// 			}
-// 		});
-// 		$('.leftPanel').click(function() {
-// 			$('body,html').animate({scrollTop:0},800);
-// 		});
-// 	});
+$('#up').hide();
+$('.leftPanel').hide();
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() == 0) {
+				$('#up').fadeOut();
+				$('.leftPanel').fadeOut();
+			}
+			else { 
+				$('#up').fadeIn();
+				$('.leftPanel').fadeIn();
+			}
+		});
+		$('.leftPanel').click(function() {
+			$('body,html').animate({scrollTop:0},800);
+		});
+	});
 
 //   for(var i = j = 4; i < k2.length; i++, j++) {
 //     if(k2[j-a] >= k2[j-b]) {
