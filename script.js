@@ -1,42 +1,3 @@
-// action = function() {
-	// document.getElementsByTagName('ul').innerHTML = 99999;
-
-	// var elements = document.querySelectorAll('.firstColomn li');
-
-	// for (var i = 1; i < 11; i++) {
-	// 	elements[i].innerHTML = Math.pow(i, 2);
-	// }
-
-// 	var elements = document.querySelectorAll('.secondColomn li');
-
-// 	for (var i = 1; i < 11; i++) {
-// 		elements[i].innerHTML = Math.pow(elements[i].innerHTML, 2);
-// 	}
-// }
-
-// var flip = document.getElementById("flip");
-// var button = document.getElementById("action");
-
-// button.onclick = function() {
-// 	if(flip.className == "done") {
-// 		flip.className = "";
-// 	}
-// 	else {
-// 		flip.className = "done";
-// 	}
-// }
-
-// var column = document.getElementByClassName("firstColumn");
-// var open = document.getElementById("open");
-
-// button.onclick = function() {
-// 	if(column.className == "open") {
-// 		column.className = "";
-// 	}
-// 	else {
-// 		column.className = "done";
-// 	}
-// }
 
 // var par1 = document.getElementsByTagName("ul")[0];
 // var par2 = document.getElementsByTagName("ul")[1];
@@ -76,8 +37,8 @@
 /////////////////// SCROLL TOP WHEN REFRESH ////////////////////////
 ////////////////////////////////////////////////////////////////////ы
 $(document).ready(function(){
-    $(this).scrollTop(0);
-});
+		$(this).scrollTop(0);
+}); 
 
 ////////////////////////////////////////////////////////////////////
 /////////////////// TAGS GENERATION ////////////////////////////////
@@ -132,27 +93,7 @@ button.onclick = function() {
 		}
 	}
 	setTimeout(func, 1200);
-
-  // var phones = $('input[name*="phone"]');
-  // var arr = [];
-  // phones.each(function() {
-  //   if (this.value != "") {
-  //     arr.push(this.value);
-  //   }
-  // });
-  // console.log(arr);
 }
-
-// function doSomething() {
-// 	console.log(rand());
-// }
-// (function loop() {
-//     var rand = Math.round(Math.random() * (1000 - 500)) + 500;
-//     setTimeout(function() {
-//             doSomething();
-//             loop();  
-//     }, rand);
-// }());
 
 ////////////////////////////////////////////////////////////////////
 ///////////////////// OPEN BUTTON //////////////////////////////////
@@ -195,14 +136,14 @@ open.onclick = function() {
 ////////////////////////////////////////////////////////////////////
 var start = document.getElementById("start");
 start.onclick = function() {
-  var wrapper = document.querySelector(".wrapper");
-  wrapper.className = "wrapperClear";
-  var but = document.querySelector("#start");
-  but.id = "startHidden";
-  var info = document.querySelector(".info");
-  info.className = "infoHidden";
-  var startDivHid = document.querySelector(".block");
-  startDivHid.className = "startDivHid";
+	var wrapper = document.querySelector(".wrapper");
+	wrapper.className = "wrapperClear";
+	var but = document.querySelector("#start");
+	but.id = "startHidden";
+	var info = document.querySelector(".info");
+	info.className = "infoHidden";
+	var startDivHid = document.querySelector(".block");
+	startDivHid.className = "startDivHid";
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -213,14 +154,14 @@ var shiftCont = document.querySelector(".container");
 var shiftBread = document.querySelector(".breadcrumbs");
 var shiftFooter = document.querySelector(".footer");
 document.querySelector("#panel").addEventListener("mouseover", function() {
-  shiftCont.className = "container containerShift";
-  shiftBread.className = "breadcrumbs containerShift";
-  shiftFooter.className = "footer containerShift";
-  this.addEventListener("mouseout", function() {
-    shiftCont.className = "container";
-    shiftBread.className = "breadcrumbs";
-    shiftFooter.className = "footer";
-  });
+	shiftCont.className = "container containerShift";
+	shiftBread.className = "breadcrumbs containerShift";
+	shiftFooter.className = "footer containerShift";
+	this.addEventListener("mouseout", function() {
+		shiftCont.className = "container";
+		shiftBread.className = "breadcrumbs";
+		shiftFooter.className = "footer";
+	});
 });
 }
 
@@ -231,9 +172,9 @@ var firstColumnLi = document.querySelectorAll(".firstColumn li");
 var secondColumnLi = document.querySelectorAll(".secondColumn li");
 var thirdColumnLi = document.querySelectorAll(".thirdColumn li");
 for(var i = 1; i < firstColumnLi.length - 2; i++) {
-  firstColumnLi[i].innerHTML = row1[i-1];
-  secondColumnLi[i].innerHTML = row2[i-1];
-  thirdColumnLi[i].innerHTML = row3[i-1];
+	firstColumnLi[i].innerHTML = row1[i-1];
+	secondColumnLi[i].innerHTML = row2[i-1];
+	thirdColumnLi[i].innerHTML = row3[i-1];
 }
 
 
@@ -242,15 +183,15 @@ for(var i = 1; i < firstColumnLi.length - 2; i++) {
 ////////////////////////////////////////////////////////////////////
 var mouse = 0;
 $(document).mousemove(function(e) {
-    var X = e.pageX; // положения по оси X
-    var Y = e.pageY; // положения по оси Y
-    mouse += (X * Y);
-    mouse %= Math.pow(10, 6);
-    $(document).mousedown(function(ev) {
+		var X = e.pageX; // положения по оси X
+		var Y = e.pageY; // положения по оси Y
+		mouse += (X * Y);
+		mouse %= Math.pow(10, 6);
+		$(document).mousedown(function(ev) {
 			var x = ev.pageX;
 			var y = ev.pageY;
 			mouse += (x * y);
-      mouse %= Math.pow(10, 6);
+			mouse %= Math.pow(10, 6);
 		});
 	$(".display").html(mouse);
 });
@@ -259,10 +200,10 @@ $(document).mousemove(function(e) {
 ////////////////// INPUT INCORRECT NUMBERS /////////////////////////
 ////////////////////////////////////////////////////////////////////
 $('.inputColumn input').bind("change keyup input click", function() {
-    if (this.value.match(/[^0-9]/g)) {
-        this.value = this.value.replace(/[^0-9]/g, '');
-      $('input:focus').parent('.inputColumn li').toggleClass('animated shake');
-    }
+		if (this.value.match(/[^0-9]/g)) {
+				this.value = this.value.replace(/[^0-9]/g, '');
+			$('input:focus').parent('.inputColumn li').toggleClass('animated shake');
+		}
 });
 
 // animation generation /////////////////////////////////////////////
@@ -287,138 +228,142 @@ var fifthColumnLi = document.querySelectorAll(".fifthColumn li");
 var sixthColumnLi = document.querySelectorAll(".sixthColumn li");
 var generate = document.getElementById("generate");
 generate.onclick = function() {
-  var mouseArr = [];
-  var k1 = new Array(4000);
-  var k2 = new Array(1000);
-  var k3 = new Array(1000);
-  mouseArr = mouse.toString().split('');
-  for(var i = 3; i >= 0; i--) {
-      k1[i] = mouseArr[i] / 10;
-    }
-  for(var i = 4; i < k1.length; i++) {
-    if(k1[i-a] >= k1[i-b]) {
-      k1[i]= k1[i-a] - k1[i-b]; 
-    }
-    else if(k1[i-a] < k1[i-b]) {
-      k1[i] = k1[i-a] - k1[i-b] + 1;
-    }
-    else {
-      console.log("I need help!");
-    }
-  }
-  for(var i = 0; i < k1.length; i++) {
-    if(k1[i] >= 1) {
-      k1[i] -= 1;
-    }
-    k1[i] = Math.floor(k1[i] * 10);
-  }
-  for(var i = 1; i <= 1000; i++) {
-    fourthColumnLi[i].innerHTML = k1[i + 4];
-  }
+	var mouseArr = [];
+	var k1 = new Array(4000);
+	var k2 = new Array(1000);
+	var k3 = new Array(1000);
+	mouseArr = mouse.toString().split('');
+	for(var i = 3; i >= 0; i--) {
+			k1[i] = mouseArr[i] / 10;
+		}
+	for(var i = 4; i < k1.length; i++) {
+		if(k1[i-a] >= k1[i-b]) {
+			k1[i]= k1[i-a] - k1[i-b]; 
+		}
+		else if(k1[i-a] < k1[i-b]) {
+			k1[i] = k1[i-a] - k1[i-b] + 1;
+		}
+		else {
+			console.log("I need help!");
+		}
+	}
+	for(var i = 0; i < k1.length; i++) {
+		if(k1[i] >= 1) {
+			k1[i] -= 1;
+		}
+		k1[i] = Math.floor(k1[i] * 10);
+	}
+	for(var i = 1; i <= 1000; i++) {
+		fourthColumnLi[i].innerHTML = k1[i + 4];
+	}
 
 /////////// SECOND FIB ROW ////////////////////////////
-  for(var i = 0, j = 4; i <= 1000; i++, j += 2) {
-    if(k1[j] == 0) {
-      i--;
-      continue;
-    }
-    k2[i] = (k1[j]).toString() + (k1[j+1]).toString();
-  }
-  // for(var i = 0; i < k2.length; i++) {
-  //   k2[i] = k2[i] * 100;
-  // }
-  for(var i = 1; i <= 1000; i++) {
-    fifthColumnLi[i].innerHTML = k2[i];
-  }
+	for(var i = 0, j = 4; i <= 1000; i++, j += 2) {
+		if(k1[j] == 0) {
+			i--;
+			continue;
+		}
+		k2[i] = (k1[j]).toString() + (k1[j+1]).toString();
+	}
+	// for(var i = 0; i < k2.length; i++) {
+	//   k2[i] = k2[i] * 100;
+	// }
+	for(var i = 1; i <= 1000; i++) {
+		fifthColumnLi[i].innerHTML = k2[i];
+	}
 /////////// THIRD FIB ROW ////////////////////////////
 for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
-    if(k1[j] == 0) {
-      i--;
-      continue;
-    }
-    k3[i] = (k1[j]).toString() + (k1[j+1]).toString() + (k1[j+3]).toString();
-  }
-  for(var i = 1; i <= 1000; i++) {
-    sixthColumnLi[i].innerHTML = k3[i];
-  }
+		if(k1[j] == 0) {
+			i--;
+			continue;
+		}
+		k3[i] = (k1[j]).toString() + (k1[j+1]).toString() + (k1[j+3]).toString();
+	}
+	for(var i = 1; i <= 1000; i++) {
+		sixthColumnLi[i].innerHTML = k3[i];
+	}
 
-//////////////////// ANALYSIS ////////////////////
-  var index1 = new Array(10);
-  var index2 = new Array(90);
-  var index3 = new Array(900);
-  var criterion1 = 0;
-  var criterion2 = 0;
-  var criterion3 = 0;
+//////////////////// ANALYSIS //////////////////////////////
+	var index1 = new Array(10);
+	var index2 = new Array(90);
+	var index3 = new Array(900);
+	var criterion1 = 0;
+	var criterion2 = 0;
+	var criterion3 = 0;
+	var summary = 0;
 
-  for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
-    index1[i] = 0;
-    for(var j = 1; j < fourthColumnLi.length - 1; j++) {
-      if(i == fourthColumnLi[j].innerHTML) {
-        index1[i] += 1;
-      }
-    }
-    if(index1[i] >= 100) {
-      criterion1 += (index1[i] - 100) / 10;
-    }
-    else {
-      criterion1 += (100 - index1[i]) / 10;
-    }
-  }
+	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+		index1[i] = 0;
+		for(var j = 1; j < fourthColumnLi.length - 1; j++) {
+			if(i == fourthColumnLi[j].innerHTML) {
+				index1[i] += 1;
+			}
+			summary += fourthColumnLi.innerHTML;
+		}
+		if(index1[i] >= 100) {
+			criterion1 += (index1[i] - 100) / 10;
+		}
+		else {
+			criterion1 += (100 - index1[i]) / 10;
+		}
+	}
 
-  for(var i = 10; i < 100; i++) { // SECOND FIB ROW ////////////
-    index2[i] = 0;
-    for(var j = 1; j < fourthColumnLi.length; j++) {
-      if(i == fifthColumnLi[j].innerHTML) {
-        index2[i] += 1;
-      }
-    }
-    if(index2[i] >= 11.111) {
-      criterion2 += (index2[i] - 11.111) / 90;
-    }
-    else {
-      criterion2 += (11.111 - index2[i]) / 90;
-    }
-  }
 
-  for(var i = 100; i < 1000; i++) { // THIRD FIB ROW ///////////////
-    index3[i] = 0;
-    for(var j = 1; j < sixthColumnLi.length; j++) {
-      if(i == sixthColumnLi[j].innerHTML) {
-        index3[i] += 1;
 
-      }
-    }
-    if(index3[i] >= 1.111) {
-      criterion3 += (index3[i] - 1.111) / 900;
-    }
-    else {
-      criterion3 += (1.11 - index3[i]) / 900;
-    }
-  }
+	for(var i = 10; i < 100; i++) { // SECOND FIB ROW ////////////
+		index2[i] = 0;
+		for(var j = 1; j < fourthColumnLi.length; j++) {
+			if(i == fifthColumnLi[j].innerHTML) {
+				index2[i] += 1;
+			}
+		}
+		if(index2[i] >= 11.111) {
+			criterion2 += (index2[i] - 11.111) / 90;
+		}
+		else {
+			criterion2 += (11.111 - index2[i]) / 90;
+		}
+	}
 
-  console.log(criterion1);
-  console.log(index1);
-  console.log(criterion2);
-  console.log(index2);
-  console.log(criterion3);
-  console.log(index3);
-  criterion1 = Math.floor(100 - criterion1);
-  criterion2 = Math.floor(100 - criterion2);
-  criterion3 = Math.floor(100 - criterion3);
-  var crit4 = document.querySelector('.crit4');
-  var crit5 = document.querySelector('.crit5');
-  var crit6 = document.querySelector('.crit6');
-  crit4.innerHTML = criterion1;
-  crit5.innerHTML = criterion2;
-  crit6.innerHTML = criterion3;
+	for(var i = 100; i < 1000; i++) { // THIRD FIB ROW ///////////////
+		index3[i] = 0;
+		for(var j = 1; j < sixthColumnLi.length; j++) {
+			if(i == sixthColumnLi[j].innerHTML) {
+				index3[i] += 1;
 
-  var count = 0;
-  for(var i = 0; i < index3.length; i++) {
-    if(index3[i] == 0) {
-      count++;
-    }
-  }
-  console.log(count);
+			}
+		}
+		if(index3[i] >= 1.111) {
+			criterion3 += (index3[i] - 1.111) / 900;
+		}
+		else {
+			criterion3 += (1.11 - index3[i]) / 900;
+		}
+	}
+
+	console.log(criterion1);
+	console.log(index1);
+	console.log(criterion2);
+	console.log(index2);
+	console.log(criterion3);
+	console.log(index3);
+	criterion1 = Math.floor(100 - criterion1);
+	criterion2 = Math.floor(100 - criterion2);
+	criterion3 = Math.floor(100 - criterion3);
+	var crit4 = document.querySelector('.crit4');
+	var crit5 = document.querySelector('.crit5');
+	var crit6 = document.querySelector('.crit6');
+	crit4.innerHTML = criterion1;
+	crit5.innerHTML = criterion2;
+	crit6.innerHTML = criterion3;
+
+	var count = 0;
+	for(var i = 0; i < index3.length; i++) {
+		if(index3[i] == 0) {
+			count++;
+		}
+	}
+	console.log(count);
 } // END OF FUNCTION ///////////////////////////////////////
 
 
@@ -427,21 +372,21 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 ////////////////////////////////////////////////////////////////////
 $('#up').hide();
 $('.leftPanel').hide();
-  $(function() {
-    $(window).scroll(function() {
-      if($(this).scrollTop() == 0) {
-        $('#up').fadeOut();
-        $('.leftPanel').fadeOut();
-      }
-      else { 
-        $('#up').fadeIn();
-        $('.leftPanel').fadeIn();
-      }
-    });
-    $('#up').click(function() {
-      $('body,html').animate({scrollTop:0},800);
-    });
-  });
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() == 0) {
+				$('#up').fadeOut();
+				$('.leftPanel').fadeOut();
+			}
+			else { 
+				$('#up').fadeIn();
+				$('.leftPanel').fadeIn();
+			}
+		});
+		$('.leftPanel').click(function() {
+			$('body,html').animate({scrollTop:0},800);
+		});
+	});
 
 //   for(var i = j = 4; i < k2.length; i++, j++) {
 //     if(k2[j-a] >= k2[j-b]) {
