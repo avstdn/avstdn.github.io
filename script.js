@@ -79,7 +79,6 @@ $(document).ready(function(){
     $(this).scrollTop(0);
 });
 
-
 ////////////////////////////////////////////////////////////////////
 /////////////////// TAGS GENERATION ////////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -323,14 +322,11 @@ generate.onclick = function() {
       i--;
       continue;
     }
-    k2[i] = ((k1[j]).toString() + (k1[j+1]).toString()) / 100;
+    k2[i] = (k1[j]).toString() + (k1[j+1]).toString();
   }
-  for(var i = 0; i < k2.length; i++) {
-    if(k2[i] >= 1) {
-      k2[i] -= 1;
-    }
-    k2[i] = Math.floor(k2[i] * 100);
-  }
+  // for(var i = 0; i < k2.length; i++) {
+  //   k2[i] = k2[i] * 100;
+  // }
   for(var i = 1; i <= 1000; i++) {
     fifthColumnLi[i].innerHTML = k2[i];
   }
@@ -340,17 +336,56 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
       i--;
       continue;
     }
-    k3[i] = ((k1[j]).toString() + (k1[j+1]).toString() + (k1[j+3]).toString()) / 100;
-  }
-  for(var i = 0; i < k3.length; i++) {
-    // if(k3[i] >= 1) {
-    //   k3[i] -= 1;
-    // }
-    k3[i] = Math.floor(k3[i] * 100);
+    k3[i] = (k1[j]).toString() + (k1[j+1]).toString() + (k1[j+3]).toString();
   }
   for(var i = 1; i <= 1000; i++) {
     sixthColumnLi[i].innerHTML = k3[i];
   }
+
+//////////////////// ANALYSIS ////////////////////
+  var index1 = new Array(10);
+  var index2 = new Array(90);
+  // var index3 = new Array(900);
+  var criterion1 = 0;
+  var criterion2 = 0;
+  // var criterion3 = 0;
+
+  for(var i = 0; i < 10; i++) { // FOURTH ROW ///////////
+    index1[i] = 0;
+    for(var j = 1; j < fourthColumnLi.length - 1; j++) {
+      if(i == fourthColumnLi[j].innerHTML) {
+        index1[i] += 1;
+      }
+    }
+    if(index1[i] >= 100) {
+      criterion1 += (index1[i] - 100) / 10;
+    }
+    else {
+      criterion1 += (100 - index1[i]) / 10;
+    }
+  }
+
+  for(var i = 10; i < 100; i++) { // FIFTH ROW ////////////
+    index2[i] = 0;
+    for(var j = 1; j < fourthColumnLi.length; j++) {
+      if(i == fifthColumnLi[j].innerHTML) {
+        index2[i] += 1;
+      }
+    }
+    if(index2[i] >= 11) {
+      criterion2 += (index2[i] - 11) / 90;
+    }
+    else {
+      criterion2 += (11 - index2[i]) / 90;
+    }
+  }
+  criterion1 = 100 - criterion1;
+  criterion2 = 100 - criterion2;
+  // criterion3 = 100 - criterion3;
+  console.log(Math.floor(criterion1));
+  console.log(index1);
+  console.log(Math.floor(criterion2));
+  console.log(index2);
 } // END OF FUNCTION ///////////////////////////////////////
 
 
