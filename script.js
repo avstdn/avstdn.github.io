@@ -395,15 +395,29 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
       criterion3 += (1.11 - index3[i]) / 900;
     }
   }
-  criterion1 = 100 - criterion1;
-  criterion2 = 100 - criterion2;
-  criterion3 = 100 - criterion3;
+  criterion1 = Math.floor(100 - criterion1);
+  criterion2 = Math.floor(100 - criterion2);
+  criterion3 = Math.floor(100 - criterion3);
+  var crit4 = document.querySelector('.crit4');
+  var crit5 = document.querySelector('.crit5');
+  var crit6 = document.querySelector('.crit6');
+  crit4.innerHTML = criterion1;
+  crit5.innerHTML = criterion2;
+  crit6.innerHTML = criterion3;
   console.log(Math.floor(criterion1));
   console.log(index1);
   console.log(Math.floor(criterion2));
   console.log(index2);
   console.log(Math.floor(criterion3));
   console.log(index3);
+
+  var count = 0;
+  for(var i = 0; i < index3.length; i++) {
+    if(index3[i] == 0) {
+      count++;
+    }
+  }
+  console.log(count);
 } // END OF FUNCTION ///////////////////////////////////////
 
 
