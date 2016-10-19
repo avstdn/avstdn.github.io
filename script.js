@@ -395,6 +395,13 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
       criterion3 += (1.11 - index3[i]) / 900;
     }
   }
+
+  console.log(criterion1);
+  console.log(index1);
+  console.log(criterion2);
+  console.log(index2);
+  console.log(criterion3);
+  console.log(index3);
   criterion1 = Math.floor(100 - criterion1);
   criterion2 = Math.floor(100 - criterion2);
   criterion3 = Math.floor(100 - criterion3);
@@ -404,12 +411,6 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
   crit4.innerHTML = criterion1;
   crit5.innerHTML = criterion2;
   crit6.innerHTML = criterion3;
-  console.log(criterion1);
-  console.log(index1);
-  console.log(criterion2);
-  console.log(index2);
-  console.log(criterion3);
-  console.log(index3);
 
   var count = 0;
   for(var i = 0; i < index3.length; i++) {
