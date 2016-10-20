@@ -290,101 +290,120 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 	var criterion1 = 0;
 	var criterion2 = 0;
 	var criterion3 = 0;
-	var summary = 0;
-
-	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
-		index1[i] = 0;
-		for(var j = 1; j < fourthColumnLi.length - 1; j++) {
-			if(i == fourthColumnLi[j].innerHTML) {
-				index1[i] += 1;
-			}
-			summary += fourthColumnLi.innerHTML;
-		}
-		if(index1[i] >= 100) {
-			criterion1 += (index1[i] - 100) / 10;
-		}
-		else {
-			criterion1 += (100 - index1[i]) / 10;
-		}
-	}
+	var sum = 0;
+  var mean = 0;
+  var expValue = 0;
 
 
+///////////////// MEAN //////////////////////////////////////////////
 
-	for(var i = 10; i < 100; i++) { // SECOND FIB ROW ////////////
-		index2[i] = 0;
-		for(var j = 1; j < fourthColumnLi.length; j++) {
-			if(i == fifthColumnLi[j].innerHTML) {
-				index2[i] += 1;
-			}
-		}
-		if(index2[i] >= 11.111) {
-			criterion2 += (index2[i] - 11.111) / 90;
-		}
-		else {
-			criterion2 += (11.111 - index2[i]) / 90;
-		}
-	}
+for(var i = 1; i <= 1000; i++) { // MEAN ///
+  sum += parseInt(fourthColumnLi[i].innerHTML, 10);
+  if(i == 1000) {
+    mean = sum / i;
+    console.log(mean);
+    console.log(i);
+  }
+} // MEAN //////////////////////////////////////////////////////
 
-	for(var i = 100; i < 1000; i++) { // THIRD FIB ROW ///////////////
-		index3[i] = 0;
-		for(var j = 1; j < sixthColumnLi.length; j++) {
-			if(i == sixthColumnLi[j].innerHTML) {
-				index3[i] += 1;
+for(var i = 1; i <= 1000; i++) {
+  expValue += Math.pow((((parseInt(fourthColumnLi[i].innerHTML, 10)) - mean) / 1000), 2);
+}
+console.log(expValue);
 
-			}
-		}
-		if(index3[i] >= 1.111) {
-			criterion3 += (index3[i] - 1.111) / 900;
-		}
-		else {
-			criterion3 += (1.11 - index3[i]) / 900;
-		}
-	}
 
-	console.log(criterion1);
-	console.log(index1);
-	console.log(criterion2);
-	console.log(index2);
-	console.log(criterion3);
-	console.log(index3);
-	criterion1 = Math.floor(100 - criterion1);
-	criterion2 = Math.floor(100 - criterion2);
-	criterion3 = Math.floor(100 - criterion3);
-	var crit4 = document.querySelector('.crit4');
-	var crit5 = document.querySelector('.crit5');
-	var crit6 = document.querySelector('.crit6');
-	crit4.innerHTML = criterion1;
-	crit5.innerHTML = criterion2;
-	crit6.innerHTML = criterion3;
 
-	var count = 0;
-	for(var i = 0; i < index3.length; i++) {
-		if(index3[i] == 0) {
-			count++;
-		}
-	}
-	console.log(count);
+	// for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+	// 	index1[i] = 0;
+	// 	for(var j = 1; j < fourthColumnLi.length - 1; j++) {
+	// 		if(i == fourthColumnLi[j].innerHTML) {
+	// 			index1[i] += 1;
+	// 		}
+	// 		summary += fourthColumnLi.innerHTML;
+	// 	}
+	// 	if(index1[i] >= 100) {
+	// 		criterion1 += (index1[i] - 100) / 10;
+	// 	}
+	// 	else {
+	// 		criterion1 += (100 - index1[i]) / 10;
+	// 	}
+	// }
+
+
+
+	// for(var i = 10; i < 100; i++) { // SECOND FIB ROW ////////////
+	// 	index2[i] = 0;
+	// 	for(var j = 1; j < fourthColumnLi.length; j++) {
+	// 		if(i == fifthColumnLi[j].innerHTML) {
+	// 			index2[i] += 1;
+	// 		}
+	// 	}
+	// 	if(index2[i] >= 11.111) {
+	// 		criterion2 += (index2[i] - 11.111) / 90;
+	// 	}
+	// 	else {
+	// 		criterion2 += (11.111 - index2[i]) / 90;
+	// 	}
+	// }
+
+	// for(var i = 100; i < 1000; i++) { // THIRD FIB ROW ///////////////
+	// 	index3[i] = 0;
+	// 	for(var j = 1; j < sixthColumnLi.length; j++) {
+	// 		if(i == sixthColumnLi[j].innerHTML) {
+	// 			index3[i] += 1;
+
+	// 		}
+	// 	}
+	// 	if(index3[i] >= 1.111) {
+	// 		criterion3 += (index3[i] - 1.111) / 900;
+	// 	}
+	// 	else {
+	// 		criterion3 += (1.11 - index3[i]) / 900;
+	// 	}
+	// }
+
+	// console.log(criterion1);
+	// console.log(index1);
+	// console.log(criterion2);
+	// console.log(index2);
+	// console.log(criterion3);
+	// console.log(index3);
+	// criterion1 = Math.floor(100 - criterion1);
+	// criterion2 = Math.floor(100 - criterion2);
+	// criterion3 = Math.floor(100 - criterion3);
+	// var crit4 = document.querySelector('.crit4');
+	// var crit5 = document.querySelector('.crit5');
+	// var crit6 = document.querySelector('.crit6');
+	// crit4.innerHTML = criterion1;
+	// crit5.innerHTML = criterion2;
+	// crit6.innerHTML = criterion3;
+
+	// var count = 0;
+	// for(var i = 0; i < index3.length; i++) {
+	// 	if(index3[i] == 0) {
+	// 		count++;
+	// 	}
+	// }
+	// console.log(count);
 } // END OF FUNCTION ///////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////
 //////////////////////// LEFT PANEL ////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-$('#up').hide();
-$('.leftPanel').hide();
 	$(function() {
 		$(window).scroll(function() {
 			if($(this).scrollTop() == 0) {
-				$('#up').fadeOut();
-				$('.leftPanel').fadeOut();
+				$('#up').fadeTo(0, 0);
+				$('.leftPanel').fadeOut(0);
 			}
 			else { 
-				$('#up').fadeIn();
-				$('.leftPanel').fadeIn();
+				$('#up').fadeTo(0, 1);
+				$('.leftPanel').fadeIn(0);
 			}
 		});
 		$('.leftPanel').click(function() {
-			$('body,html').animate({scrollTop:0},800);
+			$('body,html').animate({scrollTop:0},500);
 		});
 	});
 
