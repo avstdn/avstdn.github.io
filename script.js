@@ -1,38 +1,3 @@
-
-// var par1 = document.getElementsByTagName("ul")[0];
-// var par2 = document.getElementsByTagName("ul")[1];
-// var par3 = document.getElementsByTagName("ul")[2];
-// var par4 = document.getElementsByTagName("ul")[3];
-// var par5 = document.getElementsByTagName("ul")[4];
-// var par6 = document.getElementsByTagName("ul")[5];
-
-// var divFirst = document.createElement("div");
-// var divSecond = document.createElement("div");
-// var divThird = document.createElement("div");
-// divFirst.className = "first";
-// divSecond.className = "second";
-// divThird.className = "third";
-// par1.insertBefore(divFirst, par1.children[16]);
-// par2.insertBefore(divSecond, par2.children[16]);
-// par3.insertBefore(divThird, par3.children[16]);
-// var divFirstId = document.getElementById("first");
-// var divSecondId = document.getElementById("second");
-// var divThirdId = document.getElementById("third");
-// divFirst.className = "hidden";
-// divSecond.className = "hidden";
-// divThird.className = "hidden";
-// for(var i = 0; i < 985; i++) {
-// 	var li1 = document.createElement("li");
-// 	var li2 = document.createElement("li");
-// 	var li3 = document.createElement("li");
-// 	divFirst.appendChild(li1);
-// 	divSecond.appendChild(li2);
-// 	divThird.appendChild(li3);
-// 	li1.innerHTML = i + 16;
-// 	li2.innerHTML = i + 16;
-// 	li3.innerHTML = i + 16;
-// }
-
 ////////////////////////////////////////////////////////////////////
 /////////////////// SCROLL TOP WHEN REFRESH ////////////////////////
 ////////////////////////////////////////////////////////////////////ы
@@ -94,6 +59,7 @@ button.onclick = function() {
 	}
 	setTimeout(func, 1200);
 }
+
 
 ////////////////////////////////////////////////////////////////////
 ///////////////////// OPEN BUTTON //////////////////////////////////
@@ -206,17 +172,6 @@ $('.inputColumn input').bind("change keyup input click", function() {
 		}
 });
 
-// animation generation /////////////////////////////////////////////
-// function time() {
-//   $("[class*=thColumn] li").toggleClass('animated jello');
-// }
-// $("#generate").click(function(e) {
-//   e.preventDefault();
-//   $("[class*=thColumn] li").toggleClass('animated jello');
-//   setTimeout(time, 1000);
-// })
-
-
 ////////////////////////////////////////////////////////////////////
 ////////////////// Lagged Fibonacci Generator //////////////////////
 ////////////////////// GENERATE BUTTON /////////////////////////////
@@ -227,6 +182,21 @@ var fourthColumnLi = document.querySelectorAll(".fourthColumn li");
 var fifthColumnLi = document.querySelectorAll(".fifthColumn li");
 var sixthColumnLi = document.querySelectorAll(".sixthColumn li");
 var generate = document.getElementById("generate");
+var index1 = new Array(10);
+var index2 = new Array(90);
+var index3 = new Array(900);
+var criterion1 = 0;
+var criterion2 = 0;
+var criterion3 = 0;
+var sum = 0;
+var mean = 0;
+var expValue = 0;
+var stdDev = 0;
+var varFactor = 0;
+var inputColumnLi = document.querySelectorAll('.inputColumn li')
+var inp = $("input[class='inp']");
+var inputArr = [];
+
 generate.onclick = function() {
 	var mouseArr = [];
 	var k1 = new Array(4000);
@@ -283,33 +253,28 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 		sixthColumnLi[i].innerHTML = k3[i];
 	}
 
-//////////////////// ANALYSIS //////////////////////////////
-	var index1 = new Array(10);
-	var index2 = new Array(90);
-	var index3 = new Array(900);
-	var criterion1 = 0;
-	var criterion2 = 0;
-	var criterion3 = 0;
-	var sum = 0;
-  var mean = 0;
-  var expValue = 0;
+//////////////////////////////////////////////////////////////////////////
+////////////////////////////// ANALYSIS //////////////////////////////////
+////////////////////////////// CRITERION /////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
 
-
-///////////////// MEAN //////////////////////////////////////////////
-
-for(var i = 1; i <= 1000; i++) { // MEAN ///
+for(var i = 1; i <= 1000; i++) { // MEAN /////////////////////////////////
   sum += parseInt(fourthColumnLi[i].innerHTML, 10);
   if(i == 1000) {
     mean = sum / i;
     console.log(mean);
-    console.log(i);
   }
-} // MEAN //////////////////////////////////////////////////////
-
-for(var i = 1; i <= 1000; i++) {
+}
+for(var i = 1; i <= 1000; i++) { // EXPECTATION VALUE ///////////////////
   expValue += Math.pow((((parseInt(fourthColumnLi[i].innerHTML, 10)) - mean) / 1000), 2);
 }
-console.log(expValue);
+console.log("expectation value", expValue);
+
+stdDev = Math.sqrt(expValue); // STANDART DEVIATION ////////////////////
+console.log("standart deviation", stdDev);
+
+varFactor = stdDev / mean * 100;
+console.log("variation factor", varFactor, "%"); // VARIATION FACTOR /////////////////////////
 
 
 
@@ -385,7 +350,38 @@ console.log(expValue);
 	// 	}
 	// }
 	// console.log(count);
-} // END OF FUNCTION ///////////////////////////////////////
+ // END OF FUNCTION ///////////////////////////////////////
+sum = 0;
+mean = 0;
+expValue = 0;
+stdDev = 0;
+varFactor = 0;
+
+    inp.each(function() {
+      inputArr.push(this.value);
+    });
+  console.log("input array:", inputArr);
+
+    for(var i = 0; i < 15; i++) { // MEAN /////////////////////////////////
+    sum += parseInt(inputArr[i], 10);
+    if(i == 14) {
+      mean = sum / i;
+      console.log("mean", mean);
+    }
+  }
+  for(var i = 0; i < 15; i++) { // EXPECTATION VALUE ///////////////////
+    expValue += Math.pow((((parseInt(inputArr[i], 10)) - mean) / 15), 2);
+  }
+  console.log("expectation value", expValue);
+  
+  stdDev = Math.sqrt(expValue); // STANDART DEVIATION ////////////////////
+  console.log("standart deviation", stdDev);
+  
+  varFactor = (stdDev / mean) * 100;
+  console.log("variation factor", varFactor, "%"); // VARIATION FACTOR /////////////////////////
+
+
+}
 
 
 ////////////////////////////////////////////////////////////////////
