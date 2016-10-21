@@ -196,7 +196,7 @@ var varFactor = 0;
 var inputColumnLi = document.querySelectorAll('.inputColumn li')
 var inp = $("input[class='inp']");
 var inputArr = [];
-
+var index1 = [];
 generate.onclick = function() {
 	var mouseArr = [];
 	var k1 = new Array(4000);
@@ -258,25 +258,72 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 ////////////////////////////// CRITERION /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 
-for(var i = 1; i <= 1000; i++) { // MEAN /////////////////////////////////
-  sum += parseInt(fourthColumnLi[i].innerHTML, 10);
-  if(i == 1000) {
-    mean = sum / i;
-    console.log(mean);
+// for(var i = 1; i <= 1000; i++) { // MEAN /////////////////////////////////
+//   sum += parseInt(fourthColumnLi[i].innerHTML, 10);
+//   if(i == 1000) {
+//     mean = sum / i;
+//     console.log(mean);
+//   }
+// }
+// for(var i = 1; i <= 1000; i++) { // EXPECTATION VALUE ///////////////////
+//   expValue += Math.pow((((parseInt(fourthColumnLi[i].innerHTML, 10)) - mean) / 1000), 2);
+// }
+// console.log("expectation value", expValue);
+
+// stdDev = Math.sqrt(expValue); // STANDART DEVIATION ////////////////////
+// console.log("standart deviation", stdDev);
+
+// varFactor = stdDev / mean * 100;
+// console.log("variation factor", varFactor, "%"); // VARIATION FACTOR /////////////////////////
+  var criter = 0;
+  for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+   index1[i] = 0;
+   for(var j = 1; j <= 1000; j++) {
+     if(i == fourthColumnLi[j].innerHTML) {
+       index1[i] += 1;
+     }
+    }
+    if(index1[i] >= 100) {
+      criter += (index1[i] - 100) / 10;
+    }
+    else {
+      criter += (100 - index1[i]) / 10;
+    }
+   // if(index1[i] >= 100) {
+   //   criterion1 += (index1[i] - 100) / 10;
+   // }
+   // else {
+   //   criterion1 += (100 - index1[i]) / 10;
+   // }
   }
-}
-for(var i = 1; i <= 1000; i++) { // EXPECTATION VALUE ///////////////////
-  expValue += Math.pow((((parseInt(fourthColumnLi[i].innerHTML, 10)) - mean) / 1000), 2);
-}
-console.log("expectation value", expValue);
+  criter = 100 - criter;
+  console.log('index =', index1);
+  console.log('criter =', criter, '%');
 
-stdDev = Math.sqrt(expValue); // STANDART DEVIATION ////////////////////
-console.log("standart deviation", stdDev);
-
-varFactor = stdDev / mean * 100;
-console.log("variation factor", varFactor, "%"); // VARIATION FACTOR /////////////////////////
-
-
+  var criter = 0;
+  for(var i = 10; i < 99; i++) { // SECOND FIB ROW ///////////
+   index2[i] = 0;
+   for(var j = 1; j <= 1000; j++) {
+     if(i == fifthColumnLi[j].innerHTML) {
+       index2[i] += 1;
+     }
+    }
+    if(index2[i] >= (100/9)) {
+      criter += (index2[i] - (100/9)) / 10;
+    }
+    else {
+      criter += ((100/9) - index2[i]) / 10;
+    }
+   // if(index1[i] >= 100) {
+   //   criterion1 += (index1[i] - 100) / 10;
+   // }
+   // else {
+   //   criterion1 += (100 - index1[i]) / 10;
+   // }
+  }
+  criter = 100 - criter;
+  console.log('index =', index2);
+  console.log('criter =', criter, '%');
 
 	// for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
 	// 	index1[i] = 0;
@@ -294,6 +341,32 @@ console.log("variation factor", varFactor, "%"); // VARIATION FACTOR ///////////
 	// 	}
 	// }
 
+
+// TABLE ROW ////////////////////////////////////////////////////
+var criter = 0;
+  for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+   index1[i] = 0;
+   for(var j = 1; j <= 1000; j++) {
+     if(i == firstColumnLi[j].innerHTML) {
+       index1[i] += 1;
+     }
+    }
+    if(index1[i] >= 100) {
+      criter += (index1[i] - 100) / 10;
+    }
+    else {
+      criter += (100 - index1[i]) / 10;
+    }
+   // if(index1[i] >= 100) {
+   //   criterion1 += (index1[i] - 100) / 10;
+   // }
+   // else {
+   //   criterion1 += (100 - index1[i]) / 10;
+   // }
+  }
+  criter = 100 - criter;
+  console.log('index table =', index1);
+  console.log('criter table =', criter, '%');
 
 
 	// for(var i = 10; i < 100; i++) { // SECOND FIB ROW ////////////
