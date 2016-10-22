@@ -59,52 +59,52 @@ var bitSum = 0;
 var criterion7 = 0;
 
 button.onclick = function() {
-// 	var i = 0;
-// 	var timerId = setInterval(function() {
-// 	var elements = document.querySelectorAll(".inputColumn li");
-// 	var elt = elements[i];
-// 	if(elt.className == "criterion" || elt.className == "headerRow") {
-// 		i++;
-// 	}
-// 	else {
-// 		elt.className = 'animated rubberBand';
-// 		i++;
-// 	}
-// 	if(i == elements.length) {
-// 		clearInterval(timerId);
-// 	}
+//  var i = 0;
+//  var timerId = setInterval(function() {
+//  var elements = document.querySelectorAll(".inputColumn li");
+//  var elt = elements[i];
+//  if(elt.className == "criterion" || elt.className == "headerRow") {
+//    i++;
+//  }
+//  else {
+//    elt.className = 'animated rubberBand';
+//    i++;
+//  }
+//  if(i == elements.length) {
+//    clearInterval(timerId);
+//  }
 // }, 30);
 
-// 	function func() {
-// 		var elm = document.querySelectorAll(".inputColumn li");
-// 		for(var j = 0; j < elm.length; j++) {
-// 			var el = elm[j];
-// 			if(el.className == "criterion" || el.className == "headerRow") {
-// 				continue;
-// 			}
-// 			else {
-// 				el.className = "";
-// 			}
-// 		}
-// 	}
-// 	setTimeout(func, 1200);
+//  function func() {
+//    var elm = document.querySelectorAll(".inputColumn li");
+//    for(var j = 0; j < elm.length; j++) {
+//      var el = elm[j];
+//      if(el.className == "criterion" || el.className == "headerRow") {
+//        continue;
+//      }
+//      else {
+//        el.className = "";
+//      }
+//    }
+//  }
+//  setTimeout(func, 1200);
 
 	var criter = 0;
-  for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
-   for(var j = 1; j <= 15; j++) {
-     if(i == inputColumnLi[j].innerHTML) {
-       index1[i] += 1;
-     }
-    }
-    if(index1[i] >= 100) {
-      criter += (index1[i] - 100) / 10;
-    }
-    else {
-      criter += (100 - index1[i]) / 10;
-    }
-  }
-  criter = Math.round(100 - criter);
-  crit4.innerHTML = criter;
+	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+	 for(var j = 1; j <= 15; j++) {
+		 if(i == inputColumnLi[j].innerHTML) {
+			 index1[i] += 1;
+		 }
+		}
+		if(index1[i] >= 100) {
+			criter += (index1[i] - 100) / 10;
+		}
+		else {
+			criter += (100 - index1[i]) / 10;
+		}
+	}
+	criter = Math.round(100 - criter);
+	crit4.innerHTML = criter;
 
 
 } // END OF FUNCTION /////////////
@@ -235,6 +235,8 @@ var generate = document.getElementById("generate");
 var index1 = new Array(10);
 var index2 = new Array(90);
 var index3 = new Array(900);
+var crit4 = document.querySelector(".crit4");
+var crit5 = document.querySelector(".crit5");
 
 generate.onclick = function() {
 	var mouseArr = [];
@@ -327,17 +329,14 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 			criter += ((100/9) - index2[i]) / 10;
 		}
 	}
-	criter = 100 - criter;
-	console.log('index =', index2);
-	console.log('criter =', criter, '%');
+	criter = Math.round(100 - criter);
+	crit5.innerHTML = criter;
 
-var test = 1 - erf(2.5996);
-console.log("test:", test);
 
 // TABLE ROW ////////////////////////////////////////////////////
 var criter = 0;
 	for(var i = 0; i < 10; i++) {
-	 index1[i] = 0;
+		index1[i] = 0;
 	 for(var j = 1; j <= 1000; j++) {
 		 if(i == firstColumnLi[j].innerHTML) {
 			 index1[i] += 1;
