@@ -401,10 +401,18 @@ li.criterion {
 	transition: all .5s ease;
 }
 
-#up {
-  opacity: 0;
+.panel-button {
+	opacity: 1;
 	position: relative;
 	top: 50%;
+	margin: 0 auto;
+}
+
+.panel-button div {
+	margin-top: 5px;
+}
+
+.panel-button-up {
 	margin: 0 auto;
 	/*border: 1px solid rgba(39, 188, 133, .2);*/
 	border-radius: 30px;
@@ -415,7 +423,31 @@ li.criterion {
 	background-color: rgba(39, 188, 133, .6);
 }
 
-#up p {
+.panel-button-back {
+	margin: 0 auto;
+	/*border: 1px solid rgba(39, 188, 133, .2);*/
+	border-radius: 30px;
+	color: rgb(39, 188, 133);
+	width: 30px;
+	height: 30px;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .2);
+	background-color: rgba(39, 188, 133, .6);
+}
+
+.panel-button-down {
+	margin: 0 auto;
+	/*border: 1px solid rgba(39, 188, 133, .2);*/
+	border-radius: 30px;
+	color: rgb(39, 188, 133);
+	width: 30px;
+	height: 30px;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .2);
+	background-color: rgba(39, 188, 133, .6);
+}
+
+#up,
+#back,
+#down {
 	color: rgb(255, 255, 255);
 	text-align: center;
 	line-height: 30px;

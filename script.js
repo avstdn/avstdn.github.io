@@ -462,11 +462,11 @@ varFactor = 0;
 	$(function() {
 		$(window).scroll(function() {
 			if($(this).scrollTop() == 0) {
-				$('#up').fadeTo(0, 0);
+				$('.panel-buttons').fadeTo(0, 0);
 				$('.leftPanel').fadeOut(0);
 			}
 			else { 
-				$('#up').fadeTo(0, 1);
+				$('.panel-buttons').fadeTo(0, 1);
 				$('.leftPanel').fadeIn(0);
 			}
 		});
