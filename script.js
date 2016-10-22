@@ -89,33 +89,23 @@ button.onclick = function() {
 // 	}
 // 	setTimeout(func, 1200);
 
-	bitInt = 0;
-	bitStr = "";
-	for(var i = 0; i < 15; i++) {
-		bitInt = parseInt(inp[i].value, 10);
-		// console.log(bitInt);
-		bitStr += (bitInt).toString(2);
+	var criter = 0;
+  for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+   for(var j = 1; j <= 15; j++) {
+     if(i == inputColumnLi[j].innerHTML) {
+       index1[i] += 1;
+     }
+    }
+    if(index1[i] >= 100) {
+      criter += (index1[i] - 100) / 10;
+    }
+    else {
+      criter += (100 - index1[i]) / 10;
+    }
+  }
+  criter = Math.round(100 - criter);
+  crit4.innerHTML = criter;
 
-		for(var j = 0; j < bitStr.length; j++) {
-			// console.log(bitStr[j]);
-		}
-	}
-	console.log("bit's string:", bitStr);
-
-	for(var i = 0, bitSum = 0; i < bitStr.length; i++) {
-		if(bitStr[i] == "1") {
-			bitSum += 1;
-		}
-		else {
-			bitSum -= 1;
-		}
-	}
-	bitSum = Math.abs(bitSum);
-	console.log("bitSum :", bitSum);
-	console.log("str.length", bitStr.length);
-	console.log("sqrt", Math.sqrt(2 * bitStr.length));
-	crit7 = erf(bitSum / (Math.sqrt(2 * bitStr.length)));
-	console.log(crit7);
 
 } // END OF FUNCTION /////////////
 
@@ -319,9 +309,8 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 			criter += (100 - index1[i]) / 10;
 		}
 	}
-	criter = 100 - criter;
-	console.log('index =', index1);
-	console.log('criter =', criter, '%');
+	criter = Math.round(100 - criter);
+	crit4.innerHTML = criter;
 
 	var criter = 0;
 	for(var i = 10; i < 99; i++) { // SECOND FIB ROW ///////////
