@@ -173,6 +173,29 @@ $('.inputColumn input').bind("change keyup input click", function() {
 });
 
 ////////////////////////////////////////////////////////////////////
+///////////////// ERROR FUNCTION ///////////////////////////////////
+////////////////////////////////////////////////////////////////////
+function erf(x) {
+    // constants
+    var a1 =  0.254829592;
+    var a2 = -0.284496736;
+    var a3 =  1.421413741;
+    var a4 = -1.453152027;
+    var a5 =  1.061405429;
+    var p  =  0.3275911;
+    // Save the sign of x
+    var sign = 1;
+    if (x < 0) {
+        sign = -1;
+    }
+    x = Math.abs(x);
+    // A&S formula 7.1.26
+    var t = 1.0/(1.0 + p*x);
+    var y = 1.0 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t*Math.exp(-x*x);
+    return sign*y;
+}
+
+////////////////////////////////////////////////////////////////////
 ////////////////// Lagged Fibonacci Generator //////////////////////
 ////////////////////// GENERATE BUTTON /////////////////////////////
 ////////////////////////////////////////////////////////////////////
@@ -257,24 +280,6 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 ////////////////////////////// ANALYSIS //////////////////////////////////
 ////////////////////////////// CRITERION /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
-
-// for(var i = 1; i <= 1000; i++) { // MEAN /////////////////////////////////
-//   sum += parseInt(fourthColumnLi[i].innerHTML, 10);
-//   if(i == 1000) {
-//     mean = sum / i;
-//     console.log(mean);
-//   }
-// }
-// for(var i = 1; i <= 1000; i++) { // EXPECTATION VALUE ///////////////////
-//   expValue += Math.pow((((parseInt(fourthColumnLi[i].innerHTML, 10)) - mean) / 1000), 2);
-// }
-// console.log("expectation value", expValue);
-
-// stdDev = Math.sqrt(expValue); // STANDART DEVIATION ////////////////////
-// console.log("standart deviation", stdDev);
-
-// varFactor = stdDev / mean * 100;
-// console.log("variation factor", varFactor, "%"); // VARIATION FACTOR /////////////////////////
   var criter = 0;
   for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
    index1[i] = 0;
@@ -289,12 +294,6 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
     else {
       criter += (100 - index1[i]) / 10;
     }
-   // if(index1[i] >= 100) {
-   //   criterion1 += (index1[i] - 100) / 10;
-   // }
-   // else {
-   //   criterion1 += (100 - index1[i]) / 10;
-   // }
   }
   criter = 100 - criter;
   console.log('index =', index1);
@@ -314,12 +313,6 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
     else {
       criter += ((100/9) - index2[i]) / 10;
     }
-   // if(index1[i] >= 100) {
-   //   criterion1 += (index1[i] - 100) / 10;
-   // }
-   // else {
-   //   criterion1 += (100 - index1[i]) / 10;
-   // }
   }
   criter = 100 - criter;
   console.log('index =', index2);
@@ -470,165 +463,7 @@ varFactor = 0;
 				$('.leftPanel').fadeIn(0);
 			}
 		});
-		// $('.leftPanel').click(function() {
-		// 	$('body,html').animate({scrollTop:0},500);
-		// });
+		$('.leftPanel').click(function() {
+			$('body,html').animate({scrollTop:0},500);
+		});
 	});
-
-
-//   for(var i = j = 4; i < k2.length; i++, j++) {
-//     if(k2[j-a] >= k2[j-b]) {
-//       if(Math.floor((k2[j-a] - k2[j-b])*100) <= 10) {
-//         j++;
-//         k2[j] = (k2[j-a] - k2[j-b]); 
-//       }
-//       else {
-//         k2[j] = (k2[j-a] - k2[j-b]);
-//       }
-//     }
-//     else if(k2[j-a] < k2[j-b]) {
-//       if (Math.floor((k2[j-a] - k2[j-b] + 1)*100) <= 10) {
-//         j++;
-//         k2[j] = k2[j-a] - k2[j-b] + 1;
-//       }
-//       else {
-//         k2[j] = k2[j-a] - k2[j-b] + 1;
-//       }
-//     }
-//     else {
-//       console.log("I need help!");
-
-//     }
-//   }
-//     console.log(k2);
-//     for(var i = 0; i < k2.length; i++) {
-//       if(k2[i] >= 1) {
-//         k2[i] -= 1;
-//       }
-//       k2[i] = Math.floor(k2[i] * 100);
-//     }
-//     for(var i = 1; i < k2.length; i++) {
-//         fifthColumnLi[i].innerHTML = k2[i];
-//     }
-
-// } // END OF FUNCTION ///////////////////////////////////////
-
-
-// for(var i = j = 4; i < k2.length; i++, j++) {
-//     if(k2[i-a] >= k2[i-b]) {
-//       if(Math.floor((k2[i-a] - k2[i-b])*100) >= 10) {
-//         k2[i] = (k2[i-a] - k2[i-b]); 
-//       }
-//       else if(Math.floor((k2[i-a] - k2[i-b])*100) == 0) {
-//         k2[i] = 0.99;
-//       }
-//       else {
-//         k2[i] = (k2[i-a] - k2[i-b])*10;
-//       }
-//     }
-//     else if(k2[i-a] < k2[i-b]) {
-//       if (Math.floor((k2[i-a] - k2[i-b] + 1)*100) >=10) {
-//         k2[i] = k2[i-a] - k2[i-b] + 1;
-//       }
-//       else if(Math.floor((k2[i-a] - k2[i-b] + 1)*100) == 0) {
-//         k2[i] = 0.99;
-//       }
-//       else {
-//         k2[i] = (k2[i-a] - k2[i-b] + 1)*10;
-//       }
-//     }
-//     else {
-//       console.log("I need help!");
-
-//     }
-//   }
-//     console.log(k2);
-//     for(var i = 0; i < k2.length; i++) {
-//       if(k2[i] >= 1) {
-//         k2[i] -= 1;
-//       }
-//       k2[i] = Math.floor(k2[i] * 100);
-//     }
-//     for(var i = 1; i < k2.length; i++) {
-//         fifthColumnLi[i].innerHTML = k2[i];
-//     }
-// } // END OF FUNCTION ///////////////////////////////////////
-
-
-// var mouse = document.
-
-// $(document).ready(function() {
-// 	$(".container").css("filter", "blur(0)");
-// });
-
-// var fileDisplayArea = document.getElementById('fileDisplayArea');
-// function readTextFile(file) {
-//   var rawFile = new XMLHttpRequest();
-//   rawFile.open("GET", file, false);
-//   rawFile.onreadystatechange = function() {
-//     if(rawFile.readyState === 4) {
-//       if(rawFile.status === 200 || rawFile.status == 0) {
-//         var allText = rawFile.responseText;
-//         fileDisplayArea.innerText = allText;
-//       }
-//     }
-//   }
-//   rawFile.send(null);
-// }
-// readTextFile("file:///C:/table.txt");
-
-// function getXmlHttp(){
-//   var xmlhttp;
-//   try {
-//     xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-//   } catch (e) {
-//     try {
-//       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-//     } catch (E) {
-//       xmlhttp = false;
-//     }
-//   }
-//   if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-//     xmlhttp = new XMLHttpRequest();
-//   }
-//   return xmlhttp;
-// }
-// console.log(getXmlHttp());
-
-// window.onload = function() {
-//         var fileInput = document.getElementById('fileInput');
-//         var fileDisplayArea = document.getElementById('fileDisplayArea');
-
-//         fileInput.addEventListener('change', function(e) {
-//             var file = fileInput.files[0];
-//             var textType = /text.*/;
-
-//             if (file.type.match(textType)) {
-//                 var reader = new FileReader();
-
-//                 reader.onload = function(e) {
-//                     fileDisplayArea.innerText = reader.result;
-//                 }
-
-//                 reader.readAsText(file);    
-//             } else {
-//                 fileDisplayArea.innerText = "File not supported!"
-//             }
-//         });
-// }
-
-// shift.setAttribute("class", "wrapperClear");
-// shift.firstChild.nodeValue = "bodyShift";
-
-// function open() {
-// 	var parent = document.getElementsByTagName("ul")[0];
-// 	var li = document.createElement("li");
-// 	parent.appenChild(li);
-// 	console.log("hello!");
-// }
-
-// var intervalId = setInterval(function() {
-//   if (index >= $elements.length) return clearInterval(intervalId);
-//   $elements.eq(index).css({border: '1px solid red'}); // тут делаем что нужно
-//   index++;
-// }, 1000);
