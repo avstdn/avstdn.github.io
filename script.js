@@ -470,9 +470,9 @@ varFactor = 0;
 				$('.leftPanel').fadeIn(0);
 			}
 		});
-		$('.leftPanel').click(function() {
-			$('body,html').animate({scrollTop:0},500);
-		});
+		// $('.leftPanel').click(function() {
+		// 	$('body,html').animate({scrollTop:0},500);
+		// });
 	});
 
 
