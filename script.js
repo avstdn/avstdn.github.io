@@ -240,11 +240,9 @@ var criterion = 0;	// THIRD ROW ////////////
 		}
 		if(index[i] > (10/9)) {
 			criterion += (index[i] - (10/9)) / 10;
-			console.log(">",criterion);
 		}
 		else {
 			criterion += ((10/9) - index[i]) / 10;
-			console.log("0", criterion);
 		}
 	}
 	criterion = Math.round(criterion);
@@ -405,11 +403,9 @@ var zero = 0;
 		}
 		if(index3[i] > (10/9)) {
 			criter += (index3[i] - (10/9)) / 10;
-			console.log(">",criter);
 		}
 		else {
 			criter += ((10/9) - index3[i]) / 10;
-			console.log("0", criter);
 		}
 	}
 	criter = Math.round(criter);
