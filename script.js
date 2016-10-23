@@ -94,7 +94,7 @@ button.onclick = function() {
 		}
 		if(count == 3) {
 			console.log("i:",i);
-			crit7.innerHTML = 100;
+			crit7.innerHTML = 0;
 			break;
 		}
 		else if(i == 13) {
