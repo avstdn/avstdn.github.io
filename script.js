@@ -100,7 +100,12 @@ button.onclick = function() {
 			count -= 7;
 		}
 	}
-	crit7.innerHTML = count;
+	if(count < 0) {
+		crit7.innerHTML = 0;
+	}
+	else {
+		crit7.innerHTML = count;
+	}
 } // END OF FUNCTION /////////////
 
 
