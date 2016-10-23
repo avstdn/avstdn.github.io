@@ -85,24 +85,22 @@ button.onclick = function() {
 	// console.log('input criterion', criter);
 
 
-	var count = 0;
-	for(var i = 1; i < 14; i++) { // 1, 2, 3, 4, ... 15 TEST SEQUENCE
-		console.log(inp[i].value);
-		if(Math.abs(inp[i].value - inp[i-1].value) == Math.abs(inp[i+1].value - inp[i].value)) {
-			count++;
-			console.log(inp[i].value, inp[i-1].value, inp[i+1].value, inp[i].value);
-
-			if(count == 3) {
-				console.log("i:",i);
-				crit7.innerHTML = 0;
-				break;
-			}
-		}
-		if(i == 13) {
-				crit7.innerHTML = 100;
+	var count = 100;
+	var dif = 0;
+	for(var i = 1; i < 14; i++) { // 2 DIGITS DIFFERENCE
+		dif = inp[i].value - inp[i-1].value;
+		if(inp[i+1].value - inp[i].value == dif) {
+			count -= 7;
 		}
 	}
-
+	var dif = 0;
+	for(var i = 1; i < 13; i++) { // 3 DIGITS DIFFERENCE
+		dif = inp[i+1].value - inp[i-1].value;
+		if(inp[i+2].value - inp[i].value == dif) {
+			count -= 7;
+		}
+	}
+	crit7.innerHTML = count;
 } // END OF FUNCTION /////////////
 
 
