@@ -24,29 +24,6 @@ for(var i = 0; i < 6; i++) {
 }
 
 ////////////////////////////////////////////////////////////////////
-///////////////// ERROR FUNCTION ///////////////////////////////////
-////////////////////////////////////////////////////////////////////
-function erf(x) {
-		// constants
-		var a1 =  0.254829592;
-		var a2 = -0.284496736;
-		var a3 =  1.421413741;
-		var a4 = -1.453152027;
-		var a5 =  1.061405429;
-		var p  =  0.3275911;
-		// Save the sign of x
-		var sign = 1;
-		if (x < 0) {
-				sign = -1;
-		}
-		x = Math.abs(x);
-		// A&S formula 7.1.26
-		var t = 1.0/(1.0 + p*x);
-		var y = 1 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t*Math.exp(-x*x);
-		return sign*y;
-}
-
-////////////////////////////////////////////////////////////////////
 ///////////////// ACTION BUTTON ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 var button = document.getElementById("action");
@@ -186,11 +163,74 @@ document.querySelector("#panel").addEventListener("mouseover", function() {
 var firstColumnLi = document.querySelectorAll(".firstColumn li");
 var secondColumnLi = document.querySelectorAll(".secondColumn li");
 var thirdColumnLi = document.querySelectorAll(".thirdColumn li");
+var crit1 = document.querySelector(".crit1");
+var crit2 = document.querySelector(".crit2");
+var crit3 = document.querySelector(".crit3");
+var index = [];
+
 for(var i = 1; i < firstColumnLi.length - 2; i++) {
 	firstColumnLi[i].innerHTML = row1[i-1];
 	secondColumnLi[i].innerHTML = row2[i-1];
 	thirdColumnLi[i].innerHTML = row3[i-1];
 }
+
+var criterion = 0;
+	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+	 index[i] = 0;
+	 for(var j = 1; j <= 1000; j++) {
+		 if(i == firstColumnLi[j].innerHTML) {
+			 index[i] += 1;
+		 }
+		}
+		if(index[i] >= 100) {
+			criterion += (index[i] - 100) / 10;
+		}
+		else {
+			criterion += (100 - index[i]) / 10;
+		}
+	}
+	criterion = Math.round(100 - criterion);
+	crit1.innerHTML = criterion;
+
+	var criterion = 0;
+	for(var i = 10; i < 100; i++) { // SECOND FIB ROW ///////////
+	 index[i] = 0;
+	 for(var j = 1; j <= 1000; j++) {
+		 if(i == secondColumnLi[j].innerHTML) {
+			 index[i] += 1;
+		 }
+		}
+		if(index[i] >= (100/9)) {
+			criterion += (index[i] - (100/9)) / 10;
+		}
+		else {
+			criterion += ((100/9) - index[i]) / 10;
+		}
+	}
+	criterion = Math.round(100 - criterion);
+	crit2.innerHTML = criterion;
+
+
+var criterion = 0;	// THIRD ROW ////////////
+	for(var i = 100; i < 1000; i++) {
+		index[i] = 0;
+		for(var j = 1; j <= 1000; j++) {
+		 if(i == thirdColumnLi[j].innerHTML) {
+			 index[i] += 1;
+		 }
+		}
+		if(index[i] > (10/9)) {
+			criterion += (index[i] - (10/9)) / 10;
+			console.log(">",criterion);
+		}
+		else {
+			criterion += ((10/9) - index[i]) / 10;
+			console.log("0", criterion);
+		}
+	}
+	criterion = Math.round(100 - criterion);
+	crit3.innerHTML = criterion;
+
 
 
 ////////////////////////////////////////////////////////////////////
@@ -237,6 +277,8 @@ var index2 = new Array(90);
 var index3 = new Array(900);
 var crit4 = document.querySelector(".crit4");
 var crit5 = document.querySelector(".crit5");
+var crit6 = document.querySelector(".crit6");
+
 
 generate.onclick = function() {
 	var mouseArr = [];
@@ -315,7 +357,7 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 	crit4.innerHTML = criter;
 
 	var criter = 0;
-	for(var i = 10; i < 99; i++) { // SECOND FIB ROW ///////////
+	for(var i = 10; i < 100; i++) { // SECOND FIB ROW ///////////
 	 index2[i] = 0;
 	 for(var j = 1; j <= 1000; j++) {
 		 if(i == fifthColumnLi[j].innerHTML) {
@@ -333,25 +375,26 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 	crit5.innerHTML = criter;
 
 
-// TABLE ROW ////////////////////////////////////////////////////
-var criter = 0;
-	for(var i = 0; i < 10; i++) {
-		index1[i] = 0;
-	 for(var j = 1; j <= 1000; j++) {
-		 if(i == firstColumnLi[j].innerHTML) {
-			 index1[i] += 1;
+var criter = 0;	// THIRD FIB ROW ////////////
+var zero = 0;
+	for(var i = 100; i < 1000; i++) {
+		index3[i] = 0;
+		for(var j = 1; j <= 1000; j++) {
+		 if(i == sixthColumnLi[j].innerHTML) {
+			 index3[i] += 1;
 		 }
 		}
-		if(index1[i] >= 100) {
-			criter += (index1[i] - 100) / 10;
+		if(index3[i] > (10/9)) {
+			criter += (index3[i] - (10/9)) / 10;
+			console.log(">",criter);
 		}
 		else {
-			criter += (100 - index1[i]) / 10;
+			criter += ((10/9) - index3[i]) / 10;
+			console.log("0", criter);
 		}
 	}
-	criter = 100 - criter;
-	console.log('index table =', index1);
-	console.log('criter table =', criter, '%');
+	criter = Math.round(criter);
+	crit6.innerHTML = criter;
 }
 
 ////////////////////////////////////////////////////////////////////
