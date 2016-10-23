@@ -90,15 +90,16 @@ button.onclick = function() {
 		console.log(inp[i].value);
 		if(inp[i].value - inp[i-1].value == inp[i+1].value - inp[i].value) {
 			count++;
-			console.log(inp[i].value, inp[i-1].value, inp[i+1].value, inp[i].value)
-		}
-		if(count == 3) {
-			console.log("i:",i);
-			crit7.innerHTML = 0;
-			break;
-		}
-		else if(i == 13) {
-			crit7.innerHTML = 100;
+			console.log(inp[i].value, inp[i-1].value, inp[i+1].value, inp[i].value);
+
+			if(count == 3) {
+				console.log("i:",i);
+				crit7.innerHTML = 0;
+				break;
+			}
+			else if(i == 13) {
+				crit7.innerHTML = 100;
+			}
 		}
 	}
 
