@@ -97,7 +97,7 @@ button.onclick = function() {
 				crit7.innerHTML = 0;
 				break;
 			}
-			else if(i == 13) {
+			if(i == 13) {
 				crit7.innerHTML = 100;
 			}
 		}
