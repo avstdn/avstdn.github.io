@@ -88,7 +88,7 @@ button.onclick = function() {
 	var count = 0;
 	for(var i = 1; i < 14; i++) { // 1, 2, 3, 4, ... 15 TEST SEQUENCE
 		console.log(inp[i].value);
-		if(inp[i].value - inp[i-1].value == inp[i+1].value - inp[i].value) {
+		if(Math.abs(inp[i].value - inp[i-1].value) == Math.abs(inp[i+1].value - inp[i].value)) {
 			count++;
 			console.log(inp[i].value, inp[i-1].value, inp[i+1].value, inp[i].value);
 
@@ -97,12 +97,11 @@ button.onclick = function() {
 				crit7.innerHTML = 0;
 				break;
 			}
-			if(i == 13) {
+		}
+		if(i == 13) {
 				crit7.innerHTML = 100;
-			}
 		}
 	}
-
 
 } // END OF FUNCTION /////////////
 
