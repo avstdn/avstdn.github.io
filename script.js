@@ -66,22 +66,41 @@ button.onclick = function() {
 //  }
 //  setTimeout(func, 1200);
 
-	var criter = 0;
-	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
-	 for(var j = 1; j <= 15; j++) {
-		 if(i == inputColumnLi[j].innerHTML) {
-			 index1[i] += 1;
-		 }
+	// var criter = 0;
+	// for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
+	// 	for(var j = 1; j <= 15; j++) {
+	// 		if(i == inputColumnLi[j].innerHTML) {
+	// 			index1[i] += 1;
+	// 		}
+	// 	}
+	// 	if(index1[i] >= 100) {
+	// 		criter += (index1[i] - 100) / 10;
+	// 	}
+	// 	else {
+	// 		criter += (100 - index1[i]) / 10;
+	// 	}
+	// }
+	// criter = Math.round(100 - criter);
+	// // crit4.innerHTML = criter;
+	// console.log('input criterion', criter);
+
+
+	var count = 0;
+	for(var i = 1; i < 14; i++) { // 1, 2, 3, 4, ... 15 TEST SEQUENCE
+		console.log(inp[i].value);
+		if(inp[i].value - inp[i-1].value == inp[i+1].value - inp[i].value) {
+			count++;
+			console.log(inp[i].value, inp[i-1].value, inp[i+1].value, inp[i].value)
 		}
-		if(index1[i] >= 100) {
-			criter += (index1[i] - 100) / 10;
+		if(count == 3) {
+			console.log("i:",i);
+			crit7.innerHTML = 100;
+			break;
 		}
-		else {
-			criter += (100 - index1[i]) / 10;
+		else if(i == 13) {
+			crit7.innerHTML = 100;
 		}
 	}
-	criter = Math.round(100 - criter);
-	crit4.innerHTML = criter;
 
 
 } // END OF FUNCTION /////////////
