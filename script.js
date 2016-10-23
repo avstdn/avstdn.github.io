@@ -247,7 +247,7 @@ var criterion = 0;	// THIRD ROW ////////////
 			console.log("0", criterion);
 		}
 	}
-	criterion = Math.round(100 - criterion);
+	criterion = Math.round(criterion);
 	crit3.innerHTML = criterion;
 
 
