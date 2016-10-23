@@ -36,35 +36,35 @@ var bitSum = 0;
 var criterion7 = 0;
 
 button.onclick = function() {
-//  var i = 0;
-//  var timerId = setInterval(function() {
-//  var elements = document.querySelectorAll(".inputColumn li");
-//  var elt = elements[i];
-//  if(elt.className == "criterion" || elt.className == "headerRow") {
-//    i++;
-//  }
-//  else {
-//    elt.className = 'animated rubberBand';
-//    i++;
-//  }
-//  if(i == elements.length) {
-//    clearInterval(timerId);
-//  }
-// }, 30);
+ var k = 0;
+ var timerId = setInterval(function() {
+ var elements = document.querySelectorAll(".inputColumn li");
+ var elt = elements[k];
+ if(elt.className == "criterion" || elt.className == "headerRow") {
+   k++;
+ }
+ else {
+   elt.className = 'animated rubberBand';
+   k++;
+ }
+ if(k == elements.length) {
+   clearInterval(timerId);
+ }
+}, 30);
 
-//  function func() {
-//    var elm = document.querySelectorAll(".inputColumn li");
-//    for(var j = 0; j < elm.length; j++) {
-//      var el = elm[j];
-//      if(el.className == "criterion" || el.className == "headerRow") {
-//        continue;
-//      }
-//      else {
-//        el.className = "";
-//      }
-//    }
-//  }
-//  setTimeout(func, 1200);
+ function func() {
+   var elm = document.querySelectorAll(".inputColumn li");
+   for(var j = 0; j < elm.length; j++) {
+     var el = elm[j];
+     if(el.className == "criterion" || el.className == "headerRow") {
+       continue;
+     }
+     else {
+       el.className = "";
+     }
+   }
+ }
+ setTimeout(func, 1200);
 
 	// var criter = 0;
 	// for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
@@ -298,6 +298,8 @@ var index3 = new Array(900);
 var crit4 = document.querySelector(".crit4");
 var crit5 = document.querySelector(".crit5");
 var crit6 = document.querySelector(".crit6");
+	var count;
+	var dif;
 
 
 generate.onclick = function() {
@@ -358,6 +360,35 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 ////////////////////////////// ANALYSIS //////////////////////////////////
 ////////////////////////////// CRITERION /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
+
+
+count = 100;
+dif = 0;
+	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
+		console.log(fourthColumnLi[i].innerHTML);
+		dif = fourthColumnLi[i].innerHTML - fourthColumnLi[i-1].innerHTML;
+		if(fourthColumnLi[i+1].innerHTML - fourthColumnLi[i].innerHTML == dif) {
+			count -= 0.1;
+		}
+	}
+	console.log(count);
+	var dif = 0;
+	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
+		dif = fourthColumnLi[i+1].innerHTML - fourthColumnLi[i-1].innerHTML;
+		if(fourthColumnLi[i+2].innerHTML - fourthColumnLi[i].innerHTML == dif) {
+			count -= 0.1;
+		}
+	}
+	console.log(count);
+	if(count < 0) {
+		crit4.innerHTML = 0;
+	}
+	else {
+		crit4.innerHTML = Math.round(count);
+	}
+
+/*
+
 	var criter = 0;
 	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
 	 index1[i] = 0;
@@ -376,6 +407,34 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 	criter = Math.round(100 - criter);
 	crit4.innerHTML = criter;
 
+*/
+
+count = 100;
+dif = 0;
+	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
+		console.log(fifthColumnLi[i].innerHTML);
+		dif = fifthColumnLi[i].innerHTML - fifthColumnLi[i-1].innerHTML;
+		if(fifthColumnLi[i+1].innerHTML - fifthColumnLi[i].innerHTML == dif) {
+			count -= 1;
+		}
+	}
+	console.log(count);
+	var dif = 0;
+	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
+		dif = fifthColumnLi[i+1].innerHTML - fifthColumnLi[i-1].innerHTML;
+		if(fifthColumnLi[i+2].innerHTML - fifthColumnLi[i].innerHTML == dif) {
+			count -= 1;
+		}
+	}
+	console.log(count);
+	if(count < 0) {
+		crit5.innerHTML = 0;
+	}
+	else {
+		crit5.innerHTML = count;
+	}
+
+/*
 	var criter = 0;
 	for(var i = 10; i < 100; i++) { // SECOND FIB ROW ///////////
 	 index2[i] = 0;
@@ -393,9 +452,36 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 	}
 	criter = Math.round(100 - criter);
 	crit5.innerHTML = criter;
+*/
 
 
-var criter = 0;	// THIRD FIB ROW ////////////
+count = 100;
+dif = 0;
+	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
+		console.log(fifthColumnLi[i].innerHTML);
+		dif = sixthColumnLi[i].innerHTML - sixthColumnLi[i-1].innerHTML;
+		if(sixthColumnLi[i+1].innerHTML - sixthColumnLi[i].innerHTML == dif) {
+			count -= 10;
+		}
+	}
+	console.log(count);
+	var dif = 0;
+	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
+		dif = sixthColumnLi[i+1].innerHTML - sixthColumnLi[i-1].innerHTML;
+		if(sixthColumnLi[i+2].innerHTML - sixthColumnLi[i].innerHTML == dif) {
+			count -= 10;
+		}
+	}
+	console.log(count);
+	if(count < 0) {
+		crit6.innerHTML = 0;
+	}
+	else {
+		crit6.innerHTML = count;
+	}
+
+
+/*var criter = 0;	// THIRD FIB ROW ////////////
 var zero = 0;
 	for(var i = 100; i < 1000; i++) {
 		index3[i] = 0;
@@ -413,6 +499,7 @@ var zero = 0;
 	}
 	criter = Math.round(criter);
 	crit6.innerHTML = criter;
+*/
 }
 
 ////////////////////////////////////////////////////////////////////
