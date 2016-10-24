@@ -17,6 +17,10 @@ img {
 	text-decoration: underline;
 }
 
+.staticDiv .rating {
+	margin: 0 95px;
+}
+
 body {
 	background: url(body.jpg);
 }
@@ -440,4 +444,9 @@ li.criterion {
 	text-shadow: 1px 0px 0px #333;
 	border: 5px solid #3079ED;
 	cursor: pointer;
+}
+
+.rating {
+	margin-top: 10px;
+	text-align: center;
 }

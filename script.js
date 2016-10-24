@@ -36,35 +36,35 @@ var bitSum = 0;
 var criterion7 = 0;
 
 button.onclick = function() {
- var k = 0;
- var timerId = setInterval(function() {
- var elements = document.querySelectorAll(".inputColumn li");
- var elt = elements[k];
- if(elt.className == "criterion" || elt.className == "headerRow") {
-	 k++;
- }
- else {
-	 elt.className = 'animated rubberBand';
-	 k++;
- }
- if(k == elements.length) {
-	 clearInterval(timerId);
- }
+	var k = 0;
+	var timerId = setInterval(function() {
+	var elements = document.querySelectorAll(".inputColumn li");
+	var elt = elements[k];
+	if(elt.className == "criterion" || elt.className == "headerRow") {
+		k++;
+	}
+	else {
+		elt.className = 'animated rubberBand';
+		k++;
+	}
+	if(k == elements.length) {
+		clearInterval(timerId);
+	}
 }, 30);
 
- function func() {
-	 var elm = document.querySelectorAll(".inputColumn li");
-	 for(var j = 0; j < elm.length; j++) {
-		 var el = elm[j];
-		 if(el.className == "criterion" || el.className == "headerRow") {
-			 continue;
-		 }
-		 else {
-			 el.className = "";
-		 }
-	 }
- }
- setTimeout(func, 1200);
+	function func() {
+		var elm = document.querySelectorAll(".inputColumn li");
+		for(var j = 0; j < elm.length; j++) {
+			var el = elm[j];
+			if(el.className == "criterion" || el.className == "headerRow") {
+				continue;
+			}
+			else {
+				el.className = "";
+			}
+	}
+	}
+	setTimeout(func, 1200);
 
 	// var criter = 0;
 	// for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
@@ -370,17 +370,11 @@ var index3 = new Array(900);
 var crit4 = document.querySelector(".crit4");
 var crit5 = document.querySelector(".crit5");
 var crit6 = document.querySelector(".crit6");
-	var count;
-	var dif;
+var count;
+var dif;
 
 
 generate.onclick = function() {
-
-	// BACKGROUND COLOR CHANGE ///////////////
-// $(function(){
-
-// });
-// BACKGROUND COLOR CHANGE ///////////////
 	var mouseArr = [];
 	var k1 = new Array(4000);
 	var k2 = new Array(1000);
@@ -573,19 +567,19 @@ var zero = 0;
 ////////////////////////////////////////////////////////////////////
 //////////////////////// LEFT PANEL ////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-	$(function() {
-		$('.leftPanel').hide();
-		$(window).scroll(function() {
-			if($(this).scrollTop() == 0) {
-				$('#up').fadeTo(0, 0);
-				$('.leftPanel').fadeOut(0);
-			}
-			else { 
-				$('#up').fadeTo(0, 1);
-				$('.leftPanel').fadeIn(0);
-			}
-		});
-		$('.leftPanel').click(function() {
-			$('body,html').animate({scrollTop:0},500);
-		});
+$(function() {
+	$('.leftPanel').hide();
+	$(window).scroll(function() {
+		if($(this).scrollTop() == 0) {
+			$('#up').fadeTo(0, 0);
+			$('.leftPanel').fadeOut(0);
+		}
+		else { 
+			$('#up').fadeTo(0, 1);
+			$('.leftPanel').fadeIn(0);
+		}
 	});
+	$('.leftPanel').click(function() {
+		$('body,html').animate({scrollTop:0},500);
+	});
+});
