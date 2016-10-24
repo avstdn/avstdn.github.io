@@ -41,28 +41,28 @@ button.onclick = function() {
  var elements = document.querySelectorAll(".inputColumn li");
  var elt = elements[k];
  if(elt.className == "criterion" || elt.className == "headerRow") {
-   k++;
+	 k++;
  }
  else {
-   elt.className = 'animated rubberBand';
-   k++;
+	 elt.className = 'animated rubberBand';
+	 k++;
  }
  if(k == elements.length) {
-   clearInterval(timerId);
+	 clearInterval(timerId);
  }
 }, 30);
 
  function func() {
-   var elm = document.querySelectorAll(".inputColumn li");
-   for(var j = 0; j < elm.length; j++) {
-     var el = elm[j];
-     if(el.className == "criterion" || el.className == "headerRow") {
-       continue;
-     }
-     else {
-       el.className = "";
-     }
-   }
+	 var elm = document.querySelectorAll(".inputColumn li");
+	 for(var j = 0; j < elm.length; j++) {
+		 var el = elm[j];
+		 if(el.className == "criterion" || el.className == "headerRow") {
+			 continue;
+		 }
+		 else {
+			 el.className = "";
+		 }
+	 }
  }
  setTimeout(func, 1200);
 
@@ -192,7 +192,6 @@ var index = [];
 var cnt;
 var diff;
 
-
 for(var i = 1; i < firstColumnLi.length - 2; i++) {
 	firstColumnLi[i].innerHTML = row1[i-1];
 	secondColumnLi[i].innerHTML = row2[i-1];
@@ -202,13 +201,11 @@ for(var i = 1; i < firstColumnLi.length - 2; i++) {
 cnt = 100;
 differ = 0;
 	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
-		console.log(firstColumnLi[i].innerHTML);
 		differ = firstColumnLi[i].innerHTML - firstColumnLi[i-1].innerHTML;
 		if(firstColumnLi[i+1].innerHTML - firstColumnLi[i].innerHTML == differ) {
 			cnt -= 0.1;
 		}
 	}
-	console.log(cnt);
 	var differ = 0;
 	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
 		differ = firstColumnLi[i+1].innerHTML - firstColumnLi[i-1].innerHTML;
@@ -216,7 +213,6 @@ differ = 0;
 			cnt -= 0.1;
 		}
 	}
-	console.log(cnt);
 	if(cnt < 0) {
 		crit1.innerHTML = 0;
 	}
@@ -247,13 +243,11 @@ var criterion = 0;
 cnt = 100;
 differ = 0;
 	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
-		console.log(secondColumnLi[i].innerHTML);
 		differ = secondColumnLi[i].innerHTML - secondColumnLi[i-1].innerHTML;
 		if(secondColumnLi[i+1].innerHTML - secondColumnLi[i].innerHTML == differ) {
 			cnt -= 1;
 		}
 	}
-	console.log(cnt);
 	var differ = 0;
 	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
 		differ = secondColumnLi[i+1].innerHTML - secondColumnLi[i-1].innerHTML;
@@ -261,7 +255,6 @@ differ = 0;
 			cnt -= 1;
 		}
 	}
-	console.log(cnt);
 	if(cnt < 0) {
 		crit2.innerHTML = 0;
 	}
@@ -292,13 +285,11 @@ differ = 0;
 cnt = 100;
 differ = 0;
 	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
-		console.log(thirdColumnLi[i].innerHTML);
 		differ = thirdColumnLi[i].innerHTML - thirdColumnLi[i-1].innerHTML;
 		if(thirdColumnLi[i+1].innerHTML - thirdColumnLi[i].innerHTML == differ) {
 			cnt -= 10;
 		}
 	}
-	console.log(cnt);
 	var differ = 0;
 	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
 		differ = thirdColumnLi[i+1].innerHTML - thirdColumnLi[i-1].innerHTML;
@@ -306,7 +297,6 @@ differ = 0;
 			cnt -= 10;
 		}
 	}
-	console.log(cnt);
 	if(cnt < 0) {
 		crit3.innerHTML = 0;
 	}
@@ -385,6 +375,12 @@ var crit6 = document.querySelector(".crit6");
 
 
 generate.onclick = function() {
+
+	// BACKGROUND COLOR CHANGE ///////////////
+// $(function(){
+
+// });
+// BACKGROUND COLOR CHANGE ///////////////
 	var mouseArr = [];
 	var k1 = new Array(4000);
 	var k2 = new Array(1000);
@@ -446,13 +442,11 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 count = 100;
 dif = 0;
 	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
-		console.log(fourthColumnLi[i].innerHTML);
 		dif = fourthColumnLi[i].innerHTML - fourthColumnLi[i-1].innerHTML;
 		if(fourthColumnLi[i+1].innerHTML - fourthColumnLi[i].innerHTML == dif) {
 			count -= 0.1;
 		}
 	}
-	console.log(count);
 	var dif = 0;
 	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
 		dif = fourthColumnLi[i+1].innerHTML - fourthColumnLi[i-1].innerHTML;
@@ -460,7 +454,6 @@ dif = 0;
 			count -= 0.1;
 		}
 	}
-	console.log(count);
 	if(count < 0) {
 		crit4.innerHTML = 0;
 	}
@@ -493,13 +486,11 @@ dif = 0;
 count = 100;
 dif = 0;
 	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
-		console.log(fifthColumnLi[i].innerHTML);
 		dif = fifthColumnLi[i].innerHTML - fifthColumnLi[i-1].innerHTML;
 		if(fifthColumnLi[i+1].innerHTML - fifthColumnLi[i].innerHTML == dif) {
 			count -= 1;
 		}
 	}
-	console.log(count);
 	var dif = 0;
 	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
 		dif = fifthColumnLi[i+1].innerHTML - fifthColumnLi[i-1].innerHTML;
@@ -507,7 +498,6 @@ dif = 0;
 			count -= 1;
 		}
 	}
-	console.log(count);
 	if(count < 0) {
 		crit5.innerHTML = 0;
 	}
@@ -539,13 +529,11 @@ dif = 0;
 count = 100;
 dif = 0;
 	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
-		console.log(fifthColumnLi[i].innerHTML);
 		dif = sixthColumnLi[i].innerHTML - sixthColumnLi[i-1].innerHTML;
 		if(sixthColumnLi[i+1].innerHTML - sixthColumnLi[i].innerHTML == dif) {
 			count -= 10;
 		}
 	}
-	console.log(count);
 	var dif = 0;
 	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
 		dif = sixthColumnLi[i+1].innerHTML - sixthColumnLi[i-1].innerHTML;
@@ -553,7 +541,6 @@ dif = 0;
 			count -= 10;
 		}
 	}
-	console.log(count);
 	if(count < 0) {
 		crit6.innerHTML = 0;
 	}
@@ -587,13 +574,14 @@ var zero = 0;
 //////////////////////// LEFT PANEL ////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 	$(function() {
+		$('.leftPanel').hide();
 		$(window).scroll(function() {
 			if($(this).scrollTop() == 0) {
-				$('.panel-buttons').fadeTo(0, 0);
+				$('#up').fadeTo(0, 0);
 				$('.leftPanel').fadeOut(0);
 			}
 			else { 
-				$('.panel-buttons').fadeTo(0, 1);
+				$('#up').fadeTo(0, 1);
 				$('.leftPanel').fadeIn(0);
 			}
 		});
