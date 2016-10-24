@@ -189,6 +189,9 @@ var crit1 = document.querySelector(".crit1");
 var crit2 = document.querySelector(".crit2");
 var crit3 = document.querySelector(".crit3");
 var index = [];
+var cnt;
+var diff;
+
 
 for(var i = 1; i < firstColumnLi.length - 2; i++) {
 	firstColumnLi[i].innerHTML = row1[i-1];
@@ -196,6 +199,32 @@ for(var i = 1; i < firstColumnLi.length - 2; i++) {
 	thirdColumnLi[i].innerHTML = row3[i-1];
 }
 
+cnt = 100;
+differ = 0;
+	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
+		console.log(firstColumnLi[i].innerHTML);
+		differ = firstColumnLi[i].innerHTML - firstColumnLi[i-1].innerHTML;
+		if(firstColumnLi[i+1].innerHTML - firstColumnLi[i].innerHTML == differ) {
+			cnt -= 0.1;
+		}
+	}
+	console.log(cnt);
+	var differ = 0;
+	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
+		differ = firstColumnLi[i+1].innerHTML - firstColumnLi[i-1].innerHTML;
+		if(firstColumnLi[i+2].innerHTML - firstColumnLi[i].innerHTML == differ) {
+			cnt -= 0.1;
+		}
+	}
+	console.log(cnt);
+	if(cnt < 0) {
+		crit1.innerHTML = 0;
+	}
+	else {
+		crit1.innerHTML = Math.round(cnt);
+	}
+
+/*
 var criterion = 0;
 	for(var i = 0; i < 10; i++) { // FIRST FIB ROW ///////////
 	 index[i] = 0;
@@ -213,7 +242,34 @@ var criterion = 0;
 	}
 	criterion = Math.round(100 - criterion);
 	crit1.innerHTML = criterion;
+*/
 
+cnt = 100;
+differ = 0;
+	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
+		console.log(secondColumnLi[i].innerHTML);
+		differ = secondColumnLi[i].innerHTML - secondColumnLi[i-1].innerHTML;
+		if(secondColumnLi[i+1].innerHTML - secondColumnLi[i].innerHTML == differ) {
+			cnt -= 1;
+		}
+	}
+	console.log(cnt);
+	var differ = 0;
+	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
+		differ = secondColumnLi[i+1].innerHTML - secondColumnLi[i-1].innerHTML;
+		if(secondColumnLi[i+2].innerHTML - secondColumnLi[i].innerHTML == differ) {
+			cnt -= 1;
+		}
+	}
+	console.log(cnt);
+	if(cnt < 0) {
+		crit2.innerHTML = 0;
+	}
+	else {
+		crit2.innerHTML = Math.round(cnt);
+	}
+
+/*
 	var criterion = 0;
 	for(var i = 10; i < 100; i++) { // SECOND FIB ROW ///////////
 	 index[i] = 0;
@@ -231,8 +287,34 @@ var criterion = 0;
 	}
 	criterion = Math.round(100 - criterion);
 	crit2.innerHTML = criterion;
+*/
 
+cnt = 100;
+differ = 0;
+	for(var i = 2; i < 999; i++) { // 2 DIGITS DIFFERENCE
+		console.log(thirdColumnLi[i].innerHTML);
+		differ = thirdColumnLi[i].innerHTML - thirdColumnLi[i-1].innerHTML;
+		if(thirdColumnLi[i+1].innerHTML - thirdColumnLi[i].innerHTML == differ) {
+			cnt -= 10;
+		}
+	}
+	console.log(cnt);
+	var differ = 0;
+	for(var i = 2; i < 998; i++) { // 3 DIGITS DIFFERENCE
+		differ = thirdColumnLi[i+1].innerHTML - thirdColumnLi[i-1].innerHTML;
+		if(thirdColumnLi[i+2].innerHTML - thirdColumnLi[i].innerHTML == differ) {
+			cnt -= 10;
+		}
+	}
+	console.log(cnt);
+	if(cnt < 0) {
+		crit3.innerHTML = 0;
+	}
+	else {
+		crit3.innerHTML = Math.round(cnt);
+	}
 
+/*
 var criterion = 0;	// THIRD ROW ////////////
 	for(var i = 100; i < 1000; i++) {
 		index[i] = 0;
@@ -250,7 +332,7 @@ var criterion = 0;	// THIRD ROW ////////////
 	}
 	criterion = Math.round(criterion);
 	crit3.innerHTML = criterion;
-
+*/
 
 
 ////////////////////////////////////////////////////////////////////
@@ -360,7 +442,6 @@ for(var i = 0, j = 4; i <= 1000; i++, j += 3) {
 ////////////////////////////// ANALYSIS //////////////////////////////////
 ////////////////////////////// CRITERION /////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
-
 
 count = 100;
 dif = 0;
