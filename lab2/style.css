@@ -27,7 +27,7 @@ body {
 }
 
 .footer {
-	line-height: 97px;
+	line-height: 100px;
 	height: 100px;
 	color: #686868;
 	background: url(img/footer_bg.png) repeat-x;
@@ -42,7 +42,7 @@ body {
 	float: left;
 	width: 320px;
 	padding: 50px;
-	margin: 30px 25%;
+	margin: 0;
 	background-color: rgba(17,17,17,0.35);
 	box-shadow: 5px 5px 10px rgba(0,0,0,.66);
 }
