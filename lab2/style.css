@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	color: #fff;
+	background: url(img/mod_bg.jpg) center center fixed;
+	background-size: cover;
+	font-family: 'Signika', sans-serif;
+	height: 100%;
+}
+
+.container {
+	min-height: 100%;
+	margin-bottom: -100px;
+}
+
+.container:after {
+	content: "";
+	display: block;
+	height: 100px;
+}
+
+.footer {
+	line-height: 100px;
+	height: 100px;
+	color: #686868;
+	background-color: #161616;
+	background: url(img/footer_bg.png) repeat-x;
+}
+
+.content {
+	margin: 100px 0;
+}
+
+.trans-panel {
+	float: left;
+	width: 320px;
+	padding: 50px;
+	margin: 30px 25%;
+	background-color: rgba(17,17,17,0.35);
+	box-shadow: 5px 5px 10px rgba(0,0,0,.66);
+}
+
+.trans-panel p {
+	opacity: 1;
+}
+
+#token {
+	font-size: 1.5em;
+	color: red;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.panel {
+	margin: 20px;
+	float: left;
+}
+
+.panel li {
+	width: 100px;
+	margin: 2px;
+	list-style-type: none;
+	padding: 10px;
+	padding-left: 30px;
+	background-color: rgba(17,17,17,0.35);
+}
+
+.panel a {
+	display: block;
+	text-decoration: none;
+}
+
+.container a:visited,
+.container a:hover,
+.container a:active {
+	color: #fff;
+}
+
+.stick-panel {
+/*	position: fixed;
+	top: 0;*/
+}
