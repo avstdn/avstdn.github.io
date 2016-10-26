@@ -79,6 +79,7 @@ body {
 	text-decoration: none;
 }
 
+.container a:link,
 .container a:visited,
 .container a:hover,
 .container a:active {
