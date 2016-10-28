@@ -65,6 +65,10 @@ body {
 	float: left;
 }
 
+.fixed {
+	position: fixed;
+}
+
 .panel li {
 	width: 100px;
 	margin: 2px;
