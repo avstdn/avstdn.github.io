@@ -1,6 +1,7 @@
 body {
   background: url("img/main.jpg") fixed;
   background-size: cover;
+  background-color: black;
 }
 .hamburger {
   background: none;
