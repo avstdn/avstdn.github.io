@@ -25,6 +25,7 @@ html, body {
   height: 100vh;
   overflow: hidden;
   background: url(img/123.jpg) repeat fixed 100%;
+  max-width: 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
