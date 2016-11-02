@@ -173,9 +173,6 @@ html, body {
     background: url(img/123.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    background-origin: border-box;
   }
 }
