@@ -27,15 +27,14 @@ html, body {
 .first {
   height: 100vh;
   overflow: hidden;
-  background: url(img/main.jpg) repeat fixed 100%;
+  background: url(img/1234.jpg) repeat fixed 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.first h3,
-.first h4 {
+.first p {
   font-size: 2em;
   text-align: center;
   color: #fff;
@@ -45,6 +44,17 @@ html, body {
   height: 100vh;
   overflow: hidden;
   background-color: #dee1e5;
+}
+
+.third {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #555;
+}
+
+.top-panel {
+  height: 50px;
+  background-color: #fff;
 }
 
 
