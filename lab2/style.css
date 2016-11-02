@@ -36,7 +36,7 @@ html, body {
 
 .second {
   height: 100vh;
-  background: url(img/cover.jpg) fixed;
+  background: url(img/cover.jpg) no-repeat fixed;
   background-size: cover;
   background-color: #dee1e5; }
 
