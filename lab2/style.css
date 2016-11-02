@@ -19,7 +19,9 @@ html, body {
 .container {
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  border: 0;
+  overflow-x: hidden; }
 
 .first {
   height: 100vh;
@@ -137,12 +139,10 @@ html, body {
   .first {
     background: url(img/123.jpg) no-repeat;
     background-size: cover;
-    height: 100vh; }
+    height: 100vh;
+    overflow-x: hidden; }
 
   .container {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border: 0; } }
+    overflow-x: hidden; } }
 
 /*# sourceMappingURL=style.css.map */
