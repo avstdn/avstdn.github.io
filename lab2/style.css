@@ -23,7 +23,6 @@ html, body {
 
 .first {
   height: 100vh;
-  overflow: hidden;
   background: url(img/123.jpg) no-repeat fixed 100%;
   background-size: cover;
   display: flex;
