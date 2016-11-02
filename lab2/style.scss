@@ -1,5 +1,6 @@
 html, body {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .hamburger {
   background: none;
@@ -14,12 +15,14 @@ html, body {
   font-weight: bold;
   cursor: pointer;
   outline: none;
-  z-index: 2; }
+  z-index: 2;
+}
 
 .container {
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 .first {
   height: 100vh;
@@ -28,19 +31,24 @@ html, body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .first h3,
 .first h4 {
   font-size: 2em;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+}
 
 .second {
   height: 100vh;
   overflow: hidden;
-  background-color: #dee1e5; }
+  background-color: #dee1e5;
+}
 
+
+//////////////////* Icon 1 */////////////
 #nav-icon1 {
   width: 30px;
   height: 25px;
@@ -57,7 +65,8 @@ html, body {
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
-  z-index: 1; }
+  z-index: 1;
+}
 
 #nav-icon1 span {
   display: block;
@@ -75,34 +84,44 @@ html, body {
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out; }
+  transition: 0.25s ease-in-out;
+}
 
 #nav-icon1 span:nth-child(1) {
-  top: 0px; }
+  top: 0px;
+}
 
 #nav-icon1 span:nth-child(2) {
-  top: 9px; }
+  top: 9px;
+}
 
 #nav-icon1 span:nth-child(3) {
-  top: 18px; }
+  top: 18px;
+}
 
 #nav-icon1.open span:nth-child(1) {
   top: 9px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
-  transform: rotate(135deg); }
+  transform: rotate(135deg);
+}
 
 #nav-icon1.open span:nth-child(2) {
   opacity: 0;
-  left: -30px; }
+  left: -30px;
+}
 
 #nav-icon1.open span:nth-child(3) {
   top: 9px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
-  transform: rotate(-135deg); }
+  transform: rotate(-135deg);
+}
+
+
+///// RUBIC LOADER ///////////
 
 .wrapper {
   position: fixed;
@@ -110,7 +129,8 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: white; }
+  background: rgb(255, 255, 255);
+}
 
 .rubik-loader {
   transform: translate(-50%, -50%);
@@ -121,6 +141,6 @@ html, body {
   top: 50%;
   background-image: url(http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif);
   background-repeat: no-repeat;
-  background-position: center; }
-
-/*# sourceMappingURL=style.css.map */
+  background-position: center;
+  // background-color: rgba(0, 0, 0, .9);
+}
