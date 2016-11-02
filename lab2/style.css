@@ -1,5 +1,6 @@
 html, body {
-  background-color: #fff; }
+  background-color: #fff;
+  box-sizing: border box; }
 
 .hamburger {
   background: none;
@@ -20,8 +21,7 @@ html, body {
   width: 100%;
   padding: 0;
   margin: 0;
-  border: 0;
-  overflow-x: hidden; }
+  border: 0; }
 
 .first {
   height: 100vh;
@@ -136,13 +136,16 @@ html, body {
   background-position: center; }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    box-sizing: border box; }
+
   .first {
     background: url(img/123.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
-    overflow-x: hidden; }
+    box-sizing: border box; }
 
   .container {
-    overflow-x: hidden; } }
+    box-sizing: border box; } }
 
 /*# sourceMappingURL=style.css.map */
