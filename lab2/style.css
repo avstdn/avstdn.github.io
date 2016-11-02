@@ -137,6 +137,10 @@ html, body {
   .first {
     background: url(img/123.jpg) no-repeat;
     background-size: cover;
-    height: 100vh; } }
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0; } }
 
 /*# sourceMappingURL=style.css.map */
