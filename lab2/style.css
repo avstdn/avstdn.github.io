@@ -23,7 +23,7 @@ html, body {
 
 .first {
   height: 100vh;
-  background: url(img/123.jpg) fixed 100%;
+  background: url(img/123.jpg) fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
