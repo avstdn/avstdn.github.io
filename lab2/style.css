@@ -23,7 +23,7 @@ html, body {
 
 .first {
   height: 100vh;
-  background: url(img/123.jpg) fixed;
+  background: url(img/123.jpg) fixed 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ html, body {
 .second {
   height: 100vh;
   overflow: hidden;
-  background: url(img/cover.jpg) fixed;
+  background: url(img/cover.jpg) no-repeat fixed center;
   background-size: cover;
   background-color: #dee1e5; }
 
