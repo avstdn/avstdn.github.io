@@ -23,7 +23,7 @@ html, body {
 
 .first {
   height: 100vh;
-  background: url(img/123.jpg) no-repeat;
+  background: url(img/123.jpg) no-repeat fixed;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@ html, body {
 
 .second {
   height: 100vh;
-  background: url(img/cover.jpg) no-repeat;
+  background: url(img/cover.jpg) no-repeat fixed;
   background-size: cover;
   background-color: #dee1e5; }
 
@@ -126,5 +126,11 @@ html, body {
   background-image: url(http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif);
   background-repeat: no-repeat;
   background-position: center; }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  background: url(img/123.jpg) no-repeat;
+  justify-content: center;
+  background-size: cover;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */
