@@ -45,13 +45,10 @@ html, body {
   overflow: hidden;
   background-color: #555; }
 
-.top-panel {
+.nav-right {
   position: fixed;
-  top: 0;
-  height: 50px;
-  width: 100%;
-  background-color: grey;
-  color: #fff; }
+  right: 34px;
+  top: 50%; }
 
 #nav-icon1 {
   width: 30px;
