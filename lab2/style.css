@@ -22,14 +22,16 @@
 .first {
   overflow: hidden;
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .first:before {
   background: url(img/123.jpg) no-repeat fixed center center;
   background-size: cover;
-  z-index: -3;
+  z-index: -1;
   content: " ";
-  will-change: transform;
   position: fixed;
   width: 100%;
   height: 100%; }
@@ -45,7 +47,6 @@
 
 .third {
   height: 100vh;
-  overflow: hidden;
   background-color: #555; }
 
 .navigation {
@@ -127,24 +128,5 @@
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg); }
-
-.wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white; }
-
-.rubik-loader {
-  transform: translate(-50%, -50%);
-  width: 164px;
-  height: 164px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  background-image: url(http://smallenvelop.com/wp-content/uploads/2014/08/Preloader_3.gif);
-  background-repeat: no-repeat;
-  background-position: center; }
 
 /*# sourceMappingURL=style.css.map */
