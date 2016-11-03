@@ -46,6 +46,3 @@ $(window).on('load', function () {
 //     $('.original').css('visibility','visible');
 //   }
 // }
-
-var clientHeight = $(window).height();
-$('.first').css('height', clientHeight);
