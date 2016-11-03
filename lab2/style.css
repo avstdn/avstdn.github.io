@@ -28,7 +28,7 @@
   justify-content: center; }
 
 .first:before {
-  background: url(img/123.jpg) no-repeat fixed center center;
+  background: url(img/123.jpg) no-repeat fixed;
   background-size: cover;
   z-index: -1;
   content: " ";
