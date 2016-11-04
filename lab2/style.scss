@@ -229,4 +229,8 @@ html, body {
     width: 100%;
     z-index: 0;
   }
+
+  .first:before {
+  z-index: -1;
+  }
 }
