@@ -6,18 +6,88 @@ body {
   font-family: 'Dosis', sans-serif;
   background-color: #000; }
 
+.navigation {
+  position: fixed;
+  top: 40%;
+  right: 15px;
+  z-index: 1; }
+
+.dot {
+  list-style-type: none;
+  width: 10px;
+  height: 10px;
+  background: #666666;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #666666; }
+
+#nav-icon1 {
+  width: 30px;
+  height: 25px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 1; }
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out; }
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px; }
+
+#nav-icon1 span:nth-child(2) {
+  top: 9px; }
+
+#nav-icon1 span:nth-child(3) {
+  top: 18px; }
+
+#nav-icon1.open span:nth-child(1) {
+  top: 9px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg); }
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -30px; }
+
+#nav-icon1.open span:nth-child(3) {
+  top: 9px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg); }
+
 .container {
   color: #fff;
   position: relative; }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: yellow;
-  width: 100%;
-  height: 100%;
-  z-index: 10000; }
 
 .first-section {
   background-image: url(img/123.jpg);
@@ -61,10 +131,18 @@ body {
   background-color: #000; }
 
 .wrapper {
+  background: transparent;
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%; }
+
+.wrapper-faded {
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%; }
 
