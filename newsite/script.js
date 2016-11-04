@@ -14,3 +14,30 @@ $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
     }
 });
 
+// SCROLL TO SECTION ////////
+$(document).ready(function(){
+  $('.dot1').click(function(){
+    var speed = 1000; // scrolling speed
+    var top = $('.first-section').offset().top; // scroll to
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
+  $('.dot2').click(function(){
+    var speed = 1000; // scrolling speed
+    var top = $('.second-section').offset().top; // scroll to
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
+  $('.dot3').click(function(){
+    var speed = 1000; // scrolling speed
+    var top = $('.third-section').offset().top; // scroll to
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
+  $('.dot4').click(function(){
+    var speed = 1000; // scrolling speed
+    var top = $('.footer').offset().top; // scroll to
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
+});

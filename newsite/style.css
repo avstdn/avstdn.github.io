@@ -4,7 +4,8 @@
 
 body {
   font-family: 'Dosis', sans-serif;
-  background-color: #000; }
+  background-color: #000;
+  letter-spacing: 2px; }
 
 .navigation {
   position: fixed;
@@ -12,7 +13,7 @@ body {
   right: 15px;
   z-index: 1; }
 
-.dot {
+[class^='dot'] {
   list-style-type: none;
   width: 10px;
   height: 10px;
