@@ -75,6 +75,7 @@ html, body {
   position: fixed;
   top: 40%;
   right: 15px;
+  z-index: 1;
 }
 
 .dot {
@@ -226,5 +227,6 @@ html, body {
     background-size: cover;
     height: 100vh;
     width: 100%;
+    z-index: 0;
   }
 }
