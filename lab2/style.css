@@ -129,4 +129,11 @@
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg); }
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .first {
+    background: url(img/123.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%; } }
+
 /*# sourceMappingURL=style.css.map */
