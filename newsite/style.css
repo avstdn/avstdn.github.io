@@ -102,7 +102,7 @@ body {
 .second-section .side-text {
   float: left;
   max-width: 500px;
-  min-width: 300px;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
