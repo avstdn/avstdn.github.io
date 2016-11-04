@@ -231,6 +231,6 @@ html, body {
   }
 
   .first:before {
-  z-index: -1;
+  display: none;
   }
 }
