@@ -44,7 +44,15 @@ $(document).ready(function(){
     // $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
     // $(this).css('background', '#fff');
-    var top = $('.footer').offset().top;
+    var top = $('.fourth-section').offset().top;
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
+  $('#5').click(function(){
+    // $('[class ^= "dot"]').css('background', '#666');
+    var speed = 1000;
+    // $(this).css('background', '#fff');
+    var top = $('.fifth-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
@@ -77,6 +85,20 @@ $(window).on('scroll', function () {
     if (curPos >= top && curPos <= bottom) {
       $('.dot').removeClass('dot-active');
       $('#3 .dot').addClass('dot-active');
+    }
+
+  var top = $('.fourth-section').offset().top;
+  var bottom = top + $('.third-section').outerHeight();
+    if (curPos >= top && curPos <= bottom) {
+      $('.dot').removeClass('dot-active');
+      $('#4 .dot').addClass('dot-active');
+    }
+
+  var top = $('.fifth-section').offset().top;
+  var bottom = top + $('.third-section').outerHeight();
+    if (curPos >= top && curPos <= bottom) {
+      $('.dot').removeClass('dot-active');
+      $('#5 .dot').addClass('dot-active');
     }
 
 });
