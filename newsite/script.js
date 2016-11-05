@@ -16,6 +16,7 @@ $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 
 // SCROLL TO SECTION ////////
 $(document).ready(function(){
+  $('#1 .dot').addClass('dot-active');
   $('#1').click(function(){
     // $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000; // scrolling speed
