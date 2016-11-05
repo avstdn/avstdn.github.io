@@ -128,11 +128,25 @@ ul {
   position: relative; }
 
 .first-section {
-  background-image: url(img/123.jpg);
+  position: relative;
+  background-image: url(img/123.jpg), url(ico/arrow.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%; }
+
+.first-section img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px; }
+
+.first-section img:hover {
+  transition: all ease .2s;
+  transform: scale(1.3); }
 
 .second-section .side-text > * {
   padding-bottom: 20px;

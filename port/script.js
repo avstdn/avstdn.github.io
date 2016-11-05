@@ -57,6 +57,13 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
+
+  $('#arrow').click(function(){
+    var speed = 1000; // scrolling speed
+    var top = $('.second-section').offset().top; // scroll to
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
 });
 
 
