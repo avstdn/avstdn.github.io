@@ -39,18 +39,22 @@ ul {
   transform: scale(1.3); }
 
 .tips {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
   display: inline-block;
   padding-right: 5px;
   opacity: 0;
-  transition: all ease .2s; }
+  transition: transform .2s,opacity .2s;
+  transition-property: transform, opacity;
+  transition-duration: 0.2s, 0.2s;
+  transition-timing-function: initial, initial;
+  transition-delay: initial, initial; }
 
 .nav-row:hover .tips {
-  opacity: 1;
-  transition: all ease .2s; }
+  opacity: 1; }
 
 .nav-row:hover .dot {
   transition: all ease .2s;

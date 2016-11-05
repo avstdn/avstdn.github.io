@@ -50,7 +50,8 @@ ul {
 }
 
 .tips {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   color: #fff;
   // float: right;
@@ -59,12 +60,15 @@ ul {
   padding-right: 5px;
   // margin: -5px -100px;
   opacity: 0;
-  transition: all ease .2s;
+    transition: transform .2s,opacity .2s;
+    transition-property: transform, opacity;
+    transition-duration: 0.2s, 0.2s;
+    transition-timing-function: initial, initial;
+    transition-delay: initial, initial;
 }
 
 .nav-row:hover .tips {
   opacity: 1;
-  transition: all ease .2s;
 }
 
 .nav-row:hover .dot {
