@@ -11,17 +11,40 @@ body {
   position: fixed;
   top: 40%;
   right: 15px;
-  z-index: 1; }
+  z-index: 1;
+  display: block;
+  text-align: right; }
 
-[class^='dot'] {
-  list-style-type: none;
+.nav-row {
+  margin-bottom: 20px; }
+
+ul {
+  list-style-type: none; }
+
+.dot {
+  position: relative;
+  top: 4px;
   width: 10px;
   height: 10px;
   background: #666;
   cursor: pointer;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  border: 1px solid rgba(102, 102, 102, 0.3); }
+  border-radius: 50%;
+  border: 1px solid rgba(102, 102, 102, 0.3);
+  float: right;
+  display: inline-block; }
+
+.dot-active {
+  background: #fff; }
+
+.navigation .tips {
+  cursor: pointer;
+  display: inline-block;
+  padding-right: 5px;
+  opacity: 0; }
+
+.nav-row:hover .tips {
+  opacity: 1;
+  transition: all ease .5s; }
 
 #nav-icon1 {
   width: 30px;
