@@ -20,14 +20,14 @@ $(document).ready(function(){
     $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000; // scrolling speed
     var top = $('.first-section').offset().top; // scroll to
-    $(this).css('background', '#fff');
+    // $(this).css('background', '#fff');
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('.dot2').click(function(){
     $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    $(this).css('background', '#fff');
+    // $(this).css('background', '#fff');
     var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
@@ -35,7 +35,7 @@ $(document).ready(function(){
   $('.dot3').click(function(){
     $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    $(this).css('background', '#fff');
+    // $(this).css('background', '#fff');
     var top = $('.third-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
@@ -43,7 +43,7 @@ $(document).ready(function(){
   $('.dot4').click(function(){
     $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    $(this).css('background', '#fff');
+    // $(this).css('background', '#fff');
     var top = $('.footer').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
