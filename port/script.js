@@ -68,11 +68,9 @@ $(document).ready(function(){
 
 
 
-var staticCont = $('#static');
 
 $(window).on('scroll', function () {
   var curPos = $(this).scrollTop();
-  staticCont.text(curPos);
 
   var top = $('.first-section').offset().top;
   var bottom = top + $('.first-section').outerHeight();
