@@ -169,7 +169,7 @@ ul {
 }
 
 .first-section img {
-  border: 2px solid #000;
+  border: 1px solid rgba(255, 255, 255, .7);
   border-radius: 50%;
   position: absolute;
   bottom: 10px;
@@ -178,6 +178,7 @@ ul {
   display: block;
   width: 32px;
   height: 32px;
+  background-color: rgba(255, 255, 255, .7);
   // box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
 }
 
@@ -312,8 +313,8 @@ vertical-align: middle;
 
 }
 
-.block-left:hover .block-ico-left,
-.block-right:hover .block-ico-right {
+.block-content-left:hover + .block-ico-left,
+.block-content-right:hover + .block-ico-right {
   background-color: #fff;
 }
 
@@ -327,6 +328,50 @@ vertical-align: middle;
 
 
 // FOURTH SECTION /////////////////////////
+.skills-wrapper {
+  display: block;
+  margin: 50px auto;
+  height: 100%;
+  width: 80%;
+}
+
+.skills-title {
+  height: 60px;
+}
+
+.skills-content {
+  width: 100%;
+
+}
+
+.skills-left {
+  text-align: center;
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  min-width: 300px;
+}
+
+.skills-middle {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 33.33%;
+  min-width: 300px;
+}
+
+.skills-right {
+  text-align: center;
+  display: inline-block;
+  float: left;
+  min-width: 300px;
+  width: 33.33%;
+}
+
+
+
+
+
 .fourth-section {
   background-color: #000;
   // background-size: cover;

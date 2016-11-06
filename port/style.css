@@ -136,7 +136,7 @@ ul {
   width: 100%; }
 
 .first-section img {
-  border: 2px solid #000;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   position: absolute;
   bottom: 10px;
@@ -144,7 +144,8 @@ ul {
   margin-left: -16px;
   display: block;
   width: 32px;
-  height: 32px; }
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.7); }
 
 .first-section img:hover {
   transition: all ease .2s;
@@ -250,8 +251,8 @@ ul {
   border-radius: 50%;
   background-color: #000; }
 
-.block-left:hover .block-ico-left,
-.block-right:hover .block-ico-right {
+.block-content-left:hover + .block-ico-left,
+.block-content-right:hover + .block-ico-right {
   background-color: #fff; }
 
 .vertical-arrow {
@@ -260,6 +261,39 @@ ul {
   height: 100%;
   margin-left: -4px;
   border-right: 8px solid #666; }
+
+.skills-wrapper {
+  display: block;
+  margin: 50px auto;
+  height: 100%;
+  width: 80%; }
+
+.skills-title {
+  height: 60px; }
+
+.skills-content {
+  width: 100%; }
+
+.skills-left {
+  text-align: center;
+  display: inline-block;
+  float: left;
+  width: 33.33%;
+  min-width: 300px; }
+
+.skills-middle {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 33.33%;
+  min-width: 300px; }
+
+.skills-right {
+  text-align: center;
+  display: inline-block;
+  float: left;
+  min-width: 300px;
+  width: 33.33%; }
 
 .fourth-section {
   background-color: #000;
