@@ -421,6 +421,30 @@ vertical-align: middle;
 
 
 // FIFTH SECTION /////////////////////////
+.contact-container {
+  display: table;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.contact-input {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.contact-input input,
+.contact-input textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
 .fifth-section {
   background: url(img/contact-strip.jpg) top repeat-x,
               url(img/contact-strip-vert.jpg) left repeat-y,
@@ -443,11 +467,11 @@ vertical-align: middle;
   margin: 0 5% 0 auto;
   height: 70px;
   width: 70px;
-  transition: all ease .5s;
+  transition: all ease-in .5s;
 }
 
 .rocket:hover {
-  transition: all ease .5s;
+  transition: all ease-in .5s;
   transform: scale(1.2);
 }
 
