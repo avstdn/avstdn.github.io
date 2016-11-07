@@ -1,7 +1,8 @@
 // BURGER OPEN //////////////
 var toggle = true;
+var burger = $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4');
 $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
-    $(this).toggleClass('open');
+    burger.toggleClass('open');
     $('.wrapper').toggleClass('wrapper-faded');
     if(toggle) {
       $('.faded-menu').removeClass('animated fadeOutLeftBig');
@@ -77,6 +78,7 @@ $(document).ready(function(){
     var speed = 1000;
     var top = $('.first-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
+    burger.toggleClass('open');
     $('.wrapper').toggleClass('wrapper-faded');
     $('.faded-menu').removeClass('animated bounceInLeft');
     $('.faded-menu').addClass('animated fadeOutLeftBig');
@@ -87,6 +89,7 @@ $(document).ready(function(){
     var speed = 1000;
     var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
+    burger.toggleClass('open');
     $('.wrapper').toggleClass('wrapper-faded');
     $('.faded-menu').removeClass('animated bounceInLeft');
     $('.faded-menu').addClass('animated fadeOutLeftBig');
@@ -97,6 +100,7 @@ $(document).ready(function(){
     var speed = 1000;
     var top = $('.third-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
+    burger.toggleClass('open');
     $('.wrapper').toggleClass('wrapper-faded');
     $('.faded-menu').removeClass('animated bounceInLeft');
     $('.faded-menu').addClass('animated fadeOutLeftBig');
@@ -107,6 +111,7 @@ $(document).ready(function(){
     var speed = 1000;
     var top = $('.fourth-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
+    burger.toggleClass('open');
     $('.wrapper').toggleClass('wrapper-faded');
     $('.faded-menu').removeClass('animated bounceInLeft');
     $('.faded-menu').addClass('animated fadeOutLeftBig');
@@ -117,6 +122,7 @@ $(document).ready(function(){
     var speed = 1000;
     var top = $('.fifth-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
+    burger.toggleClass('open');
     $('.wrapper').toggleClass('wrapper-faded');
     $('.faded-menu').removeClass('animated bounceInLeft');
     $('.faded-menu').addClass('animated fadeOutLeftBig');
