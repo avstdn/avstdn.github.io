@@ -343,7 +343,8 @@ ul {
   width: 100%; }
 
 .fifth-section {
-  background-color: #d1d1d1;
+  margin-top: -8px;
+  background: #161616;
   height: 100vh;
   width: 100%; }
 
@@ -355,7 +356,12 @@ ul {
 
 .rocket {
   height: 70px;
-  width: 70px; }
+  width: 70px;
+  transition: all ease .5s; }
+
+.rocket:hover {
+  transition: all ease .5s;
+  transform: scale(1.2); }
 
 .wrapper {
   color: rgba(255, 255, 255, 0);

@@ -423,7 +423,8 @@ vertical-align: middle;
 
 // FIFTH SECTION /////////////////////////
 .fifth-section {
-  background-color: #d1d1d1;
+  margin-top: -8px;
+  background: #161616;
   // background-size: cover;
   // background-repeat: no-repeat;
   height: 100vh;
@@ -440,6 +441,12 @@ vertical-align: middle;
 .rocket {
   height: 70px;
   width: 70px;
+  transition: all ease .5s;
+}
+
+.rocket:hover {
+  transition: all ease .5s;
+  transform: scale(1.2);
 }
 
 .wrapper {
