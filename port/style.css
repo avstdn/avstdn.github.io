@@ -357,7 +357,7 @@ ul {
   align-items: center; }
 
 .rocket {
-  margin: 0 auto;
+  margin: 0 5% 0 auto;
   height: 70px;
   width: 70px;
   transition: all ease .5s; }
