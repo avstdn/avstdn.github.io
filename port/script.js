@@ -64,6 +64,13 @@ $(document).ready(function(){
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
+
+  $('.rocket').click(function(){
+    var speed = 1000; // scrolling speed
+    var top = $('.first-section').offset().top; // scroll to
+    $('html, body').animate({scrollTop: top}, speed);
+    return false;
+  });
 });
 
 

@@ -405,8 +405,15 @@ vertical-align: middle;
   width: 100px;
 }
 
+.fourth-wrapper {
+  width: 100%;
+  height: 100%;
+  background: url(img/bg-footer.png) top repeat-x;
+}
+
 .fourth-section {
-  background-color: #666;
+  color: #000;
+  background: url(img/background.jpg);
   // background-size: cover;
   // background-repeat: no-repeat;
   height: 100vh;
@@ -424,6 +431,7 @@ vertical-align: middle;
 } // FIFTH SECTION /////////////////////////
 
 .footer {
+  background: url(img/contact-strip.jpg) top repeat-x;
   height: 200px;
   width: 100%;
   background-color: #b3d4fc;
