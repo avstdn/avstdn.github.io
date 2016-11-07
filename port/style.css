@@ -153,18 +153,20 @@ ul {
   cursor: pointer; }
 
 .second-section .side-text > * {
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  text-align: center; }
 
 .second-section .side-text {
   max-width: 500px;
-  padding: 0 20px; }
+  padding: 50px 20px; }
 
 .second-section {
   background-color: #1b1b1b;
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  display: flex; }
 
 .third-section {
   position: relative;
