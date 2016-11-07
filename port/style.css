@@ -406,4 +406,8 @@ ul {
 .faded-menu h1 {
   cursor: pointer; }
 
+@media only screen and (max-device-width: 960px) {
+  .navigation {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */
