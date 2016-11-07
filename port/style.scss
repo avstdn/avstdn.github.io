@@ -422,19 +422,19 @@ vertical-align: middle;
 
 // FIFTH SECTION /////////////////////////
 .fifth-section {
-  // margin-top: -8px;
-  background: #161616;
-  // background-size: cover;
-  // background-repeat: no-repeat;
+  background: url(img/contact-strip.jpg) top repeat-x,
+              url(img/contact-strip-vert.jpg) left repeat-y,
+              url(img/contact-strip.jpg) bottom repeat-x,
+              url(img/contact-strip-vert.jpg) right repeat-y;
+  background-color: #b3d4fc;
   height: 100vh;
   width: 100%;
 } // FIFTH SECTION /////////////////////////
 
 .footer {
-  background: url(img/contact-strip.jpg) top repeat-x;
   height: 200px;
   width: 100%;
-  background-color: #b3d4fc;
+  background-color: #455261;
   display: flex;
   align-items: center;
 }
