@@ -408,6 +408,13 @@ ul {
 
 @media only screen and (max-device-width: 960px) {
   .navigation {
-    display: none; } }
+    display: none; }
+
+  .second-section,
+  .third-section,
+  .fourth-section,
+  .fifth-section {
+    width: 100vw;
+    height: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
