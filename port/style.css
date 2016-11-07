@@ -330,7 +330,7 @@ ul {
 .fourth-section {
   color: #000;
   background: url(img/background.jpg);
-  height: 100vh;
+  height: 100%;
   width: 100%; }
 
 .fifth-section {
