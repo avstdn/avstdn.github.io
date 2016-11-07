@@ -436,10 +436,11 @@ vertical-align: middle;
   height: 200px;
   width: 100%;
   background-color: #b3d4fc;
+  display: flex;
+  align-items: center;
 }
 
 .rocket {
-  display: block;
   margin: 0 auto;
   height: 70px;
   width: 70px;
