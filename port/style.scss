@@ -209,7 +209,7 @@ ul {
   background-color: #1b1b1b;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   // flex-direction: column;
@@ -406,7 +406,7 @@ vertical-align: middle;
 
 .fourth-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(img/bg-footer.png) top repeat-x;
 }
 
@@ -415,14 +415,14 @@ vertical-align: middle;
   background: url(img/background.jpg);
   // background-size: cover;
   // background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 } // THIRD SECTION /////////////////////////
 
 
 // FIFTH SECTION /////////////////////////
 .fifth-section {
-  margin-top: -8px;
+  // margin-top: -8px;
   background: #161616;
   // background-size: cover;
   // background-repeat: no-repeat;

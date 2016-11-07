@@ -164,7 +164,7 @@ ul {
   background-color: #1b1b1b;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex; }
 
@@ -324,17 +324,16 @@ ul {
 
 .fourth-wrapper {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: url(img/bg-footer.png) top repeat-x; }
 
 .fourth-section {
   color: #000;
   background: url(img/background.jpg);
-  height: 100%;
+  height: 100vh;
   width: 100%; }
 
 .fifth-section {
-  margin-top: -8px;
   background: #161616;
   height: 100vh;
   width: 100%; }
