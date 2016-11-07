@@ -403,4 +403,7 @@ ul {
   width: 300px;
   height: 300px; }
 
+.faded-menu h1 {
+  cursor: pointer; }
+
 /*# sourceMappingURL=style.css.map */
