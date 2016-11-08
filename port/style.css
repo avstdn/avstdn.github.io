@@ -7,6 +7,9 @@ body {
   background-color: #000;
   letter-spacing: 2px; }
 
+.clearfix {
+  clear: both; }
+
 .navigation {
   position: fixed;
   top: 40%;
@@ -266,10 +269,13 @@ ul {
   height: 60px; }
 
 .skills-content {
-  width: 90%;
-  margin: 0 auto; }
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  background-color: rgba(83, 83, 83, 0.3); }
 
 .skills-left {
+  margin-right: 50px;
   text-align: center;
   display: inline-block;
   float: left;
@@ -278,7 +284,7 @@ ul {
 
 .skills-right {
   display: inline-block;
-  float: right;
+  float: left;
   min-width: 330px;
   width: 40%; }
 

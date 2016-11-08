@@ -9,6 +9,9 @@ body {
   letter-spacing: 2px;
 }
 
+.clearfix {
+  clear: both;
+}
 
 //////////////////////////////////
 ////// RIGHT NAVIGATION MENU /////
@@ -340,12 +343,15 @@ vertical-align: middle;
 }
 
 .skills-content {
-  width: 90%;
+  display: inline-block;
+  vertical-align: top;
+  // height: 100%;
   margin: 0 auto;
-
+  background-color: rgba(83, 83, 83, .3);
 }
 
 .skills-left {
+  margin-right: 50px;
   text-align: center;
   display: inline-block;
   float: left;
@@ -358,7 +364,7 @@ vertical-align: middle;
   // text-align: center;
   // margin-left: 30px;
   display: inline-block;
-  float: right;
+  float: left;
   min-width: 330px;
   width: 40%;
   // background-color: rgba(83, 83, 83, .3);
