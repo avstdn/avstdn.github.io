@@ -259,39 +259,36 @@ ul {
   border-right: 8px solid #666; }
 
 .skills-wrapper {
-  display: block;
   padding: 50px 0;
   margin: 0 auto;
   height: 100%;
-  width: 80%; }
+  width: 80%;
+  text-align: center; }
 
 .skills-title {
   height: 60px; }
 
 .skills-content {
   display: inline-block;
-  vertical-align: top;
-  margin: 0 auto;
   background-color: rgba(83, 83, 83, 0.3); }
 
 .skills-left {
-  margin-right: 50px;
+  margin: 0 10px;
   text-align: center;
   display: inline-block;
-  float: left;
-  width: 40%;
-  min-width: 330px; }
+  width: 330px; }
 
 .skills-right {
+  margin: 0 10px;
   display: inline-block;
-  float: left;
-  min-width: 330px;
-  width: 40%; }
+  width: 330px;
+  vertical-align: top; }
 
 .tools-wrap {
   display: block;
   margin: 0 auto;
-  width: 323px; }
+  width: 323px;
+  text-align: left; }
 
 .skills-left span {
   margin: 4px 2px;
