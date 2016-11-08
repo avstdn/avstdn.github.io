@@ -266,11 +266,10 @@ ul {
   height: 60px; }
 
 .skills-content {
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
 
 .skills-left {
-  margin-right: 60px;
   text-align: center;
   display: inline-block;
   float: left;
@@ -279,7 +278,7 @@ ul {
 
 .skills-right {
   display: inline-block;
-  float: left;
+  float: right;
   min-width: 330px;
   width: 40%; }
 
