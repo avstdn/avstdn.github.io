@@ -132,7 +132,11 @@ $(document).ready(function(){
 
 });
 
-
+// $('.rocket').hover(function() {
+//   $(".rocket").attr("src","ico/startup-hover.svg");
+// }, function() {
+//   $(".rocket").attr("src","ico/startup.svg");
+// });
 
 
 $(window).on('scroll', function () {

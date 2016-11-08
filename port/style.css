@@ -266,63 +266,90 @@ ul {
   height: 60px; }
 
 .skills-content {
-  width: 100%; }
+  width: 80%;
+  margin: 0 auto; }
 
 .skills-left {
+  margin-right: 60px;
   text-align: center;
   display: inline-block;
   float: left;
-  width: 33.33%;
-  min-width: 300px; }
-
-.skills-middle {
-  display: inline-block;
-  float: left;
-  text-align: center;
-  width: 33.33%;
-  min-width: 300px; }
+  width: 40%;
+  min-width: 330px; }
 
 .skills-right {
-  text-align: center;
   display: inline-block;
   float: left;
-  min-width: 300px;
-  width: 33.33%; }
+  min-width: 330px;
+  width: 40%; }
 
-.tech-ico1 {
-  display: inline-block;
-  background: url(ico/1234.png);
-  background-position: 0 100px;
-  height: 100px;
-  width: 100px; }
+.tools-wrap {
+  display: block;
+  margin: 0 auto;
+  width: 323px; }
 
-.tech-ico2 {
+.skills-left span {
+  margin: 4px 2px;
   display: inline-block;
-  background: url(ico/1234.png);
-  background-position: 100px 100px;
   height: 100px;
-  width: 100px; }
+  width: 100px;
+  background-image: url(ico/sprite-1.png);
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.4); }
 
-.tech-ico3 {
+.skills-right span {
+  margin: 4px 2px;
   display: inline-block;
-  background: url(ico/1234.png);
-  background-position: 200px 100px;
   height: 100px;
-  width: 100px; }
+  width: 100px;
+  background-image: url(ico/sprite-2.png);
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.4); }
 
-.tech-ico4 {
-  display: inline-block;
-  background: url(ico/1234.png);
-  background-position: 300px 100px;
-  height: 100px;
-  width: 100px; }
+.skills-right p {
+  text-align: center; }
 
-.tech-ico5 {
-  display: inline-block;
-  background: url(ico/1234.png);
-  background-position: 400px 100px;
-  height: 100px;
-  width: 100px; }
+.tech-ico-1 {
+  background-position: 0 0; }
+
+.tech-ico-2 {
+  background-position: -100px 0; }
+
+.tech-ico-3 {
+  background-position: -200px 0; }
+
+.tech-ico-4 {
+  background-position: 0 -100px; }
+
+.tech-ico-5 {
+  background-position: -100px -100px; }
+
+.tech-ico-6 {
+  background-position: -200px -100px; }
+
+.tech-ico-7 {
+  background-position: 0 -200px; }
+
+.tech-ico-8 {
+  background-position: -100px -200px; }
+
+.tech-ico-9 {
+  background-position: -200px -200px; }
+
+.tools-ico-1 {
+  background-position: 0 0; }
+
+.tools-ico-2 {
+  background-position: -100px 0; }
+
+.tools-ico-3 {
+  background-position: -200px 0; }
+
+.tools-ico-4 {
+  background-position: -300px 0; }
+
+.tools-ico-5 {
+  background-position: -400px 0; }
 
 .fourth-wrapper {
   width: 100%;
@@ -364,14 +391,20 @@ ul {
   align-items: center; }
 
 .rocket {
+  border: none;
+  background-image: url(ico/startup.svg);
   margin: 0 5% 0 auto;
   height: 70px;
   width: 70px;
   transition: all ease-in .5s; }
 
 .rocket:hover {
+  background-image: url(ico/startup-hover.svg);
   transition: all ease-in .5s;
   transform: scale(1.2); }
+
+img {
+  border: 0; }
 
 .wrapper {
   color: rgba(255, 255, 255, 0);
