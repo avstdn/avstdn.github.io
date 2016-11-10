@@ -4,7 +4,6 @@
 
 body {
   font-family: 'Dosis', sans-serif;
-  background-color: yellow;
   letter-spacing: 2px; }
 
 .container {
@@ -409,9 +408,10 @@ ul {
 .footer {
   height: 200px;
   width: 100%;
-  background-color: #455261;
+  background: url(img/cork-wallet.png);
   display: flex;
-  align-items: center; }
+  align-items: center;
+  color: #000; }
 
 .rocket {
   border: none;
@@ -422,7 +422,6 @@ ul {
   transition: all ease-in .5s; }
 
 .rocket:hover {
-  background-image: url(ico/startup-hover.svg);
   transition: all ease-in 1.5s; }
 
 .invisible {
