@@ -495,3 +495,21 @@ ul {
     transform: rotate(-10deg); }
   20%, 40% {
     transform: rotate(10deg); } }
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 100500; }
+
+#page-preloader .spinner {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("img/preloader.gif") no-repeat;
+  margin: -64px 0 0 -64px; }

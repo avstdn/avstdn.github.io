@@ -1,3 +1,11 @@
+// PRELOADER ////////////////
+$(window).on('load', function () {
+    var $preloader = $('#page-preloader'),
+        $spinner   = $preloader.find('.spinner');
+    $spinner.delay(500).fadeOut();
+    $preloader.delay(550).fadeOut('slow');
+});
+
 // BURGER OPEN //////////////
 var toggle = true;
 var burger = $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4');
