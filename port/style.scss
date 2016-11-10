@@ -5,8 +5,13 @@
 
 body {
   font-family: 'Dosis', sans-serif;
-  background-color: #000;
+  background-color: yellow;
   letter-spacing: 2px;
+}
+
+.container {
+  color: #fff;
+  position: relative;
 }
 
 .clearfix {
@@ -151,17 +156,11 @@ ul {
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
-}
-/////////////////////////////////
-////////// BURGER END ///////////
+} ////////// BURGER END ///////////
 
-.container {
-  color: #fff;
-  position: relative;
-}
-
-
-// FIRST SECTION /////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+// FIRST SECTION /////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 .first-section {
   position: relative;
   background-image: url(img/123.jpg), url(ico/arrow.png);
@@ -169,6 +168,7 @@ ul {
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  clear: both;
 }
 
 .first-section img {
@@ -191,36 +191,23 @@ ul {
   cursor: pointer;
 } // FIRST SECTION /////////////////////////
 
-// SECOND SECTION /////////////////////////
-.second-section .side-text > * {
-  padding-bottom: 20px;
-  text-align: center;
-}
-
-.second-section .side-text {
-  // float: left;
-  max-width:500px;
-  // min-width: 200px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  padding: 50px 20px;
-}
-
+//////////////////////////////////////////////////////////////////////////////////////////
+// SECOND SECTION ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 .second-section {
-  background-color: #1b1b1b;
-  background-size: cover;
-  background-repeat: no-repeat;
-  // height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // align-items: center;
-} // SECOND SECTION /////////////////////////
+  background-color: #000;
+}
 
-// THIRD SECTION /////////////////////////
+.second-container {
+
+}
+
+.second-content {
+
+}
+//////////////////////////////////////////////////////////////////////////////////////////
+// THIRD SECTION /////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 .third-section {
   position: relative;
   background: url(img/body.jpg) repeat;
@@ -328,9 +315,9 @@ vertical-align: middle;
   border-right: 8px solid #666;
 } // THIRD SECTION /////////////////////////
 
-///////////////////////////////////////////
-// FOURTH SECTION /////////////////////////
-///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
+// FOURTH SECTION ////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 .skills-wrapper {
   padding: 50px 0;
   margin: 0 auto;
@@ -358,10 +345,6 @@ vertical-align: middle;
 .skills-left {
   text-align: center;
   display: inline-block;
-  // float: left;
-
-  // background-color: rgba(83, 83, 83, .3);
-
 }
 
 .skills-border {
@@ -369,6 +352,7 @@ vertical-align: middle;
   display: inline-block;
   padding: 0 20px;
   border-right: 1px solid rgba(0, 0, 0, .1);
+  text-align: left;
 }
 
 .skills-left p {
@@ -393,7 +377,6 @@ vertical-align: middle;
   margin: 0 auto;
   width: 323px;
   text-align: left;
-
 }
 
 .skills-left span {
@@ -456,6 +439,10 @@ vertical-align: middle;
   background-position: -200px -200px;
 }
 
+.tech-ico-10 {
+  background-position: 0 -300px;
+}
+
 .tools-ico-1 { // SECOND ICONS ROW /////////////
   background-position: 0 0;
 }
@@ -486,17 +473,17 @@ vertical-align: middle;
 
 .fourth-section {
   color: #000;
-  background: url(img/background.jpg),
-              url(img/bg-footer.png) top repeat-x;;
+  background: url(img/bg-footer.png) top repeat-x,
+              url(img/background.jpg);
   // background-size: cover;
   // background-repeat: no-repeat;
   // height: 100vh;
   width: 100%;
 } // THIRD SECTION /////////////////////////
 
-
-// FIFTH SECTION /////////////////////////
-
+//////////////////////////////////////////////////////////////////////////////////////////
+// FIFTH SECTION /////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 .contact-title {
   font-size: 25px;
   padding: 30px 0 10px;
@@ -530,6 +517,7 @@ vertical-align: middle;
 .contact-input input,
 .contact-input textarea {
   width: 100%;
+  min-width: 300px;
   box-sizing: border-box;
   margin-bottom: 2px;
 }
@@ -538,9 +526,8 @@ vertical-align: middle;
   width: 100%;
 }
 
-
-
 .fifth-section {
+  padding: 80px 0;
   background: url(img/contact-strip.jpg) top repeat-x,
               url(img/contact-strip-vert.jpg) left repeat-y,
               url(img/contact-strip.jpg) bottom repeat-x,
@@ -550,6 +537,8 @@ vertical-align: middle;
   width: 100%;
 } // FIFTH SECTION /////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////
 .footer {
   height: 200px;
   width: 100%;
@@ -567,13 +556,18 @@ vertical-align: middle;
   transition: all ease-in .5s;
 }
 
-.rocket:hover {
-  background-image: url(ico/startup-hover.svg);
-  transition: all ease-in .5s;
-  transform: scale(1.2);
-}
-img {
-  border: 0;
+// .rocket:hover {
+//   background-image: url(ico/startup-hover.svg);
+//   transition: all ease-in .5s;
+//   animation: 1s ease-in-out 0s normal none infinite running trambling-animation;
+// }
+
+.fire {
+  // background-image: url(ico/startup-hover.svg);
+  transition: all ease-in 1.5s;
+  -webkit-transform: translate(0, -10000px);
+  -moz-transform: translate(0, -10000px);
+  -o-transform: translate(0, -10000px);
 }
 .wrapper {
   color: rgba(255, 255, 255, 0);
@@ -624,4 +618,16 @@ img {
   .navigation{
     display: none;
   }
+}
+
+@keyframes trambling-animation {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(-10deg);
+    }
+    20%, 40% {
+        transform: rotate(10deg);
+    }
 }
