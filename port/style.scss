@@ -12,6 +12,7 @@ body {
 .container {
   color: #fff;
   position: relative;
+    overflow: hidden;
 }
 
 .clearfix {
@@ -550,25 +551,37 @@ vertical-align: middle;
 .rocket {
   border: none;
   background-image: url(ico/startup.svg);
-  margin: 0 5% 0 auto;
+  margin: 0 5% -300px auto;
   height: 70px;
   width: 70px;
   transition: all ease-in .5s;
 }
 
-// .rocket:hover {
-//   background-image: url(ico/startup-hover.svg);
-//   transition: all ease-in .5s;
-//   animation: 1s ease-in-out 0s normal none infinite running trambling-animation;
-// }
+.rocket:hover {
+  background-image: url(ico/startup-hover.svg);
+  transition: all ease-in 1.5s;
+  // animation: 1s ease-in-out 0s normal none infinite running trambling-animation;
+}
 
-.fire {
+.invisible {
+  display: none;
+}
+
+.fire-off {
   // background-image: url(ico/startup-hover.svg);
   transition: all ease-in 1.5s;
   -webkit-transform: translate(0, -10000px);
   -moz-transform: translate(0, -10000px);
   -o-transform: translate(0, -10000px);
 }
+
+.fire-on {
+  transition: all ease-in .2s;
+  -webkit-transform: translate(0, -150px);
+  -moz-transform: translate(0, -150px);
+  -o-transform: translate(0, -150px);
+}
+
 .wrapper {
   color: rgba(255, 255, 255, 0);
   background: rgba(0, 0, 0, 0);

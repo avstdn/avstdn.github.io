@@ -177,10 +177,18 @@ $(window).on('scroll', function () {
   if ($(window).scrollTop() == $(document).height() - $(window).height()) {
     $('.dot').removeClass('dot-active');
     $('#5 .dot').addClass('dot-active');
+    $('#apollo').removeClass('invisible');
+    $('#apollo').addClass('rocket fire-on');
+
   }
 
 });
 
 $('.rocket').on('click', function() {
-  $(this).addClass('fire');
+  $(this).removeClass('fire-on');
+  $(this).addClass('fire-off');
+  setTimeout(function() {
+    $('#apollo').removeClass('fire-off');
+    $('#apollo').addClass('invisible');
+  }, 900);
 })
