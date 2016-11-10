@@ -167,7 +167,6 @@ ul {
   background-color: #1b1b1b;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -402,7 +401,11 @@ ul {
 .contact-input input,
 .contact-input textarea {
   width: 100%;
-  max-width: 100%; }
+  box-sizing: border-box;
+  margin-bottom: 2px; }
+
+.contact-input button {
+  width: 100%; }
 
 .fifth-section {
   background: url(img/contact-strip.jpg) top repeat-x, url(img/contact-strip-vert.jpg) left repeat-y, url(img/contact-strip.jpg) bottom repeat-x, url(img/contact-strip-vert.jpg) right repeat-y;
