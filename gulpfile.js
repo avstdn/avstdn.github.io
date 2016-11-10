@@ -9,22 +9,22 @@ gulp.task('default', function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src('port/*.scss')
+  return gulp.src('portfolio/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('port'))
+    .pipe(gulp.dest('portfolio'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('default', ['browser-sync' , 'sass'], function() {
-  gulp.watch('port/*.scss', ['sass']);
-  gulp.watch('port/*.html', browserSync.reload);
-  gulp.watch('port/*.js', browserSync.reload);
+  gulp.watch('portfolio/*.scss', ['sass']);
+  gulp.watch('portfolio/*.html', browserSync.reload);
+  gulp.watch('portfolio/*.js', browserSync.reload);
 });
 
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-      baseDir: 'port'
+      baseDir: 'portfolio'
     },
     notify: false
   });
