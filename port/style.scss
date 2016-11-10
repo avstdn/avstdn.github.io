@@ -328,22 +328,26 @@ vertical-align: middle;
   border-right: 8px solid #666;
 } // THIRD SECTION /////////////////////////
 
-
+///////////////////////////////////////////
 // FOURTH SECTION /////////////////////////
+///////////////////////////////////////////
 .skills-wrapper {
   padding: 50px 0;
   margin: 0 auto;
-  // height: 100%;
   width: 80%;
   text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .skills-title {
   font-size: 25px;
   padding: 30px 0 10px;
   border-bottom: 3px solid #000;
-  margin-left: 30px;
-  display: inline-block;
+  width: 120px;
+  text-align: center;
+  margin: 0 auto;
+  // display: inline-block;
 }
 
 .skills-content {
@@ -368,6 +372,10 @@ vertical-align: middle;
 }
 
 .skills-left p {
+    margin-bottom: 20px;
+}
+
+.skills-right p {
     margin-bottom: 20px;
 }
 
@@ -472,26 +480,42 @@ vertical-align: middle;
 
 .fourth-wrapper {
   width: 100%;
-  height: 100vh;
-  background: url(img/bg-footer.png) top repeat-x;
+  height: 100%;
+  display: table;
 }
 
 .fourth-section {
   color: #000;
-  background: url(img/background.jpg);
+  background: url(img/background.jpg),
+              url(img/bg-footer.png) top repeat-x;;
   // background-size: cover;
   // background-repeat: no-repeat;
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
 } // THIRD SECTION /////////////////////////
 
 
 // FIFTH SECTION /////////////////////////
+
+.contact-title {
+  font-size: 25px;
+  padding: 30px 0 10px;
+  border-bottom: 3px solid #000;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 140px;
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
 .contact-container {
   display: table;
   height: 100%;
   width: 50%;
   margin: 0 auto;
+  padding: 50px 0;
   // display: flex;
   // flex-direction: column;
   // justify-content: center;
@@ -517,7 +541,7 @@ vertical-align: middle;
               url(img/contact-strip.jpg) bottom repeat-x,
               url(img/contact-strip-vert.jpg) right repeat-y;
   background-color: #b3d4fc;
-  height: 100vh;
+  // height: 100vh;
   width: 100%;
 } // FIFTH SECTION /////////////////////////
 
