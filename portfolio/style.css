@@ -145,7 +145,8 @@ ul {
 
 .intro p {
   margin: 5px;
-  font-size: 35px; }
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.8); }
 
 .division {
   width: 100px;
@@ -171,12 +172,27 @@ ul {
   cursor: pointer; }
 
 .second-section {
-  background-color: #000; }
+  background-color: #1d1f25;
+  height: 600px; }
 
 .third-section {
   position: relative;
-  background: url(img/body.jpg) repeat;
-  width: 100%; }
+  background: url(img/land.jpg) repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow: hidden; }
+
+.exp-head {
+  text-align: center;
+  width: 225px;
+  padding: 5px;
+  margin: 35px auto;
+  border-bottom: 3px solid rgba(46, 38, 47, 0.8); }
+
+.exp-head h1 {
+  margin: 0;
+  color: rgba(46, 38, 47, 0.8); }
 
 .block-left {
   padding: 40px 0;
@@ -191,7 +207,7 @@ ul {
   height: 100%;
   width: 70%;
   margin-right: 60px;
-  background-color: rgba(0, 0, 0, 0.9); }
+  background-color: rgba(46, 38, 47, 0.95); }
 
 .block-content-left:after {
   content: '';
@@ -199,7 +215,7 @@ ul {
   right: 20px;
   top: 70px;
   border: 20px solid transparent;
-  border-left: 20px solid rgba(0, 0, 0, 0.9); }
+  border-left: 20px solid rgba(46, 38, 47, 0.95); }
 
 .block-ico-left {
   position: absolute;
@@ -210,7 +226,7 @@ ul {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #000; }
+  background-color: #2e262f; }
 
 .block-right {
   float: right;
@@ -226,7 +242,7 @@ ul {
   height: 100%;
   width: 70%;
   margin-left: 60px;
-  background-color: rgba(0, 0, 0, 0.9); }
+  background-color: rgba(46, 38, 47, 0.95); }
 
 .block-content-right:before {
   content: '';
@@ -234,7 +250,7 @@ ul {
   left: 20px;
   top: 70px;
   border: 20px solid transparent;
-  border-right: 20px solid rgba(0, 0, 0, 0.9); }
+  border-right: 20px solid rgba(46, 38, 47, 0.95); }
 
 .block-ico-right {
   position: absolute;
@@ -245,7 +261,21 @@ ul {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #000; }
+  background: #2e262f; }
+
+.exp-ico {
+  display: block;
+  margin: 14px auto;
+  height: 30px;
+  width: 30px; }
+
+.ico-edu {
+  background: url(ico/graduate-cap.png) no-repeat center;
+  background-size: cover; }
+
+.ico-work {
+  background: url(ico/briefcase.png) no-repeat center;
+  background-size: cover; }
 
 .block-content-left:hover + .block-ico-left,
 .block-content-right:hover + .block-ico-right {
@@ -255,8 +285,8 @@ ul {
   position: absolute;
   width: 50%;
   height: 100%;
-  margin-left: -4px;
-  border-right: 8px solid #666; }
+  margin-left: -2px;
+  border-right: 4px solid rgba(197, 184, 191, 0.5); }
 
 .skills-wrapper {
   padding: 50px 0;
@@ -479,7 +509,9 @@ ul {
 .faded-menu h1 {
   margin: 0 0 10px;
   padding: 0;
-  transition: all ease .5s; }
+  transition: all ease .5s;
+  font-family: 'Comfortaa', cursive;
+  font-weight: lighter; }
 
 .faded-menu h1:hover {
   transition: all ease .5s;

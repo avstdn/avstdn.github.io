@@ -20,6 +20,7 @@ body {
 
 //////////////////////////////////
 ////// RIGHT NAVIGATION MENU /////
+//////////////////////////////////
 .navigation {
   position: fixed;
   top: 40%;
@@ -82,11 +83,12 @@ ul {
 .nav-row:hover .dot {
   transition: all ease .2s;
   transform: scale(1.3);
-}
-//////////////////////////////////
+} //////////////////////////////////
+
 
 //////////////////////////////
 /////////// BURGER ///////////
+//////////////////////////////
 #nav-icon1 {
   width: 30px;
   height: 25px;
@@ -163,7 +165,8 @@ ul {
 //////////////////////////////////////////////////////////////////////////////////////////
 .first-section {
   position: relative;
-  background-image: url(img/mac.jpg), url(ico/arrow.png);
+  background-image: url(img/mac.jpg),
+                    url(ico/arrow.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -181,6 +184,7 @@ ul {
 .intro p {
   margin: 5px;
   font-size: 35px;
+  color: rgba(255, 255, 255, .8);
 }
 
 .division {
@@ -214,7 +218,8 @@ ul {
 // SECOND SECTION ////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 .second-section {
-  background-color: #000;
+  background-color: #1d1f25;
+  height: 600px;
 }
 
 .second-container {
@@ -229,10 +234,25 @@ ul {
 //////////////////////////////////////////////////////////////////////////////////////////
 .third-section {
   position: relative;
-  background: url(img/body.jpg) repeat;
-  // height: 100vh;
+  background: url(img/land.jpg) repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
-} 
+  overflow: hidden;
+}
+
+.exp-head {
+  text-align: center;
+  width: 225px;
+  padding: 5px;
+  margin: 35px auto;
+  border-bottom: 3px solid rgba(46, 38, 47, .8);
+}
+
+.exp-head h1 {
+  margin: 0;
+  color: rgba(46, 38, 47, .8);
+}
 
 .block-left {
   padding: 40px 0;
@@ -250,7 +270,7 @@ ul {
   height: 100%;
   width: 70%;
   margin-right: 60px;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(46, 38, 47, .95);
 }
 
 .block-content-left:after {
@@ -260,7 +280,7 @@ ul {
   right: 20px;
   top: 70px;
   border: 20px solid transparent;
-  border-left: 20px solid rgba(0, 0, 0, .9);;
+  border-left: 20px solid rgba(46, 38, 47, .95);;
 }
 
 .block-ico-left {
@@ -273,7 +293,7 @@ vertical-align: middle;
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #000;
+  background-color: rgb(46, 38, 47);
 }
 
 .block-right {
@@ -294,7 +314,7 @@ vertical-align: middle;
   height: 100%;
   width: 70%;
   margin-left: 60px;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(46, 38, 47, .95);
 }
 
 .block-content-right:before {
@@ -304,7 +324,7 @@ vertical-align: middle;
   left: 20px;
   top: 70px;
   border: 20px solid transparent;
-  border-right: 20px solid rgba(0, 0, 0, .9);
+  border-right: 20px solid rgba(46, 38, 47, .95);
 }
 
 .block-ico-right {
@@ -313,14 +333,29 @@ vertical-align: middle;
   left: -30px;
   // margin-top: -30px;
   display: inline-block;
-vertical-align: middle;
+  vertical-align: middle;
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #000;
-
+  background: rgb(46, 38, 47);
 }
 
+.exp-ico {
+  display: block;
+  margin: 14px auto;
+  height: 30px;
+  width: 30px;
+}
+
+.ico-edu {
+  background: url(ico/graduate-cap.png) no-repeat center;
+  background-size: cover;
+}
+
+.ico-work {
+  background: url(ico/briefcase.png) no-repeat center;
+  background-size: cover;
+}
 .block-content-left:hover + .block-ico-left,
 .block-content-right:hover + .block-ico-right {
   background-color: #fff;
@@ -330,8 +365,8 @@ vertical-align: middle;
   position: absolute;
   width: 50%;
   height: 100%;
-  margin-left: -4px;
-  border-right: 8px solid #666;
+  margin-left: -2px;
+  border-right: 4px solid rgba(197, 184, 191, .5);
 } // THIRD SECTION /////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -644,6 +679,8 @@ vertical-align: middle;
   margin: 0 0 10px;
   padding: 0;
   transition: all ease .5s;
+  font-family: 'Comfortaa', cursive;
+  font-weight: lighter;
 }
 
 .faded-menu h1:hover {
