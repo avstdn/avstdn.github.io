@@ -386,6 +386,25 @@ vertical-align: middle;
   background: url(ico/briefcase.png) no-repeat center;
   background-size: cover;
 }
+
+.description-left {
+  position: absolute;
+  min-width: 200px;
+  top: 15px;
+  left: 70px;
+  color: rgba(255,253,248, .9);
+  font-size: 20px;
+}
+
+.description-right {
+  position: absolute;
+  min-width: 200px;
+  top: 5px;
+  right: 65px;
+  color: rgba(255, 253, 248, .9);
+  font-size: 20px;
+}
+
 .block-content-left:hover + .block-ico-left,
 .block-content-right:hover + .block-ico-right {
   background-color: #705473;
