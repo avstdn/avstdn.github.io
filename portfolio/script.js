@@ -186,14 +186,11 @@ $(window).on('scroll', function () {
     $('.dot').removeClass('dot-active');
     $('#5 .dot').addClass('dot-active');
     $('#apollo').removeClass('invisible');
-    $('#apollo').addClass('rocket fire-on');
-
   }
 
 });
 
 $('.rocket').on('click', function() {
-  $(this).removeClass('fire-on');
   $(this).addClass('fire-off');
   setTimeout(function() {
     $('#apollo').removeClass('fire-off');
