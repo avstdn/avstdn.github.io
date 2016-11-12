@@ -218,10 +218,18 @@ ul {
 // SECOND SECTION ////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 .second-section {
-  background: linear-gradient(#30333a, #e5d3c5);
+  background: linear-gradient(#30333a, #fde8d7);
 }
 
-// #1d1f25;
+.about-title {
+  font-size: 25px;
+  padding: 30px 0 10px;
+  border-bottom: 3px solid rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .8);
+  width: 130px;
+  text-align: center;
+  margin: 0 auto;
+}
 
 .about-container {
   margin: 0 auto;
@@ -274,16 +282,13 @@ ul {
 }
 
 .exp-head {
+  font-size: 25px;
+  padding: 30px 0 10px;
+  border-bottom: 3px solid rgba(255, 255, 255, .8);
+  color: rgba(255, 255, 255, .8);
+  width: 200px;
   text-align: center;
-  width: 225px;
-  padding: 5px;
-  margin: 35px auto;
-  border-bottom: 3px solid rgba(46, 38, 47, .8);
-}
-
-.exp-head h1 {
-  margin: 0;
-  color: rgba(46, 38, 47, .8);
+  margin: 0 auto 50px;
 }
 
 .block-left {
@@ -666,6 +671,33 @@ vertical-align: middle;
 
 .contact-input button {
   width: 100%;
+}
+
+.inp {
+  // border-radius: 4px;
+  border: none;
+  padding: 5px;
+  outline-color: #000;
+}
+
+// .inp:focus {
+//   outline: 1px solid #fff;
+// }
+
+.txtarea {
+  border: none;
+  padding: 5px;
+  outline-color: #000;
+}
+
+.btn {
+  background: #131b1e;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  height: 30px;
+  border-radius: 4px;
+  outline-color: #fff;
 }
 
 .fifth-section {

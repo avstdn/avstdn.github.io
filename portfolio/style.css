@@ -172,7 +172,16 @@ ul {
   cursor: pointer; }
 
 .second-section {
-  background: linear-gradient(#30333a, #e5d3c5); }
+  background: linear-gradient(#30333a, #fde8d7); }
+
+.about-title {
+  font-size: 25px;
+  padding: 30px 0 10px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  width: 130px;
+  text-align: center;
+  margin: 0 auto; }
 
 .about-container {
   margin: 0 auto;
@@ -215,15 +224,13 @@ ul {
   overflow: hidden; }
 
 .exp-head {
+  font-size: 25px;
+  padding: 30px 0 10px;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  width: 200px;
   text-align: center;
-  width: 225px;
-  padding: 5px;
-  margin: 35px auto;
-  border-bottom: 3px solid rgba(46, 38, 47, 0.8); }
-
-.exp-head h1 {
-  margin: 0;
-  color: rgba(46, 38, 47, 0.8); }
+  margin: 0 auto 50px; }
 
 .block-left {
   padding: 40px 0;
@@ -555,6 +562,25 @@ ul {
 
 .contact-input button {
   width: 100%; }
+
+.inp {
+  border: none;
+  padding: 5px;
+  outline-color: #000; }
+
+.txtarea {
+  border: none;
+  padding: 5px;
+  outline-color: #000; }
+
+.btn {
+  background: #131b1e;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  height: 30px;
+  border-radius: 4px;
+  outline-color: #fff; }
 
 .fifth-section {
   position: relative;
