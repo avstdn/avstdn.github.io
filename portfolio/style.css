@@ -172,7 +172,7 @@ ul {
   cursor: pointer; }
 
 .second-section {
-  background-color: #1d1f25; }
+  background: linear-gradient(#30333a, #e5d3c5); }
 
 .about-container {
   margin: 0 auto;
@@ -537,9 +537,10 @@ ul {
   display: table;
   height: 100%;
   width: 40%;
-  margin: 0 auto;
-  padding: 100px 50px;
-  background-color: rgba(255, 255, 255, 0.2); }
+  margin: 50px auto;
+  padding: 40px 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px; }
 
 .contact-input {
   display: table-cell;
@@ -566,7 +567,7 @@ ul {
   position: relative;
   height: 100px;
   width: 100%;
-  background: #151a1d;
+  background: linear-gradient(#2d3939, #151a1d);
   text-align: center;
   vertical-align: middle;
   color: #fff; }
