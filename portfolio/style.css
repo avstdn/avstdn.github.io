@@ -268,7 +268,6 @@ ul {
   padding: 40px 0;
   position: relative;
   width: 50%;
-  height: 200px;
   clear: both; }
 
 .block-content-right {
@@ -361,6 +360,15 @@ ul {
 
 .third-section a:hover {
   color: #ff961b; }
+
+.block-content-right p,
+.block-content-right ul {
+  padding: 20px 30px 20px;
+  text-align: left;
+  list-style-type: circle; }
+
+.block-content-right {
+  text-align: center; }
 
 .vertical-arrow {
   position: absolute;

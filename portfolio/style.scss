@@ -336,7 +336,7 @@ vertical-align: middle;
   padding: 40px 0;
   position: relative;
   width: 50%;
-  height: 200px;
+  // height: 200px;
   // border: 1px solid #000;
   clear: both
 }
@@ -352,6 +352,7 @@ vertical-align: middle;
   border-radius: 4px;
   transition: all ease .3s;
 }
+
 
 .block-content-right:before {
   content: '';
@@ -449,7 +450,16 @@ vertical-align: middle;
   color: #ff961b;
 }
 
+.block-content-right p,
+.block-content-right ul, {
+  padding: 20px 30px 20px;
+  text-align: left;
+  list-style-type: circle;
+}
 
+.block-content-right {
+  text-align: center;
+}
 
 .vertical-arrow {
   position: absolute;
@@ -547,66 +557,23 @@ vertical-align: middle;
   text-align: center;
 }
 
-.tech-ico-1 { // FIRST ICONS ROW ////////////
-  background-position: 0 0;
-}
-
-.tech-ico-2 {
-  background-position: -100px 0;
-}
-
-.tech-ico-3 {
-  background-position: -200px 0;
-}
-
-.tech-ico-4 {
-  background-position: 0 -100px;
-}
-
-.tech-ico-5 {
-  background-position: -100px -100px;
-}
-
-.tech-ico-6 {
-  background-position: -200px -100px;
-}
-
-.tech-ico-7 {
-  background-position: 0 -200px;
-}
-
-.tech-ico-8 {
-  background-position: -100px -200px;
-}
-
-.tech-ico-9 {
-  background-position: -200px -200px;
-}
-
-.tech-ico-10 {
-  background-position: 0 -300px;
-}
-
-.tools-ico-1 { // SECOND ICONS ROW /////////////
-  background-position: 0 0;
-}
-
-.tools-ico-2 {
-  background-position: -100px 0;
-}
-
-.tools-ico-3 {
-  background-position: -200px 0;
-}
-
-.tools-ico-4 {
-  background-position: -300px 0;
-}
-
-.tools-ico-5 {
-  background-position: -400px 0;
-}
-
+// FIRST ICON ROW ////////////
+.tech-ico-1  {background-position: 0 0;}
+.tech-ico-2  {background-position: -100px 0;}
+.tech-ico-3  {background-position: -200px 0;}
+.tech-ico-4  {background-position: 0 -100px;}
+.tech-ico-5  {background-position: -100px -100px;}
+.tech-ico-6  {background-position: -200px -100px;}
+.tech-ico-7  {background-position: 0 -200px;}
+.tech-ico-8  {background-position: -100px -200px;}
+.tech-ico-9  {background-position: -200px -200px;}
+.tech-ico-10 {background-position: 0 -300px;}
+// SECOND ICON ROW /////////////
+.tools-ico-1 {background-position: 0 0;}
+.tools-ico-2 {background-position: -100px 0;}
+.tools-ico-3 {background-position: -200px 0;}
+.tools-ico-4 {background-position: -300px 0;}
+.tools-ico-5 {background-position: -400px 0;}
 
 
 .fourth-wrapper {
