@@ -238,7 +238,9 @@ ul {
   height: 100%;
   width: 70%;
   margin-right: 60px;
-  background-color: rgba(46, 38, 47, 0.95); }
+  background-color: rgba(46, 38, 47, 0.9);
+  border-radius: 4px;
+  transition: all ease .3s; }
 
 .block-content-left:after {
   content: '';
@@ -246,7 +248,8 @@ ul {
   right: 20px;
   top: 70px;
   border: 20px solid transparent;
-  border-left: 20px solid rgba(46, 38, 47, 0.95); }
+  border-left: 20px solid rgba(46, 38, 47, 0.9);
+  transition: all ease .3s; }
 
 .block-ico-left {
   position: absolute;
@@ -257,7 +260,8 @@ ul {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #2e262f; }
+  background-color: #2e262f;
+  transition: all ease .3s; }
 
 .block-right {
   float: right;
@@ -273,7 +277,9 @@ ul {
   height: 100%;
   width: 70%;
   margin-left: 60px;
-  background-color: rgba(46, 38, 47, 0.95); }
+  background-color: rgba(46, 38, 47, 0.9);
+  border-radius: 4px;
+  transition: all ease .3s; }
 
 .block-content-right:before {
   content: '';
@@ -281,7 +287,8 @@ ul {
   left: 20px;
   top: 70px;
   border: 20px solid transparent;
-  border-right: 20px solid rgba(46, 38, 47, 0.95); }
+  border-right: 20px solid rgba(46, 38, 47, 0.9);
+  transition: all ease .3s; }
 
 .block-ico-right {
   position: absolute;
@@ -292,7 +299,8 @@ ul {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background: #2e262f; }
+  background: #2e262f;
+  transition: all ease .3s; }
 
 .exp-ico {
   display: block;
@@ -326,7 +334,33 @@ ul {
 
 .block-content-left:hover + .block-ico-left,
 .block-content-right:hover + .block-ico-right {
-  background-color: #705473; }
+  background-color: #705473;
+  transition: all ease .3s; }
+
+.block-content-left:hover,
+.block-content-right:hover {
+  background-color: #29222A;
+  transition: all ease .3s; }
+
+.block-content-right:hover:before {
+  border: 20px solid transparent;
+  border-right: 20px solid #29222A;
+  transition: all ease .3s; }
+
+.block-content-left:hover:after {
+  border: 20px solid transparent;
+  border-left: 20px solid #29222A;
+  transition: all ease .3s; }
+
+.third-section a,
+.third-section a:link,
+.third-section a:visited,
+.third-section a:active {
+  color: #ae7c41;
+  text-decoration: none; }
+
+.third-section a:hover {
+  color: #ff961b; }
 
 .vertical-arrow {
   position: absolute;
