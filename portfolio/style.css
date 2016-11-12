@@ -229,7 +229,6 @@ ul {
   padding: 40px 0;
   position: relative;
   width: 50%;
-  height: 200px;
   clear: both; }
 
 .block-content-left {
@@ -356,20 +355,28 @@ ul {
 .third-section a:visited,
 .third-section a:active {
   color: #ae7c41;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all ease .3s;
+  cursor: default;
+  font-weight: bold; }
 
 .third-section a:hover {
-  color: #ff961b; }
+  color: #ff961b;
+  transition: all ease .3s; }
 
 .block-content-right p,
-.block-content-right ul {
+.block-content-right ul,
+.block-content-left p,
+.block-content-left ul {
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 35px;
+  margin-right: 5px;
   margin-bottom: 20px;
   text-align: left;
   list-style-type: circle; }
 
-.block-content-right {
+.block-content-right,
+.block-content-left {
   text-align: center; }
 
 .vertical-arrow {
