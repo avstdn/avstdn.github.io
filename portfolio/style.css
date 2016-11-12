@@ -363,7 +363,9 @@ ul {
 
 .block-content-right p,
 .block-content-right ul {
-  padding: 20px 30px 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
   text-align: left;
   list-style-type: circle; }
 
