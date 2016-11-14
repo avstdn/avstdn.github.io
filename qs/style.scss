@@ -74,6 +74,32 @@ html, body {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
+.quantity {
+  display: table;
+  margin: 0 auto;
+}
+
+
+.request-tab {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  width: 100px;
+  height: 25px;
+  background: #eee;
+  // margin: 10px auto;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+  border-radius: 4px;
+}
+
+.request-tab > * {
+  vertical-align: middle;
+}
+
+.request {
+}
+
 .queue {
   position: relative;
   display: table-cell;
@@ -87,6 +113,7 @@ html, body {
 }
 
 .worker-queue {
+  line-height: 25px;
   position: relative;
   width: 100px;
   height: 25px;
@@ -94,6 +121,7 @@ html, body {
   margin: 10px auto;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
   border-radius: 4px;
+  vertical-align: middle;
 }
 
 .workers {
