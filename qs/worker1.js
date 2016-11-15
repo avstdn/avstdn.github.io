@@ -4,9 +4,8 @@ onmessage = function(e) {
   // var worker1Result = 'Result: ' + (e.data);
   // console.log('var e: ', e.data);
 
-  var test = function() {
-    postMessage('message from first worker!');
+  var timeout = function() {
+    postMessage(null);
   }
-
-  setTimeout(test, 3000);
+  setTimeout(timeout, 5000);
 }

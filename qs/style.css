@@ -8,14 +8,13 @@ html, body {
   margin: 0 auto; }
 
 .container {
-  height: 100%;
+  height: 70%;
   margin: 0 auto;
   padding: 100px 0;
   text-align: center;
   vertical-align: middle;
   display: table;
-  border-spacing: 10px;
-  height: 80%; }
+  border-spacing: 10px; }
 
 .row {
   display: table-row; }
@@ -145,12 +144,27 @@ html, body {
   border-radius: 4px; }
 
 .bar-fill {
+  width: 0%;
   height: 5px;
   display: block;
   background: cornflowerblue;
-  width: 0%;
   border-radius: 3px;
   transition: all ease .1s; }
+
+.bar-fill-1 {
+  width: 0%; }
+
+.bar-fill-2 {
+  width: 0%; }
+
+.bar-fill-3 {
+  width: 0%; }
+
+.bar-fill-4 {
+  width: 0%; }
+
+.bar-fill-5 {
+  width: 0%; }
 
 .wrapper2 {
   margin-top: 10px;
@@ -170,3 +184,22 @@ html, body {
   border-radius: 3px;
   transition: all ease .1s;
   visibility: visible; }
+
+.statistic {
+  width: 500px;
+  background: #fff;
+  text-align: center;
+  margin: 0 auto; }
+
+.stat-head {
+  padding-top: 20px; }
+
+.first-list,
+.second-list {
+  display: inline-block;
+  margin: 20px;
+  text-align: left; }
+
+.first-list ul,
+.second-list ul {
+  list-style-type: none; }
