@@ -21,9 +21,11 @@ html, body {
 
 .row {
   display: table-row;
+  padding-top: 30px;
 }
 
 .event {
+  padding-top: 30px;
   position: relative;
   display: table-cell;
   vertical-align: middle;
@@ -62,6 +64,7 @@ html, body {
 }
 
 .dispatcher {
+  padding-top: 30px;
   position: relative;
   display: table-cell;
   vertical-align: middle;
@@ -100,6 +103,7 @@ html, body {
 }
 
 .queue {
+  padding-top: 30px;
   position: relative;
   display: table-cell;
   vertical-align: middle;
@@ -124,6 +128,7 @@ html, body {
 }
 
 .workers {
+  padding-top: 30px;
   position: relative;
   display: table-cell;
   vertical-align: middle;
@@ -136,6 +141,7 @@ html, body {
 }
 
 .result {
+  padding-top: 30px;
   position: relative;
   display: table-cell;
   vertical-align: middle;
