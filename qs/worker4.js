@@ -5,7 +5,7 @@ onmessage = function(e) {
   // console.log('var e: ', e.data);
   console.log('begin');
   var counter = 0;
-  var stop = setInterval(fill, 125);
+  var stop = setInterval(fill, 100);
   function fill() {
     if(counter < 100) {
       counter += 10;

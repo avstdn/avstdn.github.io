@@ -169,30 +169,45 @@ worker1.onmessage = function(e) {
   $('#countdown-1').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(0);
+    document.querySelector('#worker-1').innerHTML++;
+    document.querySelector('#proc-req').innerHTML++;
+    document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker2.onmessage = function(e) {
   $('#countdown-2').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(1);
+    document.querySelector('#worker-2').innerHTML++;
+    document.querySelector('#proc-req').innerHTML++;
+    document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker3.onmessage = function(e) {
   $('#countdown-3').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(2);
+    document.querySelector('#worker-3').innerHTML++;
+    document.querySelector('#proc-req').innerHTML++;
+    document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker4.onmessage = function(e) {
   $('#countdown-4').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(3);
+    document.querySelector('#worker-4').innerHTML++;
+    document.querySelector('#proc-req').innerHTML++;
+    document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker5.onmessage = function(e) {
   $('#countdown-5').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(4);
+    document.querySelector('#worker-5').innerHTML++;
+    document.querySelector('#proc-req').innerHTML++;
+    document.querySelector('.result-tab').innerHTML++;
   }
 }
 
