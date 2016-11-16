@@ -85,27 +85,27 @@ function showWorkerQueue() { // GUI ////////////////////////////
 function showWorkerRequest(i) { // GUI ////////////////////////////
   switch(i) {
     case 0:
-  document.querySelector('#countdown-1').innerHTML = queue[0].countdown;
+  document.querySelector('#countdown-1').innerHTML = queue[0].countdown + '%';
   document.querySelector('.bar-fill-1').innerHTML = queue[0].totalRequest;
   document.querySelector('#queue-1').innerHTML = queue[0].workerQueue;
   break;
     case 1:
-  document.querySelector('#countdown-2').innerHTML = queue[1].countdown;
+  document.querySelector('#countdown-2').innerHTML = queue[1].countdown + '%';
   document.querySelector('.bar-fill-2').innerHTML = queue[1].totalRequest;
   document.querySelector('#queue-2').innerHTML = queue[1].workerQueue;
   break;
     case 2:
-  document.querySelector('#countdown-3').innerHTML = queue[2].countdown;
+  document.querySelector('#countdown-3').innerHTML = queue[2].countdown + '%';
   document.querySelector('.bar-fill-3').innerHTML = queue[2].totalRequest;
   document.querySelector('#queue-3').innerHTML = queue[2].workerQueue;
   break;
     case 3:
-  document.querySelector('#countdown-4').innerHTML = queue[3].countdown;
+  document.querySelector('#countdown-4').innerHTML = queue[3].countdown + '%';
   document.querySelector('.bar-fill-4').innerHTML = queue[3].totalRequest;
   document.querySelector('#queue-4').innerHTML = queue[3].workerQueue;
   break;
     case 4:
-  document.querySelector('#countdown-5').innerHTML = queue[4].countdown;
+  document.querySelector('#countdown-5').innerHTML = queue[4].countdown + '%';
   document.querySelector('.bar-fill-5').innerHTML = queue[4].totalRequest;
   document.querySelector('#queue-5').innerHTML = queue[4].workerQueue;
   break;
@@ -166,31 +166,31 @@ button.addEventListener("click", function() {
 })
 
 worker1.onmessage = function(e) {
-  $('#countdown-1').text(e.data);
+  $('#countdown-1').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(0);
   }
 }
 worker2.onmessage = function(e) {
-  $('#countdown-2').text(e.data);
+  $('#countdown-2').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(1);
   }
 }
 worker3.onmessage = function(e) {
-  $('#countdown-3').text(e.data);
+  $('#countdown-3').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(2);
   }
 }
 worker4.onmessage = function(e) {
-  $('#countdown-4').text(e.data);
+  $('#countdown-4').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(3);
   }
 }
 worker5.onmessage = function(e) {
-  $('#countdown-5').text(e.data);
+  $('#countdown-5').text(e.data + '%');
   if(e.data == 'stop') {
     addToWorkerI(4);
   }
