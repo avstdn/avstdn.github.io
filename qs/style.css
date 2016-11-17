@@ -28,7 +28,7 @@ html, body {
   text-align: center;
   height: 200px;
   width: 200px;
-  background: url(weather.png);
+  background: #bcf2ff;
   border: 1px solid rgba(238, 238, 238, 0.5);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
@@ -59,7 +59,7 @@ html, body {
   text-align: center;
   height: 200px;
   width: 200px;
-  background: url(food.png);
+  background: #fac564;
   border: 1px solid rgba(238, 238, 238, 0.5);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
@@ -89,7 +89,7 @@ html, body {
   text-align: center;
   height: 200px;
   width: 200px;
-  background: url(geometry2.png);
+  background: #f9fafb;
   border: 1px solid rgba(238, 238, 238, 0.5);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
@@ -112,9 +112,12 @@ html, body {
   text-align: center;
   height: 200px;
   width: 200px;
-  background: url(school.png);
+  background: #e9ddc6;
   border: 1px solid rgba(238, 238, 238, 0.5);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
+
+.worker {
+  color: #fff; }
 
 .result {
   padding-top: 30px;
@@ -124,7 +127,7 @@ html, body {
   text-align: center;
   height: 200px;
   width: 200px;
-  background: url(restaurant_icons.png);
+  background: #fafaee;
   border: 1px solid rgba(238, 238, 238, 0.5);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
