@@ -14,6 +14,9 @@ var workers = [
   worker5
 ];
 
+var request = 0;
+var total = 0;
+
 var queue = [
               { workerQueue: 0, isBusy: false , totalRequest: 0, countdown: 0 },
               { workerQueue: 0, isBusy: false , totalRequest: 0, countdown: 0 },
@@ -21,8 +24,6 @@ var queue = [
               { workerQueue: 0, isBusy: false , totalRequest: 0, countdown: 0 },
               { workerQueue: 0, isBusy: false , totalRequest: 0, countdown: 0 },
 ];
-var request = 0;
-var total = 0;
 
 $('#countdown-1').text('READY').css('background-color', '#68E768');
 $('#countdown-2').text('READY').css('background-color', '#68E768');
@@ -33,12 +34,13 @@ $('#countdown-5').text('READY').css('background-color', '#68E768');
 var generate = document.querySelector("#generate");
 generate.addEventListener("click", function() {
   createRequest();
-})
+});
 var start = document.querySelector("#start");
 start.addEventListener("click", function() {
   createRequest();
-  setInterval(createRequest, 100);
-})
+  setInterval(createRequest, 200);
+});
+
 function createRequest() {
   var minimum = 0;
   request++;
@@ -84,31 +86,26 @@ function showWorkerParams(i) { // GUI ////////////////////////////
     document.querySelector('.result-tab').innerHTML = total;
   switch(i) {
     case 0:
-  // document.querySelector('#countdown-1').innerHTML = queue[0].countdown + '%';
   document.querySelector('.bar-fill-1').innerHTML = queue[0].totalRequest;
   document.querySelector('#worker-1').innerHTML = queue[0].totalRequest;
   document.querySelector('#queue-1').innerHTML = queue[0].workerQueue;
   break;
     case 1:
-  // document.querySelector('#countdown-2').innerHTML = queue[1].countdown + '%';
   document.querySelector('.bar-fill-2').innerHTML = queue[1].totalRequest;
   document.querySelector('#worker-2').innerHTML = queue[1].totalRequest;
   document.querySelector('#queue-2').innerHTML = queue[1].workerQueue;
   break;
     case 2:
-  // document.querySelector('#countdown-3').innerHTML = queue[2].countdown + '%';
   document.querySelector('.bar-fill-3').innerHTML = queue[2].totalRequest;
   document.querySelector('#worker-3').innerHTML = queue[2].totalRequest;
   document.querySelector('#queue-3').innerHTML = queue[2].workerQueue;
   break;
     case 3:
-  // document.querySelector('#countdown-4').innerHTML = queue[3].countdown + '%';
   document.querySelector('.bar-fill-4').innerHTML = queue[3].totalRequest;
   document.querySelector('#worker-4').innerHTML = queue[3].totalRequest;
   document.querySelector('#queue-4').innerHTML = queue[3].workerQueue;
   break;
     case 4:
-  // document.querySelector('#countdown-5').innerHTML = queue[4].countdown + '%';
   document.querySelector('.bar-fill-5').innerHTML = queue[4].totalRequest;
   document.querySelector('#worker-5').innerHTML = queue[4].totalRequest;
   document.querySelector('#queue-5').innerHTML = queue[4].workerQueue;
@@ -132,9 +129,6 @@ worker1.onmessage = function(e) {
     else {
       showWorkerParams(0);
     }
-    // document.querySelector('#worker-1').innerHTML++;
-    // document.querySelector('#proc-req').innerHTML++;
-    // document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker2.onmessage = function(e) {
@@ -153,9 +147,6 @@ worker2.onmessage = function(e) {
     else {
       showWorkerParams(1);
     }
-      // document.querySelector('#worker-2').innerHTML++;
-      // document.querySelector('#proc-req').innerHTML++;
-      // document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker3.onmessage = function(e) {
@@ -174,9 +165,6 @@ worker3.onmessage = function(e) {
     else {
       showWorkerParams(2);
     }
-      // document.querySelector('#worker-3').innerHTML++;
-      // document.querySelector('#proc-req').innerHTML++;
-      // document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker4.onmessage = function(e) {
@@ -195,9 +183,6 @@ worker4.onmessage = function(e) {
     else {
       showWorkerParams(3);
     }
-      // document.querySelector('#worker-4').innerHTML++;
-      // document.querySelector('#proc-req').innerHTML++;
-      // document.querySelector('.result-tab').innerHTML++;
   }
 }
 worker5.onmessage = function(e) {
@@ -216,9 +201,6 @@ worker5.onmessage = function(e) {
     else {
       showWorkerParams(4);
     }
-      // document.querySelector('#worker-5').innerHTML++;
-      // document.querySelector('#proc-req').innerHTML++;
-      // document.querySelector('.result-tab').innerHTML++;
   }
 }
 

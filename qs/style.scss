@@ -241,10 +241,11 @@ html, body {
   background: #fff;
   text-align: center;
   margin: 0 auto;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 .stat-head {
   padding: 20px;
+  text-decoration: underline;
 }
 
 .first-list,
@@ -263,4 +264,5 @@ html, body {
   background: rgba(0, 0, 0, .1);
   margin: 0 auto;
   width: 60%;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
