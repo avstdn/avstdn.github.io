@@ -143,6 +143,7 @@ html, body {
 
 .worker {
   color: #fff;
+  margin: 10px;
 }
 
 .result {
@@ -198,50 +199,52 @@ html, body {
 .bar-fill {
   width: 70px;
   display: inline-block;
-  background: cornflowerblue;
   border-radius: 3px;
-  transition: all ease .1s;
+  transition: all ease .2s;
   border-radius: 4px;
 }
 
 .bar-fill-1 {
+  color: #000;
   display: inline-block;
   width: 70px;
-  background: red;
+  background: #fff;
 }
 .bar-fill-2 {
+  color: #000;
   display: inline-block;
-
   width: 70px;
-  background: red;
+  background: #fff;
 }
 .bar-fill-3 {
+  color: #000;
   display: inline-block;
-
   width: 70px;
-  background: red;
+  background: #fff;
 }
 .bar-fill-4 {
+  color: #000;
   display: inline-block;
-
   width: 70px;
-  background: red;
+  background: #fff;
 }
 .bar-fill-5 {
+  color: #000;
   display: inline-block;
-
   width: 70px;
-  background: red;
+  background: #fff;
 }
 
-.statistic {
+.statistics {
   width: 500px;
+  height: 255px;
   background: #fff;
   text-align: center;
   margin: 0 auto;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
 }
 .stat-head {
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .first-list,
@@ -254,4 +257,10 @@ html, body {
 .first-list ul,
 .second-list ul {
   list-style-type: none;
+}
+
+.stat-wrap {
+  background: rgba(0, 0, 0, .1);
+  margin: 0 auto;
+  width: 60%;
 }

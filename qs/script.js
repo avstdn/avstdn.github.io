@@ -24,11 +24,11 @@ var queue = [
 var request = 0;
 var total = 0;
 
-$('#countdown-1').text('READY').css('background', '#68E768');
-$('#countdown-2').text('READY').css('background', '#68E768');
-$('#countdown-3').text('READY').css('background', '#68E768');
-$('#countdown-4').text('READY').css('background', '#68E768');
-$('#countdown-5').text('READY').css('background', '#68E768');
+$('#countdown-1').text('READY').css('background-color', '#68E768');
+$('#countdown-2').text('READY').css('background-color', '#68E768');
+$('#countdown-3').text('READY').css('background-color', '#68E768');
+$('#countdown-4').text('READY').css('background-color', '#68E768');
+$('#countdown-5').text('READY').css('background-color', '#68E768');
 
 var generate = document.querySelector("#generate");
 generate.addEventListener("click", function() {
@@ -118,10 +118,10 @@ function showWorkerParams(i) { // GUI ////////////////////////////
 
 worker1.onmessage = function(e) {
   if(e.data != 'stop') {
-    $('#countdown-1').text(e.data + '%');
+    $('#countdown-1').text(e.data + '%').css('background-color', 'red');
   } else {
     queue[0].totalRequest++;
-    $('#countdown-1').text('READY');
+    $('#countdown-1').text('READY').css('background-color', '#68E768');
     queue[0].workerQueue--;
     total++;
     queue[0].isBusy = false;
@@ -139,10 +139,10 @@ worker1.onmessage = function(e) {
 }
 worker2.onmessage = function(e) {
   if(e.data != 'stop') {
-    $('#countdown-2').text(e.data + '%');
+    $('#countdown-2').text(e.data + '%').css('background-color', 'red');
   } else {
     queue[1].totalRequest++;
-    $('#countdown-2').text('READY');
+    $('#countdown-2').text('READY').css('background-color', '#68E768');
     queue[1].workerQueue--;
     total++;
     queue[1].isBusy = false;
@@ -160,10 +160,10 @@ worker2.onmessage = function(e) {
 }
 worker3.onmessage = function(e) {
   if(e.data != 'stop') {
-    $('#countdown-3').text(e.data + '%');
+    $('#countdown-3').text(e.data + '%').css('background-color', 'red');
   } else {
     queue[2].totalRequest++;
-    $('#countdown-3').text('READY');
+    $('#countdown-3').text('READY').css('background-color', '#68E768');
     queue[2].workerQueue--;
     total++;
     queue[2].isBusy = false;
@@ -181,10 +181,10 @@ worker3.onmessage = function(e) {
 }
 worker4.onmessage = function(e) {
   if(e.data != 'stop') {
-    $('#countdown-4').text(e.data + '%');
+    $('#countdown-4').text(e.data + '%').css('background-color', 'red');
   } else {
     queue[3].totalRequest++;
-    $('#countdown-4').text('READY');
+    $('#countdown-4').text('READY').css('background-color', '#68E768');
     queue[3].workerQueue--;
     total++;
     queue[3].isBusy = false;
@@ -202,10 +202,10 @@ worker4.onmessage = function(e) {
 }
 worker5.onmessage = function(e) {
   if(e.data != 'stop') {
-    $('#countdown-5').text(e.data + '%');
+    $('#countdown-5').text(e.data + '%').css('background-color', 'red');
   } else {
     queue[4].totalRequest++;
-    $('#countdown-5').text('READY');
+    $('#countdown-5').text('READY').css('background-color', '#68E768');
     queue[4].workerQueue--;
     total++;
     queue[4].isBusy = false;
