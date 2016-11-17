@@ -44,6 +44,7 @@ html, body {
   height: 25px;
   width: 100px;
   font-size: 12px;
+  margin: 5px 0;
   transition: all 0.2s ease; }
 
 .event input:hover {
@@ -131,7 +132,14 @@ html, body {
   border: 1px solid rgba(238, 238, 238, 0.5);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
 
+.summary {
+  display: table;
+  margin: 0 auto; }
+
 .result-tab {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
   position: relative;
   width: 100px;
   height: 25px;
@@ -141,8 +149,11 @@ html, body {
   border-radius: 4px; }
 
 .wrapper {
-  width: 400px;
+  width: 200px;
   margin: 10px 0; }
+
+.wrapper > span {
+  border-radius: 4px; }
 
 .bar {
   background: #eee;
@@ -157,7 +168,8 @@ html, body {
   display: inline-block;
   background: cornflowerblue;
   border-radius: 3px;
-  transition: all ease .1s; }
+  transition: all ease .1s;
+  border-radius: 4px; }
 
 .bar-fill-1 {
   display: inline-block;

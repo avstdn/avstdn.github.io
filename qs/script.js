@@ -57,11 +57,11 @@ function createRequest() {
 }
 
 function checkForEmpty(i) {
-    if(queue[i].workerQueue == 0 && queue[i].isBusy == false) {
-      return true;
-    } else {
-      return false;
-    }
+  if(queue[i].workerQueue == 0 && queue[i].isBusy == false) {
+    return true;
+  } else {
+    return false;
+  }
 }
 function findMin() {
   var min = queue[0].workerQueue;
@@ -75,9 +75,8 @@ function findMin() {
   return indexOfMin;
 }
 function addToWorker(i) {
-    // queue[i].workerQueue--;
-    queue[i].isBusy = true;
-    workers[i].postMessage(null);
+  queue[i].isBusy = true;
+  workers[i].postMessage(null);
 }
 
 function showWorkerParams(i) { // GUI ////////////////////////////
