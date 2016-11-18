@@ -31,12 +31,6 @@ $('#countdown-3').text('READY').css('background-color', '#68E768');
 $('#countdown-4').text('READY').css('background-color', '#68E768');
 $('#countdown-5').text('READY').css('background-color', '#68E768');
 
-var input = document.querySelector("#speed");
-var speed = 200;
-input.oninput = function() {
-   speed = input.value;
-}
-
 var generate = document.querySelector("#generate");
 generate.addEventListener("click", function() {
   createRequest();
@@ -44,12 +38,11 @@ generate.addEventListener("click", function() {
 var start = document.querySelector("#start");
 start.addEventListener("click", function() {
   createRequest();
-  setInterval(createRequest, input.value);
+  setInterval(createRequest, 200);
 });
 
 function createRequest() {
   var minimum = 0;
-  console.log('speed', speed);
   request++;
   document.querySelector(".request-tab").innerHTML = request;
   document.querySelector("#total-req").innerHTML = request;
