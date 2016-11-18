@@ -4,7 +4,8 @@
 
 body {
   font-family: 'Playfair Display', serif;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  min-width: 685px; }
 
 .container {
   color: #fff;
