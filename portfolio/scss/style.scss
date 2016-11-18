@@ -297,6 +297,7 @@ ul {
   display: inline-block;
   height: 100%;
   width: 70%;
+  max-width: 450px;
   margin-right: 60px;
   background-color: rgba(46, 38, 47, .9);
   border-radius: 4px;
@@ -339,6 +340,7 @@ ul {
   display: inline-block;
   height: 100%;
   width: 70%;
+  max-width: 450px;
   margin-left: 60px;
   background-color: rgba(46, 38, 47, .9);
   border-radius: 4px;
@@ -616,6 +618,7 @@ ul {
   display: table;
   height: 100%;
   width: 40%;
+  max-width: 650px;
   margin: 50px auto;
   padding: 6px;
   background-color: rgba(0, 0, 0, .2);
@@ -674,7 +677,7 @@ ul {
 //////////////////////////////////////////////////////////////
 .footer {
   position: relative;
-  height: 100px;
+  height: 70px;
   width: 100%;
   background: linear-gradient(#2d3939, #151a1d);
   text-align: center;
@@ -697,17 +700,18 @@ ul {
   border: none;
   background-image: url(../ico/startup.svg);
   top: 50%;
-  margin-top: -40px;
+  margin-top: -30px;
   right: 10px;
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   transition: all ease-in .5s;
 }
 
 .up {
   position: absolute;
   bottom: 2px;
-  right: 10px;
+  right: 11px;
+  bottom: 2px;
   color: rgba(255, 255, 255, .5);
 }
 
@@ -777,7 +781,7 @@ ul {
 
 .faded-menu h1:before {
  content: "";
- background: url(../img/suriken.png) no-repeat;
+ background: url(../ico/suriken.png) no-repeat;
  width: 30px;
  height: 30px;
  float: left;
