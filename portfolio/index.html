@@ -1,191 +1,175 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-  <meta charset="UTF-8">
-  <title>Портфолио</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="animate.css">
-  <script type="text/javascript" src="jquery-3.1.1.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize-min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+  </head>
 
-  <!-- <link rel="stylesheet" href="reset.css"> -->
-</head>
-<body>
+  <body>
 
-<div id="page-preloader"><span class="spinner"></span></div>
+    <div id="page-preloader"><span class="spinner"></span></div>  <!-- PRELOADER -->
 
-<!-- BURBER -->
-<div id="nav-icon1">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-
-<!-- RIGHT NAVIGATION BAR -->
-<div class="navigation">
-  <ul>
-    <li class="nav-row" id="1"><span class="tips">Главная</span><span class="dot"></span></li>
-    <li class="nav-row" id="2"><span class="tips">Обо мне</span><span class="dot"></span></li>
-    <li class="nav-row" id="3"><span class="tips">Образование</span><span class="dot"></span></li>
-    <li class="nav-row" id="4"><span class="tips">Навыки</span><span class="dot"></span></li>
-    <li class="nav-row" id="5"><span class="tips">Контакты</span><span class="dot"></span></li>
-  </ul>
-</div> <!-- RIGHT NAVIGATION BAR -->
-
-
-  <div class="container">
-
-    <!-- ABOUT -->
-    <div class="first-section"><div class="intro">
-      <p>Студеникин Алексей</p><div class="division"></div><p>Начинающий веб-разработчик</p>
-    </div>
-      <img id="arrow" src="ico/arrow.png">
-    </div><!-- ABOUT -->
-
-
-    <div class="second-section">
-    <div class="about-title"><p>Обо мне</p></div>
-      <div class="about-container">
-        <div class="about-wrap">
-          <div class="about-content-left">
-            <p>Привет!</p><p>Меня зовут Алексей</p><p>и это мой сайт портфолио.</p>
-          </div>
-          <div class="about-content-right"><img src="img/mac-44.jpg"></div>
-        </div>
-      </div>
+    <!-- BURBER -->
+    <div id="nav-icon1">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <!-- EXPERIENCE -->
-    <div class="third-section">
+    <!-- RIGHT NAVIGATION BAR -->
+    <div class="navigation">
+      <ul>
+        <li class="nav-row" id="1"><span class="tips">Главная</span><span class="dot"></span></li>
+        <li class="nav-row" id="2"><span class="tips">Обо мне</span><span class="dot"></span></li>
+        <li class="nav-row" id="3"><span class="tips">Образование</span><span class="dot"></span></li>
+        <li class="nav-row" id="4"><span class="tips">Навыки</span><span class="dot"></span></li>
+        <li class="nav-row" id="5"><span class="tips">Контакты</span><span class="dot"></span></li>
+      </ul>
+    </div>  <!-- RIGHT NAVIGATION BAR -->
 
-    <div class="exp-head"><p>Образование</p></div>
-      <div class="vertical-arrow"></div>
+    <div class="container">
 
-      <div class="block-left">
-        <div class="block-content-left"><p>Студент, Факультет механизации</p><a href="http://kubsau.ru/" target="_blank">КубГАУ, Краснодар</a>
-        <ul>
-              <li>Высшее образование по специальности инженер механик</li>
-          </ul>
-        </div>
-        <div class="block-ico-left">
-          <div class="exp-ico ico-edu"></div>
-          <div class="description-left">
-            <p>2008 -2013</p>
+      <!-- ABOUT -->
+      <div class="first-section"><div class="intro">
+        <p>Студеникин Алексей</p><div class="division"></div><p>Начинающий веб-разработчик</p>
+      </div>
+        <img id="arrow" src="ico/arrow.png">
+      </div>  <!-- ABOUT -->
+
+      <div class="second-section">
+      <div class="about-title"><p>Обо мне</p></div>
+        <div class="about-container">
+          <div class="about-wrap">
+            <div class="about-content-left">
+              <p>Привет!</p><p>Меня зовут Алексей</p><p>и это мой сайт портфолио.</p>
+            </div>
+            <div class="about-content-right"><img src="img/code.jpg"></div>
           </div>
         </div>
       </div>
 
-      <div class="block-right">
-        <div class="block-content-right"><p>Помощник системного администратора</p><a>ЗАО ТД "Медтехпром", Москва</a>
-          <ul>
-            <li>Установка, настройка ОС семейства Windows;</li>
-            <li>Обслуживание рабочих станций, телефонии‚ оргтехники;</li>
-          </ul>
-        </div>
-        <div class="block-ico-right">
-          <div class="exp-ico ico-work"></div>
-          <div class="description-right">
-            <p>Сентябрь 2013 - Февраль 2015</p>
+      <!-- EXPERIENCE -->
+      <div class="third-section">
+        <div class="exp-head"><p>Образование</p></div>
+        <div class="vertical-arrow"></div>
+
+        <div class="block-left">
+          <div class="block-content-left"><p>Студент, Факультет механизации</p><a href="http://kubsau.ru/" target="_blank">КубГАУ, Краснодар</a><ul><li>Высшее образование по специальности инженер механик</li></ul>
+          </div>
+          <div class="block-ico-left">
+            <div class="exp-ico ico-edu"></div>
+            <div class="description-left"><p>2008 -2013</p></div>
           </div>
         </div>
-      </div>
 
-      <div class="block-left">
-        <div class="block-content-left"><p>Студент, Факультет ИУ7</p><a href="http://www.bmstu.ru/" target="_blank">МГТУ им.Баумана, Москва</a>
-        <ul>
-              <li>Второе высшее образование по специальности программная инженерия</li>
-          </ul>
-        </div>
-        <div class="block-ico-left">
-          <div class="exp-ico ico-edu"></div>
-          <div class="description-left">
-            <p>2013 -2017</p>
+        <div class="block-right">
+          <div class="block-content-right"><p>Помощник системного администратора</p><a>ЗАО ТД "Медтехпром", Москва</a>
+            <ul>
+              <li>Установка, настройка ОС семейства Windows;</li>
+              <li>Обслуживание рабочих станций, телефонии‚ оргтехники;</li>
+            </ul>
+          </div>
+          <div class="block-ico-right">
+            <div class="exp-ico ico-work"></div>
+            <div class="description-right"><p>Сентябрь 2013 - Февраль 2015</p></div>
           </div>
         </div>
-      </div>
 
-      <div class="block-right">
-        <div class="block-content-right"><p>Системный администратор</p><a>ООО "ТД "ПРОТОН", Москва</a>
-        <ul>
-          <li>Администрирование MS Windows Server и мини АТС Panasonic;</li>
-          <li>Настройка сетевого оборудования;</li>
-          <li>Обеспечение бесперебойной работы локальной сети и ПК;</li>
-          <li>Консультация, техподдержка и обучение сотрудников по работе с программным обеспечением и локальной сетью;</li>
-        </ul></div>
-        <div class="block-ico-right">
-          <div class="exp-ico ico-work"></div>
-          <div class="description-right">
-            <p>Февраль 2015 - Настоящее время</p>
+        <div class="block-left">
+          <div class="block-content-left"><p>Студент, Факультет ИУ7</p><a href="http://www.bmstu.ru/" target="_blank">МГТУ им.Баумана, Москва</a><ul><li>Второе высшее образование по специальности программная инженерия</li></ul>
+          </div>
+          <div class="block-ico-left">
+            <div class="exp-ico ico-edu"></div>
+            <div class="description-left"><p>2013 -2017</p></div>
           </div>
         </div>
-      </div>
 
-    </div> <!-- EXPERIENCE -->
+        <div class="block-right">
+          <div class="block-content-right"><p>Системный администратор</p><a>ООО "ТД "ПРОТОН", Москва</a>
+            <ul>
+              <li>Администрирование MS Windows Server, АТС Panasonic;</li>
+              <li>Настройка сетевого оборудования;</li>
+              <li>Обеспечение бесперебойной работы локальной сети и ПК;</li>
+              <li>Консультация, техподдержка и обучение сотрудников по работе с программным обеспечением и локальной сетью;</li>
+            </ul>
+          </div>
+          <div class="block-ico-right">
+            <div class="exp-ico ico-work"></div>
+            <div class="description-right"><p>Февраль 2015 - Настоящее время</p></div>
+          </div>
+        </div>
 
-    <!-- SKILLS -->
-    <div class="fourth-section">
-      <div class="skills-title"><p>Навыки</p></div>
-      <div class="fourth-wrapper">
-        <div class="skills-wrapper">
-          <div class="skills-content">
-            <div class="skills-left">
-              <p>Технологии</p>
-              <div class="skills-border">
-                <span class="tech-ico-1"></span>
-                <span class="tech-ico-2"></span>
-                <span class="tech-ico-3"></span>
-                <span class="tech-ico-4"></span>
-                <span class="tech-ico-5"></span>
-                <span class="tech-ico-6"></span>
-                <span class="tech-ico-7"></span>
-                <span class="tech-ico-8"></span>
-                <span class="tech-ico-9"></span>
-                <span class="tech-ico-10"></span>
+      </div>  <!-- EXPERIENCE -->
+
+      <!-- SKILLS -->
+      <div class="fourth-section">
+        <div class="skills-title"><p>Навыки</p></div>
+        <div class="fourth-wrapper">
+          <div class="skills-wrapper">
+            <div class="skills-content">
+              <div class="skills-left">
+                <p>Технологии</p>
+                <div class="skills-border">
+                  <span class="tech-ico-1"></span>
+                  <span class="tech-ico-2"></span>
+                  <span class="tech-ico-3"></span>
+                  <span class="tech-ico-4"></span>
+                  <span class="tech-ico-5"></span>
+                  <span class="tech-ico-6"></span>
+                  <span class="tech-ico-7"></span>
+                  <span class="tech-ico-8"></span>
+                  <span class="tech-ico-9"></span>
+                  <span class="tech-ico-10"></span>
+                </div>
+              </div>
+              <div class="skills-right">
+                <p>Инструменты</p>
+                <div class="tools-wrap">
+                  <span class="tools-ico-1"></span>
+                  <span class="tools-ico-2"></span>
+                  <span class="tools-ico-3"></span>
+                  <span class="tools-ico-4"></span>
+                  <span class="tools-ico-5"></span>
+                </div>
+                <div class="clearfix"></div>
               </div>
             </div>
-            <div class="skills-right">
-              <p>Инструменты</p>
-              <div class="tools-wrap">
-                <span class="tools-ico-1"></span>
-                <span class="tools-ico-2"></span>
-                <span class="tools-ico-3"></span>
-                <span class="tools-ico-4"></span>
-                <span class="tools-ico-5"></span>
-              </div>
-              <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>  <!-- SKILLS -->
+
+      <!-- CONTACTS -->
+      <div class="fifth-section">
+      <div class="contact-title"><p>Контакты</p></div>
+        <div class="contact-container">
+          <div class="contact-head"></div>
+          <div class="contact-input">
+            <div class="name">
+              <input class="inp" type="text" name="" placeholder="Имя">
             </div>
+            <div class="email">
+              <input class="inp" type="text" name="" placeholder="Электронный адрес">
+            </div>
+            <div class="message">
+              <textarea class="txtarea" type="text" name="" placeholder="Сообщение" rows="7"></textarea>
+            </div>
+            <button class="btn" type="submit">ОТПРАВИТЬ</button>
           </div>
         </div>
-      </div>
-    </div> <!-- SKILLS -->
+      </div>  <!-- CONTACTS -->
 
-    <div class="fifth-section">
-    <div class="contact-title"><p>Контакты</p></div>
-      <div class="contact-container">
-        <div class="contact-head"></div>
-        <div class="contact-input">
-          <div class="name">
-            <input class="inp" type="text" name="" placeholder="Имя">
-          </div>
-          <div class="email">
-            <input class="inp" type="text" name="" placeholder="Электронный адрес">
-          </div>
-          <div class="message">
-            <textarea class="txtarea" type="text" name="" placeholder="Сообщение" rows="7"></textarea>
-          </div>
-          <button class="btn" type="submit">ОТПРАВИТЬ</button>
-        </div>
-      </div>
-    </div>
+      <!-- FOOTER -->
+      <div class="footer"><p>Copyright 2016</p><div class="rocket" id="apollo"></div><div class="up">НАВЕРХ</div><div class="fix-block"></div>
+      </div>  <!-- FOOTER -->
 
-    <!-- FOOTER -->
-    <div class="footer"><p>Copyright 2016</p><div class="rocket" id="apollo"></div><div class="up">НАВЕРХ</div><div class="fix-block"></div>
-    </div><!-- FOOTER -->
-
+        <!-- FADED MENU -->
       <div class="wrapper">
         <div class="faded-menu">
           <ul>
@@ -196,9 +180,11 @@
             <li class="faded-item-5"><h1>Контакты</h1></li>
           </ul>
         </div>
+      </div>  <!-- FADED MENU -->
 
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    </div>  <!-- CONTAINER -->
+
+    <script src="js/script.js"></script>
+
+  </body>
 </html>

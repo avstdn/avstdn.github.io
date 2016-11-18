@@ -130,7 +130,7 @@ ul {
 
 .first-section {
   position: relative;
-  background-image: url(img/mac.jpg), url(ico/arrow.png);
+  background-image: url(../img/mac.jpg), url(../ico/arrow.png);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -217,7 +217,7 @@ ul {
 
 .third-section {
   position: relative;
-  background: url(img/land.jpg) repeat;
+  background: url(../img/land.jpg) repeat;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -314,11 +314,11 @@ ul {
   width: 30px; }
 
 .ico-edu {
-  background: url(ico/graduate-cap.png) no-repeat center;
+  background: url(../ico/graduate.png) no-repeat center;
   background-size: cover; }
 
 .ico-work {
-  background: url(ico/briefcase.png) no-repeat center;
+  background: url(../ico/briefcase.png) no-repeat center;
   background-size: cover; }
 
 .description-left {
@@ -456,7 +456,7 @@ ul {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background-image: url(ico/sprite-1.png);
+  background-image: url(../ico/sprite-1.png);
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
@@ -467,7 +467,7 @@ ul {
   display: inline-block;
   height: 100px;
   width: 100px;
-  background-image: url(ico/sprite-2.png);
+  background-image: url(../ico/sprite-2.png);
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
@@ -585,7 +585,7 @@ ul {
 .fifth-section {
   position: relative;
   padding-bottom: 50px;
-  background: url(img/sea.jpg) no-repeat center;
+  background: url(../img/sea.jpg) no-repeat center;
   background-size: cover;
   width: 100%; }
 
@@ -609,7 +609,7 @@ ul {
 .rocket {
   position: absolute;
   border: none;
-  background-image: url(ico/startup.svg);
+  background-image: url(../ico/startup.svg);
   top: 50%;
   margin-top: -40px;
   right: 10px;
@@ -681,7 +681,7 @@ ul {
 
 .faded-menu h1:before {
   content: "";
-  background: url("img/suriken.png") no-repeat;
+  background: url(../img/suriken.png) no-repeat;
   width: 30px;
   height: 30px;
   float: left;
@@ -691,7 +691,6 @@ ul {
 @media only screen and (max-device-width: 960px) {
   .navigation {
     display: none; } }
-
 @keyframes trambling-animation {
   0%, 50%, 100% {
     transform: rotate(0deg); }
@@ -699,7 +698,6 @@ ul {
     transform: rotate(-10deg); }
   20%, 40% {
     transform: rotate(10deg); } }
-
 #page-preloader {
   position: fixed;
   left: 0;
@@ -715,5 +713,7 @@ ul {
   position: absolute;
   left: 50%;
   top: 50%;
-  background: url("img/preloader.gif") no-repeat;
+  background: url(../img/preloader.gif) no-repeat;
   margin: -64px 0 0 -64px; }
+
+/*# sourceMappingURL=style.css.map */
