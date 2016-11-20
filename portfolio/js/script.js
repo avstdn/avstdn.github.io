@@ -31,60 +31,49 @@ $(document).ready(function(){
   }
 
   $('#1').click(function(){
-    // $('[class ^= "dot"]').css('background', '#666');
-    var speed = 1000; // scrolling speed
-    var top = $('.first-section').offset().top; // scroll to
-    // $(this).css('background', '#fff');
+    var speed = 1000;
+    var top = $('.first-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#2').click(function(){
-    // $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    // $(this).css('background', '#fff');
     var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#3').click(function(){
-    // $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    // $(this).css('background', '#fff');
     var top = $('.third-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#4').click(function(){
-    // $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    // $(this).css('background', '#fff');
     var top = $('.fourth-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#5').click(function(){
-    // $('[class ^= "dot"]').css('background', '#666');
     var speed = 1000;
-    // $(this).css('background', '#fff');
     var top = $(document).height() - $(window).height();
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
 
   $('#arrow').click(function(){
-    var speed = 1000; // scrolling speed
-    var top = $('.second-section').offset().top; // scroll to
+    var speed = 1000;
+    var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
 
   $('.rocket').click(function(){
-    var speed = 1000; // scrolling speed
-    var top = $('.first-section').offset().top; // scroll to
+    var speed = 1000;
+    var top = $('.first-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
-
 
   $('.faded-item-1').click(function(){
     var speed = 1000;
@@ -144,14 +133,8 @@ $(document).ready(function(){
 
 });
 
-// $('.rocket').hover(function() {
-//   $(".rocket").attr("src","ico/startup-hover.svg");
-// }, function() {
-//   $(".rocket").attr("src","ico/startup.svg");
-// });
-
-
 $(window).on('scroll', function () {
+
   var curPos = $(this).scrollTop();
 
   var top = $('.first-section').offset().top;
