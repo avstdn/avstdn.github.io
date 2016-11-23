@@ -4,10 +4,6 @@ var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     browserSync = require('browser-sync');
 
-gulp.task('default', function() {
-  console.log('Hello, I\'m task!');
-});
-
 gulp.task('sass', function() {
   return gulp.src('portfolio/*.scss')
     .pipe(sass())
