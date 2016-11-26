@@ -6,6 +6,10 @@ $(window).on('load', function () {
     $preloader.delay(550).fadeOut('slow');
 });
 
+$('.contact-input').click(function() {
+  window.location.replace('https://avstdn.herokuapp.com');
+});
+
 // BURGER OPEN //////////////
 var toggle = true;
 var burger = $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4');
