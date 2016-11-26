@@ -7,7 +7,7 @@ $(window).on('load', function () {
 });
 
 $('.contact-input').click(function() {
-  window.location.replace('https://avstdn.herokuapp.com');
+  document.location.href = 'https://avstdn.herokuapp.com';
 });
 
 // BURGER OPEN //////////////
