@@ -35,52 +35,52 @@ $(document).ready(function(){
   }
 
   $('#1').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.first-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#2').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#3').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.third-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#4').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.fourth-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
   $('#5').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $(document).height() - $(window).height();
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
 
   $('#arrow').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
 
   $('.rocket').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.first-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     return false;
   });
 
   $('.faded-item-1').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.first-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     burger.toggleClass('open');
@@ -91,7 +91,7 @@ $(document).ready(function(){
     return false;
   });
   $('.faded-item-2').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.second-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     burger.toggleClass('open');
@@ -102,7 +102,7 @@ $(document).ready(function(){
     return false;
   });
   $('.faded-item-3').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.third-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     burger.toggleClass('open');
@@ -113,7 +113,7 @@ $(document).ready(function(){
     return false;
   });
   $('.faded-item-4').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $('.fourth-section').offset().top;
     $('html, body').animate({scrollTop: top}, speed);
     burger.toggleClass('open');
@@ -124,7 +124,7 @@ $(document).ready(function(){
     return false;
   });
   $('.faded-item-5').click(function(){
-    var speed = 1000;
+    var speed = 500;
     var top = $(document).height() - $(window).height();
     $('html, body').animate({scrollTop: top}, speed);
     burger.toggleClass('open');
