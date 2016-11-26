@@ -1,6 +1,6 @@
 onmessage = function(e) {
 
-  var rand = Math.round(Math.random() * (500 - 200)) + 200;
+  var rand = Math.round(Math.random() * (3000 - 1000)) + 1000;
 
   var counter = 0;
   var stop = setInterval(fill, rand / 10);
