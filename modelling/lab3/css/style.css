@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background-color: #eee; }
+
+.container {
+  width: 80%;
+  background-color: #fff;
+  margin: 50px auto;
+  text-align: center; }
+
+.inputs {
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px; }
+  .inputs input {
+    width: 210px;
+    display: block;
+    margin: 5px auto; }
+
+.generator,
+.queue,
+.worker {
+  margin: 50px 0;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  display: inline-block;
+  line-height: 100px; }
+
+#start {
+  margin: 50px auto;
+  display: block; }
+
+.stat {
+  text-align: center;
+  background-color: #fff; }
+  .stat .stat-wrapper {
+    display: inline-block;
+    width: 300px;
+    margin: 0 auto; }
+    .stat .stat-wrapper ul {
+      text-align: left;
+      list-style-type: none;
+      display: inline-block;
+      margin: 30px; }

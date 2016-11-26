@@ -5,22 +5,22 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync');
 
 gulp.task('sass', function() {
-  return gulp.src('portfolio/*.scss')
+  return gulp.src('scss/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('portfolio'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('default', ['browser-sync' , 'sass'], function() {
-  gulp.watch('portfolio/*.scss', ['sass']);
-  gulp.watch('portfolio/*.html', browserSync.reload);
-  gulp.watch('portfolio/*.js', browserSync.reload);
+  gulp.watch('scss/*.scss', ['sass']);
+  gulp.watch('*.html', browserSync.reload);
+  gulp.watch('js/*.js', browserSync.reload);
 });
 
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-      baseDir: 'portfolio'
+      baseDir: ''
     },
     notify: false
   });

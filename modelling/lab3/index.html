@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>lab3</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <div class="inputs">
+      <input type="text" id="queue-length" placeholder="Enter max queue length" value="300">
+      <input type="text" id="max-gen-time" placeholder="Enter max value of generation time" value="5000">
+      <input type="text" id="min-gen-time" placeholder="Enter min value of generation time" value="1000">
+    </div>
+    <div class="generator"></div>
+    <div class="queue"></div>
+    <div class="worker"></div>
+  </div>
+
+  <button id="start">START</button>
+  <button id="stop">STOP</button>
+
+  <div class="stat">
+    <div class="stat-wrapper">
+      <ul>
+        <li>Total:</li>
+        <li>Queue:</li>
+        <li>Processed:</li>
+        <li>Lost:</li>
+        <li>Worker:</li>
+      </ul>
+      <ul>
+        <li id="stat-total">0</li>
+        <li id="stat-queue">0</li>
+        <li id="stat-proc">0</li>
+        <li id="stat-lost">0</li>
+        <li id="stat-worker">0</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

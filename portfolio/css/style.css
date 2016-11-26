@@ -696,6 +696,7 @@ ul {
 @media only screen and (max-device-width: 960px) {
   .navigation {
     display: none; } }
+
 @keyframes trambling-animation {
   0%, 50%, 100% {
     transform: rotate(0deg); }
@@ -703,6 +704,7 @@ ul {
     transform: rotate(-10deg); }
   20%, 40% {
     transform: rotate(10deg); } }
+
 #page-preloader {
   position: fixed;
   left: 0;
@@ -720,5 +722,3 @@ ul {
   top: 50%;
   background: url(../img/preloader.gif) no-repeat;
   margin: -64px 0 0 -64px; }
-
-/*# sourceMappingURL=style.css.map */
