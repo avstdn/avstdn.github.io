@@ -9,9 +9,10 @@ body {
 
 .container {
   width: 80%;
-  background-color: #fff;
+  background-color: #4f5a6e;
   margin: 50px auto;
   text-align: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
 .inputs {
@@ -20,24 +21,53 @@ body {
   padding: 10px;
   input {
     width: 210px;
-    display: block;
+    display: inline;
     margin: 5px auto;
+  }
+  label {
+    display: inline;
   }
 }
 
 .generator,
 .queue,
 .worker {
-  margin: 50px 0;
+  // margin: 50px 10px;
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
+  width: 160px;
+  height: 55px;
   background-color: #eee;
   display: inline-block;
-  line-height: 100px;
+  line-height: 55px;
+  // box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 
-#start {
+.gen-wrap,
+.que-wrap,
+.wor-wrap {
+  .hdr {
+    position: relative;
+    color: #000;
+    width: 100%;
+    background-color: #6df67d;
+    display: block;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, .3);
+  }
+  margin: 50px 10px;
+  vertical-align: middle;
+  width: 160px;
+  background-color: #eee;
+  display: inline-block;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+
+.btns {
+  #start,
+  #stop {
+    display: block;
+    margin: 5px auto;
+  }
   margin: 50px auto;
   display: block;
 }

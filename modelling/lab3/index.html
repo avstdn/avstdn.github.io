@@ -9,20 +9,34 @@
   
   <div class="container">
     <div class="inputs">
-      <input type="text" id="queue-length" placeholder="Enter max queue length" value="300">
-      <input type="text" id="max-gen-time" placeholder="Enter max value of generation time" value="3000">
-      <input type="text" id="min-gen-time" placeholder="Enter min value of generation time" value="800">
+      <label for="queue">Queue length:</label>
+      <input name="queue" type="text" id="queue-length" placeholder="Enter max queue length" value="300">
+      <label for="max">Maximum generation time:</label>
+      <input name="max" type="text" id="max-gen-time" placeholder="Enter max value of generation time" value="2000">
+      <label for="min">Minimum generation time:</label>
+      <input name="min" type="text" id="min-gen-time" placeholder="Enter min value of generation time" value="800">
     </div>
-    <div class="generator"></div>
-    <div class="queue"></div>
-    <div class="worker"></div>
+    <div class="gen-wrap">
+      <span class="hdr">GENERATOR</span>
+      <div class="generator"></div>
+    </div>
+    <div class="que-wrap">
+      <span class="hdr">QUEUE</span>
+      <div class="queue"></div>
+    </div>
+    <div class="wor-wrap">
+      <span class="hdr">WORKER</span>
+      <div class="worker"></div>
+    </div>
   </div>
-
-  <button id="start">START</button>
-  <button id="stop">STOP</button>
+  <div class="btns">
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+  </div>
 
   <div class="stat">
     <div class="stat-wrapper">
+    <p>STATISTICS</p>
       <ul>
         <li>Total:</li>
         <li>Queue:</li>
