@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #eee; }
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  background: #e6e6e6;
+  text-align: center; }
+
+.choose {
+  width: 150px;
+  margin: 0 auto; }
+  .choose p {
+    padding: 20px 0 0; }
+  .choose select {
+    margin: 20px; }
+
+input {
+  width: 40px;
+  height: 40px;
+  text-align: center; }
