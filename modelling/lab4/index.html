@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LAB4</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+
+      <!-- IVENT -->
+      <div class="event">
+        <div class="head-container">
+          <p>EVENT</p>
+        </div>
+        <input id="start" type="button" value="START">
+        <input id="generate" type="button" value="SINGLE EVENT">
+        <input id="stop" type="button" value="STOP">
+      </div>  <!-- IVENT -->
+
+      <!-- DISPATCHER -->
+      <div class="dispatcher">
+      <div class="head-container">
+        <p>DISPATCHER</p>
+      </div>
+        <div class="quantity"><div class="request-tab">0</div></div>
+      </div>  <!-- DISPATCHER -->
+
+      <!-- QUEUE -->
+      <div class="queue">
+        <div class="head-container">
+          <p>QUEUE</p>
+        </div>
+        <div class="request">
+          <div class="worker-queue" id="queue-1">0</div>
+          <div class="worker-queue" id="queue-2">0</div>
+          <div class="worker-queue" id="queue-3">0</div>
+          <!-- <div class="worker-queue" id="queue-4">0</div>
+          <div class="worker-queue" id="queue-5">0</div> -->
+        </div>
+      </div>  <!-- QUEUE -->
+
+      <!-- WORKERS -->
+      <div class="workers">
+      <div class="head-container">
+        <p>WORKERS</p>
+      </div>
+        <div class="worker">
+          <div class="wrapper">
+              <span class="bar-fill" id="countdown-1"></span><span class="bar-fill-1">0</span>
+          </div>
+        </div>
+
+        <div class="worker">
+          <div class="wrapper">
+              <span class="bar-fill" id="countdown-2"></span><span class="bar-fill-2">0</span>
+          </div>
+        </div>
+
+        <div class="worker">
+          <div class="wrapper">
+              <span class="bar-fill" id="countdown-3"></span><span class="bar-fill-3">0</span>
+          </div>
+        </div>
+
+<!--         <div class="worker">
+          <div class="wrapper">
+              <span class="bar-fill" id="countdown-4"></span><span class="bar-fill-4">0</span>
+          </div>
+        </div>
+
+        <div class="worker">
+          <div class="wrapper">
+              <span class="bar-fill" id="countdown-5"></span><span class="bar-fill-5">0</span>
+          </div>
+        </div> -->
+
+      </div>  <!-- WORKERS -->
+
+      <!-- RESULT -->
+      <div class="result">
+      <div class="head-container">
+        <p>RESULT</p>
+      </div>
+        <div class="summary"><div class="result-tab">0</div></div>
+      </div>  <!-- RESULT -->
+    </div>
+  </div> <!-- CONTAINER -->
+
+  <div class="statistics">
+    <div class="stat-head">STATISTICS</div>
+    <div class="stat-wrap">
+      <div class="first-list">
+        <ul>
+          <li>Total requests</li>
+          <li>Processed requests</li>
+          <li>First worker</li>
+          <li>Second worker</li>
+          <li>Third worker</li>
+          <li>Lost</li>
+<!--           <li>Fourth worker</li>
+          <li>Fifth worker</li> -->
+        </ul>
+      </div>
+      <div class="second-list">
+        <ul>
+          <li id="total-req">0</li>
+          <li id="proc-req">0</li>
+          <li id="worker-1">0</li>
+          <li id="worker-2">0</li>
+          <li id="worker-3">0</li>
+          <li id="lost">0</li>
+<!--           <li id="worker-4">0</li>
+          <li id="worker-5">0</li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js" type="text/javascript"></script>
+
+</body>
+</html>
