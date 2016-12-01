@@ -1,4 +1,3 @@
-
 var rows, columns;
 var form = document.getElementById("frm");
 
@@ -27,18 +26,3 @@ $('select').change(function() {
     form.appendChild(br);
   }
 });
-
-var user = {
-  firstName: 'Vasya'
-};
-var admin = {
-  firstName: 'Admin'
-};
-
-function func() {
-  
-  alert(this);
-}
-
-func();
-// user['f']();
