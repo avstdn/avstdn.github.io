@@ -47,7 +47,7 @@ start.addEventListener('click', function() {
 var stop = document.querySelector('#stop');
 stop.addEventListener('click', function() {
   clearInterval(stopGen);
-})
+});
 
 function createRequest() {
   var minimum = 0;
