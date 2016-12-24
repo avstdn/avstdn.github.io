@@ -1,9 +1,12 @@
 // PRELOADER ////////////////
 $(window).on('load', function () {
-    var $preloader = $('#page-preloader'),
-        $spinner   = $preloader.find('.spinner');
-    $spinner.delay(500).fadeOut();
-    $preloader.delay(550).fadeOut('slow');
+  var $preloader = $('#page-preloader'),
+      $spinner   = $preloader.find('.spinner');
+  $spinner.delay(500).fadeOut();
+  $preloader.delay(550).fadeOut('slow');
+  
+  // PLAYER SLIDE /////////////////////
+  $('.player').addClass('slide');
 });
 
 $('.contact-input').click(function() {
@@ -45,9 +48,6 @@ $(document).ready(function(){
     playToggle = true;
   }
 });
-
-  // PLAYER SLIDE /////////////////////
-  $('.player').addClass('slide');
 
   if($(window).scrollTop() == 0) {
     $('#1 .dot').addClass('dot-active');
