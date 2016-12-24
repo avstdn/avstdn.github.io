@@ -28,17 +28,17 @@ $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 });
 
 var startBtn = document.getElementById('audio');
-var toggle = true;
+var playToggle = true;
 
 $('#play-btn').click(function() {
   $(this).toggleClass('pause');
   $('.outer-ring-pause').toggleClass('outer-ring');
-  if(toggle) {
+  if(playToggle) {
     startBtn.play();
-    toggle = false;
+    playToggle = false;
   } else {
     startBtn.pause();
-    toggle = true;
+    playToggle = true;
   }
 });
 
