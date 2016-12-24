@@ -30,7 +30,11 @@ $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 var startBtn = document.getElementById('audio');
 var playToggle = true;
 
-$('#play-btn').click(function() {
+// SCROLL TO SECTION ////////
+$(document).ready(function(){
+
+  // PLAYER ///////////////////////
+  $('#play-btn').click(function() {
   $(this).toggleClass('pause');
   $('.outer-ring-pause').toggleClass('outer-ring');
   if(playToggle) {
@@ -41,28 +45,6 @@ $('#play-btn').click(function() {
     playToggle = true;
   }
 });
-
-// $('.pause').click(function() {
-//   console.log('!!!');
-//   startBtn.pause();
-//   $('#play-btn').removeClass('pause');
-//   $('#play-btn').addClass('play');
-//   $('.outer-ring').addClass('outer-ring-pause');
-//   $('.outer-ring').removeClass('outer-ring');
-// });
-
-// $('.play').click(function() {
-//   console.log('&&&???');
-//   startBtn.play();
-//   $('#play-btn').removeClass('play');
-//   $('#play-btn').addClass('pause');
-//   $('.outer-ring-pause').addClass('outer-ring');
-//   $('.outer-ring-pause').removeClass('outer-ring-pause');
-// });
-
-
-// SCROLL TO SECTION ////////
-$(document).ready(function(){
 
   if($(window).scrollTop() == 0) {
     $('#1 .dot').addClass('dot-active');
