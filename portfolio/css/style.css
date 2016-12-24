@@ -30,7 +30,7 @@ body {
   transition: 2s ease-out all; }
 
 .outer-ring {
-  animation: twinkle .4s ease infinite; }
+  animation: twinkle .5s ease infinite; }
 
 .outer-ring-pause {
   position: relative;
@@ -57,14 +57,14 @@ body {
   margin: 8px;
   background: url(../ico/play.png) no-repeat;
   cursor: pointer;
-  transition: 0.2s ease all; }
+  transition: 0.2s ease-out all; }
 
 .pause {
   background: url(../ico/pause.png) no-repeat; }
 
 @keyframes twinkle {
   0% {
-    background: #27ff1c; }
+    background: #00ff3c; }
   100% {
     background: #00c63d; } }
 
