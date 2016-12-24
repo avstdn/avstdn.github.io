@@ -4,9 +4,9 @@ $(window).on('load', function () {
       $spinner   = $preloader.find('.spinner');
   $spinner.delay(500).fadeOut();
   $preloader.delay(550).fadeOut('slow');
-  
+
   // PLAYER SLIDE /////////////////////
-  $('.player').addClass('slide');
+  $('.player').delay(500).addClass('slide');
 });
 
 $('.contact-input').click(function() {
