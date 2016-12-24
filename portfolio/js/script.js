@@ -46,6 +46,9 @@ $(document).ready(function(){
   }
 });
 
+  // PLAYER SLIDE /////////////////////
+  $('.player').addClass('slide');
+
   if($(window).scrollTop() == 0) {
     $('#1 .dot').addClass('dot-active');
   }
