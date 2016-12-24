@@ -37,7 +37,7 @@ body {
   margin: 18px auto;
   height: 88px;
   width: 88px;
-  background: #111;
+  background: rgba(17, 17, 17, 0.6);
   border-radius: 50%;
   border: 1px solid #111; }
 
