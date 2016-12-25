@@ -61,7 +61,7 @@ body {
 
 .slide {
   transform: translate(0, 110px);
-  transition: 3s ease-out all; }
+  transition: 2s ease-out all; }
 
 .hide-player {
   transform: translate(0, -110px);
@@ -106,7 +106,8 @@ body {
 
 @keyframes twinkle {
   0% {
-    background: #00ff3c; }
+    background: #00ff3c;
+    transform: scale(1.1); }
   100% {
     background: #00c63d; } }
 
