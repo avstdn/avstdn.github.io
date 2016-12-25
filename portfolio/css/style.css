@@ -26,15 +26,14 @@ body {
   z-index: 1; }
 
 #player {
-  width: 75px;
-  height: 15px;
+  width: 72px;
   position: relative;
   margin: 0 auto; }
 
 #volume {
+  width: 72px;
   margin: 10px auto 0;
   height: 10px;
-  width: 75px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -43,7 +42,6 @@ body {
 #volume .ui-slider-range-min {
   position: absolute;
   height: 10px;
-  width: 15px;
   background: #fff;
   border-radius: 15px 0 0 15px;
   border: none;
@@ -55,7 +53,7 @@ body {
   background: url("../ico/handle.png") no-repeat left top;
   position: absolute;
   top: -6px;
-  margin-left: -13px;
+  margin-left: -12px;
   cursor: pointer;
   outline: none;
   border: none; }
@@ -69,7 +67,7 @@ body {
 
 .outer-ring-pause {
   position: relative;
-  margin: 6px auto;
+  margin: 9px auto;
   height: 88px;
   width: 88px;
   background: rgba(17, 17, 17, 0.6);
