@@ -31,25 +31,20 @@ body {
   background: rgba(51, 51, 51, .7);
   border-radius: 0 0 75px 75px;
   z-index: 1;
+  transition: 1s ease-out all;
 }
 
 
 #player {
   width: 72px;
-  // height: 15px;
   position: relative;
   margin: 0 auto;
-  // top: 10px;
-  // background: url('http://iviewsource.com/exercises/audioslider/images/volume-background.png') no-repeat left top;
 }
 
 #volume {
-  // position: absolute;
-  // left: 24px;
   width: 72px;
   margin: 10px auto 0;
   height: 10px;
-  // background: url('http://iviewsource.com/exercises/audioslider/images/volume-empty.png') no-repeat left top;
   background: rgba(255, 255, 255, .2);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, .1);
@@ -58,11 +53,7 @@ body {
 
 #volume .ui-slider-range-min {
   position: absolute;
-  // top: -2px;
-  // left: -2px;
   height: 10px;
-  // width: 15px;
-  // background: url('http://iviewsource.com/exercises/audioslider/images/volume-full.png') no-repeat left top;
   background: #fff;
   border-radius: 15px 0 0 15px;
   border: none;
@@ -70,48 +61,45 @@ body {
 }
 
 #volume .ui-slider-handle {
-    width: 25px;
-    height:25px;
-    // background: url('http://iviewsource.com/exercises/audioslider/images/volume-knob.png') no-repeat left top;
-    background: url('../ico/handle.png') no-repeat left top;
-    position: absolute;
-    top: -6px;
-    margin-left: -12px;
-    cursor: pointer;
-    outline: none;
-    border: none;
+  width: 25px;
+  height:25px;
+  background: url('../ico/handle.png') no-repeat left top;
+  position: absolute;
+  top: -6px;
+  margin-left: -12px;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
-
-
 
 
 .slide {
   transform: translate(0, 110px);
-  transition: 2s ease-out all;
+  transition: 3s ease-out all;
+}
+
+.hide-player {
+  transform: translate(0, -110px);
+  transition: 1s ease-out all;
+}
+
+.show-player {
+  transform: translate(0, 110px);
+  transition: 1s ease-out all;
 }
 
 .outer-ring {
-  // position: relative;
-  // margin: 4px auto;
-  // height: 142px;
-  // width: 142px;
-  // // background: #03a703;
-  // background: #00e800;
-  // border-radius: 50%;
-  // border: 1px solid #111;
   animation: twinkle .5s ease infinite;
 }
 
 .outer-ring-pause {
   position: relative;
-  // margin: 18px auto;
   margin: 9px auto;
   height: 88px;
   width: 88px;
   background: rgba(17, 17, 17, .6);
   border-radius: 50%;
   border: 1px solid #111;
-  // transition: 10s ease all;
 }
 
 .inner-ring {
@@ -135,12 +123,6 @@ body {
 }
 
 .pause {
-  // position: absolute;
-  // height: 64px;
-  // width: 64px;
-  // margin: 36px;
-  // cursor: pointer;
-  // transition: 0.2s ease all;
   background: url(../ico/pause.png) no-repeat;
 }
 

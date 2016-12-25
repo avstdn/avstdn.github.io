@@ -23,7 +23,8 @@ body {
   height: 122px;
   background: rgba(51, 51, 51, 0.7);
   border-radius: 0 0 75px 75px;
-  z-index: 1; }
+  z-index: 1;
+  transition: 1s ease-out all; }
 
 #player {
   width: 72px;
@@ -60,7 +61,15 @@ body {
 
 .slide {
   transform: translate(0, 110px);
-  transition: 2s ease-out all; }
+  transition: 3s ease-out all; }
+
+.hide-player {
+  transform: translate(0, -110px);
+  transition: 1s ease-out all; }
+
+.show-player {
+  transform: translate(0, 110px);
+  transition: 1s ease-out all; }
 
 .outer-ring {
   animation: twinkle .5s ease infinite; }

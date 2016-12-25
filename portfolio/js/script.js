@@ -13,7 +13,9 @@ $('.contact-input').click(function() {
 });
 
 
-////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////
+// VOLUME CONTROL ////////////////
+//////////////////////////////////
 $("#volume").slider({
     min: 0,
     max: 100,
@@ -24,31 +26,13 @@ $("#volume").slider({
       setVolume((ui.value) / 100);
     }
 });
-
 setVolume(0.5);
-
-//   var myMedia = document.createElement('audio');
-//   $('#player').append(myMedia);
-//   myMedia.id = "myMedia";
-//   // playAudio('http://iviewsource.com/exercises/audioslider/audio/ViewSource', 0);
-
-// function playAudio(fileName, myVolume) {
-//   var mediaExt = (myMedia.canPlayType('audio/mp3')) ? '.mp3' 
-//     : (myMedia.canPlayType('audio/ogg')) ? '.ogg' 
-//     : '';
-//   if (mediaExt) {
-//     myMedia.src = fileName + mediaExt;
-//     myMedia.setAttribute('loop', 'loop');
-//     setVolume(myVolume);
-//     myMedia.play();
-//   }
-// }
 
 function setVolume(myVolume) {
     var myMedia = document.getElementById('audio');
     myMedia.volume = myVolume;
 }
-////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////
 
 
 
@@ -197,6 +181,14 @@ $(document).ready(function(){
 });
 
 $(window).on('scroll', function () {
+
+  if ($(window).scrollTop()) {
+    $('.player').removeClass('slide').removeClass('show-player');
+    $('.player').addClass('hide-player');
+  } else {
+    $('.player').removeClass('hide-player');
+    $('.player').addClass('show-player');
+  }
 
   var curPos = $(this).scrollTop();
 
