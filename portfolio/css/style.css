@@ -125,6 +125,12 @@ body {
   to {
     background: #00c63d; } }
 
+@keyframes twinkle-none {
+  from {
+    background: #00ff3c; }
+  to {
+    background: #00c63d; } }
+
 .navigation {
   position: fixed;
   top: 40%;

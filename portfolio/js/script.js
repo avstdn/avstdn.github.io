@@ -37,9 +37,12 @@ function setVolume(myVolume) {
   if(myVolume >= 0.75) {
     $('.outer-ring').css('animation', 'twinkle-high .5s ease infinite');
     animationState = 2;
-  } else if(myVolume <= 0.25) {
+  } else if(myVolume <= 0.25 && myVolume > 0) {
     $('.outer-ring').css('animation', 'twinkle-low .5s ease infinite');
     animationState = 0;
+  } else if(myVolume == 0) {
+    $('.outer-ring').css('animation', 'twinkle-none .5s ease infinite');
+    animationState = 3;
   } else {
     $('.outer-ring').css('animation', 'twinkle-middle .5s ease infinite');
     animationState = 1;
@@ -79,6 +82,9 @@ $(document).ready(function(){
   $('.outer-ring-pause').toggleClass('outer-ring');
   if(playToggle) {
     switch(animationState) {
+      case 3:
+        $('.outer-ring-pause').css('animation', 'twinkle-none .5s ease infinite');
+        break;
       case 2:
         $('.outer-ring-pause').css('animation', 'twinkle-high .5s ease infinite');
         break;
