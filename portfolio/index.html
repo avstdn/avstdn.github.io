@@ -10,11 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфолио</title>
     <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
   </head>
 
   <body>
 
-  <audio src="mp3/park.mp3" type="audio/mpeg" loop="1" id="audio"></audio>
+    <audio src="mp3/park.mp3" type="audio/mpeg" loop="1" id="audio"></audio>
 
     <div id="page-preloader"><span class="spinner"></span></div>  <!-- PRELOADER -->
 
@@ -26,6 +27,11 @@
     </div>
 
     <div class="player">
+
+      <div id="player">
+        <div id="volume"></div>
+      </div>
+
       <div class="outer-ring-pause">
         <div class="inner-ring">
           <div class="play" id="play-btn"></div>

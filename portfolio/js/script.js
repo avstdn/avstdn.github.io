@@ -4,7 +4,6 @@ $(window).on('load', function () {
       $spinner   = $preloader.find('.spinner');
   $spinner.delay(500).fadeOut();
   $preloader.delay(550).fadeOut('slow');
-
   // PLAYER SLIDE /////////////////////
   $('.player').delay(500).addClass('slide');
 });
@@ -12,6 +11,47 @@ $(window).on('load', function () {
 $('.contact-input').click(function() {
   document.location.href = 'https://avstdn.herokuapp.com';
 });
+
+
+////////////////////////////////////////////////////////////////////////////
+$("#volume").slider({
+    min: 0,
+    max: 100,
+    value: 50,
+    range: "min",
+    animate: true,
+    slide: function(event, ui) {
+      setVolume((ui.value) / 100);
+    }
+});
+
+setVolume(0.5);
+
+//   var myMedia = document.createElement('audio');
+//   $('#player').append(myMedia);
+//   myMedia.id = "myMedia";
+//   // playAudio('http://iviewsource.com/exercises/audioslider/audio/ViewSource', 0);
+
+// function playAudio(fileName, myVolume) {
+//   var mediaExt = (myMedia.canPlayType('audio/mp3')) ? '.mp3' 
+//     : (myMedia.canPlayType('audio/ogg')) ? '.ogg' 
+//     : '';
+//   if (mediaExt) {
+//     myMedia.src = fileName + mediaExt;
+//     myMedia.setAttribute('loop', 'loop');
+//     setVolume(myVolume);
+//     myMedia.play();
+//   }
+// }
+
+function setVolume(myVolume) {
+    var myMedia = document.getElementById('audio');
+    myMedia.volume = myVolume;
+}
+////////////////////////////////////////////////////////////////////////////
+
+
+
 
 // BURGER OPEN //////////////
 var toggle = true;

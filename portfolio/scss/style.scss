@@ -27,11 +27,63 @@ body {
   top: -110px;
   right: 10%;
   width: 92px;
-  height: 110px;
+  height: 122px;
   background: rgba(51, 51, 51, .7);
   border-radius: 0 0 75px 75px;
   z-index: 1;
 }
+
+
+#player {
+  width: 75px;
+  height: 15px;
+  position: relative;
+  margin: 0 auto;
+  // top: 10px;
+  // background: url('http://iviewsource.com/exercises/audioslider/images/volume-background.png') no-repeat left top;
+}
+
+#volume {
+  // position: absolute;
+  // left: 24px;
+  margin: 10px auto 0;
+  height: 10px;
+  width: 75px;
+  // background: url('http://iviewsource.com/exercises/audioslider/images/volume-empty.png') no-repeat left top;
+  background: rgba(255, 255, 255, .2);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, .1);
+  outline: none;
+}
+
+#volume .ui-slider-range-min {
+  position: absolute;
+  // top: -2px;
+  // left: -2px;
+  height:10px;
+  width: 15px;
+  // background: url('http://iviewsource.com/exercises/audioslider/images/volume-full.png') no-repeat left top;
+  background: #fff;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  outline: none;
+}
+
+#volume .ui-slider-handle {
+    width: 25px;
+    height:25px;
+    // background: url('http://iviewsource.com/exercises/audioslider/images/volume-knob.png') no-repeat left top;
+    background: url('../ico/handle.png') no-repeat left top;
+    position: absolute;
+    top: -6px;
+    margin-left: -13px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+
+
 
 .slide {
   transform: translate(0, 110px);
@@ -52,7 +104,8 @@ body {
 
 .outer-ring-pause {
   position: relative;
-  margin: 18px auto;
+  // margin: 18px auto;
+  margin: 6px auto;
   height: 88px;
   width: 88px;
   background: rgba(17, 17, 17, .6);
@@ -66,7 +119,7 @@ body {
   margin: 3px;
   height: 80px;
   width: 80px;
-  background: #111111;
+  background: #111;
   border-radius: 50%;
   border: 1px solid #111;
 }
