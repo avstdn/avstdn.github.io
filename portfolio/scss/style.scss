@@ -89,7 +89,7 @@ body {
 }
 
 .outer-ring {
-  animation: twinkle .5s ease infinite;
+  animation: twinkle-middle .5s ease infinite;
 }
 
 .outer-ring-pause {
@@ -126,21 +126,32 @@ body {
   background: url(../ico/pause.png) no-repeat;
 }
 
-@keyframes twinkle {
-  0% {
+@keyframes twinkle-low {
+  from {
+    background: #00ff3c;
+    transform: scale(1.05);
+  }
+  to {
+    background: #00c63d;
+  }
+}
+
+@keyframes twinkle-middle {
+  from {
     background: #00ff3c;
     transform: scale(1.1);
   }
-  // 25% {
-  //   background: yellow; 00ff3c
-  // }
-  // 50% {
-  //   background: orange;
-  // }
-  // 75% {
-  //   background: red;
-  // }
-  100% {
+  to {
+    background: #00c63d;
+  }
+}
+
+@keyframes twinkle-high {
+  from {
+    background: #00ff3c;
+    transform: scale(1.15);
+  }
+  to {
     background: #00c63d;
   }
 }

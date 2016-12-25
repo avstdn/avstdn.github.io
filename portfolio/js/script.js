@@ -16,7 +16,10 @@ $('.contact-input').click(function() {
 //////////////////////////////////
 // VOLUME CONTROL ////////////////
 //////////////////////////////////
-$("#volume").slider({
+var volume = $("#volume");
+var animationState = 1;
+
+volume.slider({
     min: 0,
     max: 100,
     value: 50,
@@ -29,8 +32,18 @@ $("#volume").slider({
 setVolume(0.5);
 
 function setVolume(myVolume) {
-    var myMedia = document.getElementById('audio');
-    myMedia.volume = myVolume;
+  var myMedia = document.getElementById('audio');
+  myMedia.volume = myVolume;
+  if(myVolume >= 0.75) {
+    $('.outer-ring').css('animation', 'twinkle-high .5s ease infinite');
+    animationState = 2;
+  } else if(myVolume <= 0.25) {
+    $('.outer-ring').css('animation', 'twinkle-low .5s ease infinite');
+    animationState = 0;
+  } else {
+    $('.outer-ring').css('animation', 'twinkle-middle .5s ease infinite');
+    animationState = 1;
+  }
 }
 ///////////////////////////////////////////////////
 
@@ -65,9 +78,21 @@ $(document).ready(function(){
   $(this).toggleClass('pause');
   $('.outer-ring-pause').toggleClass('outer-ring');
   if(playToggle) {
+    switch(animationState) {
+      case 2:
+        $('.outer-ring-pause').css('animation', 'twinkle-high .5s ease infinite');
+        break;
+      case 1:
+        $('.outer-ring-pause').css('animation', 'twinkle-middle .5s ease infinite');
+        break;
+      case 0:
+        $('.outer-ring-pause').css('animation', 'twinkle-low .5s ease infinite');
+        break;
+    }
     startBtn.play();
     playToggle = false;
   } else {
+    $('.outer-ring-pause').css('animation', 'none');
     startBtn.pause();
     playToggle = true;
   }
