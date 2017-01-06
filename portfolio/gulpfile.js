@@ -6,12 +6,12 @@ var gulp        = require('gulp'),
 
 gulp.task('sass', function() {
   return gulp.src('scss/*.scss')
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task('default', ['browser-sync' , 'sass'], function() {
+gulp.task('default', ['sass', 'browser-sync'], function() {
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('*.html', browserSync.reload);
   gulp.watch('js/*.js', browserSync.reload);

@@ -1,0 +1,18 @@
+body {
+  background: url(../img/alps.jpg) no-repeat fixed;
+  background-size: cover; }
+
+.container {
+  background-color: #eee;
+  width: 50%;
+  margin-bottom: 50px;
+  padding: 0; }
+
+header {
+  background-color: #0058e0; }
+  header img {
+    height: 150px;
+    width: 150px;
+    float: left; }
+  header h1, header h2, header h3, header h4 {
+    color: #fff; }
