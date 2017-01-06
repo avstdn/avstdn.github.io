@@ -5,13 +5,14 @@ body {
 
 .container {
   background-color: #eee;
-  width: 50%;
   margin-bottom: 50px;
   padding: 0;
+  max-width: 980px;
 }
 
 header {
   background-color: #0058e0;
+  padding: 10px;
   img {
     height: 150px;
     width: 150px;
@@ -21,3 +22,11 @@ header {
     color: #fff;
   }
 }
+
+.content {
+  img {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
