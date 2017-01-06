@@ -4,15 +4,19 @@ body {
 }
 
 .container {
-  background-color: #eee;
+  background-color: #fff;
   margin-bottom: 50px;
   padding: 0;
   max-width: 980px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, .7);
+}
+
+.wrapper {
+  padding: 15px;
 }
 
 header {
   background-color: #0058e0;
-  padding: 10px;
   img {
     height: 150px;
     width: 150px;
@@ -24,14 +28,20 @@ header {
 }
 
 .content {
+  padding: 0;
   img {
     width: 100%;
     padding: 20px 0;
   }
 }
 
-.footer {
-  border-top: 1px dashed rgba(0,0,0,.2);
-  text-align: center;
+.container h4 {
+  padding: 0;
 }
 
+.footer {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
