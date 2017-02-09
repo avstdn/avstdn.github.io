@@ -1,7 +1,7 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 
-var radius = 10000000;
+var radius = 25;
 
 canvas.width = window.innerWidth;
 canvas.height = 500;
