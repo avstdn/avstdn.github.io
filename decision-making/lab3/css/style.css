@@ -3,15 +3,14 @@
   padding: 0; }
 
 .container {
-  background: #eee; }
+  position: relative; }
 
 #canvas {
-  margin: 5px 0;
-  background: #fff; }
+  background: #eee; }
 
 .start {
   width: 150px;
+  margin-top: 50px;
   margin-left: -75px;
   position: absolute;
-  bottom: 10%;
   left: 50%; }
