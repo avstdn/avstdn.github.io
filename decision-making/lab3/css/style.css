@@ -2,21 +2,38 @@
   margin: 0;
   padding: 0; }
 
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all ease .5s; }
+
+.hide {
+  opacity: 0;
+  transition: all ease .5s; }
+
 .container {
-  position: relative; }
+  position: relative;
+  transition: all ease .5s; }
 
 #canvas {
+  margin: 0 25px;
   background: #eee; }
 
 .start {
+  position: absolute;
   width: 150px;
   margin-top: 10px;
   margin-left: -75px;
-  position: absolute;
   left: 50%; }
 
 #coords {
   margin: 10px auto;
   text-align: center;
   width: 200px;
-  background: yellow; }
+  background: #eee;
+  color: #000; }

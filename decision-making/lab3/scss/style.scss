@@ -7,8 +7,28 @@ body {
 
 }
 
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // display: none;
+  overflow: auto;
+  // background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
+    // background: #2c2f36;
+    transition: all ease .5s;
+}
+
+.hide {
+  opacity: 0;
+  transition: all ease .5s;
+}
+
 .container {
   position: relative;
+  transition: all ease .5s;
   // height: 300px;
   // width: 90%;
   // margin: 0 auto;
@@ -16,15 +36,15 @@ body {
 }
 
 #canvas {
-  // margin: 5px 0;
+  margin: 0 25px;
   background: #eee;
 }
 
 .start {
+  position: absolute;
   width: 150px;
   margin-top: 10px;
   margin-left: -75px;
-  position: absolute;
   // bottom: 10%;
   left: 50%;
 }
@@ -34,5 +54,6 @@ body {
   text-align: center;
   // height: 50px;
   width: 200px;
-  background: yellow;
+  background: #eee;
+  color: #000;
 }
