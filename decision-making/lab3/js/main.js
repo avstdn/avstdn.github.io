@@ -4,7 +4,7 @@ var objectsArray = [];
 
 var radius = 7;
 
-var outerRadius = 40;
+var outerRadius = 20;
 
 canvas.width = window.innerWidth - 50;
 canvas.height = 400;
@@ -13,11 +13,11 @@ var putPoint = function(e) {
 
   addToObjectsArray(e.offsetX, e.offsetY, 'undefined');
 
-  context.beginPath();
-  context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
-  context.strokeStyle = 'yellow';
-  context.stroke();
-  context.closePath();
+  // context.beginPath();
+  // context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
+  // context.strokeStyle = 'yellow';
+  // context.stroke();
+  // context.closePath();
 
   context.beginPath();
   context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
