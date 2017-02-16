@@ -33,8 +33,14 @@ var putPoint = function(e) {
         if(isCurrentColor(objectsArray[i], objectsArray[objectsArray.length-1])) {
           drawPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
         } else {
+          // Если есть связь с точкой другого цвета
+          if(false) {
           redrawPoints(objectsArray[i], objectsArray[objectsArray.length-1]);
           console.log('is not current color');
+          // Если связь только с точками нового цвета
+          } else {
+            drawCurrentPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
+          }
         }
         notReached = false;
       }
@@ -94,6 +100,16 @@ function drawPoint(reachedPoint, currentPoint) {
   context.fillStyle = currentPoint.color;
   context.fill();
   context.closePath();
+  reachedPoint.color = currentPoint.color;
+}
+
+function drawCurrentPoint(reachedPoint, currentPoint) {
+  context.beginPath();
+  context.arc(currentPoint.x, currentPoint.y, radius/2, 0, Math.PI*2);
+  context.fillStyle = reachedPoint.color;
+  context.fill();
+  context.closePath();
+  currentPoint.color = reachedPoint.color;
 }
 
 function redrawPoints(reachedPoint, currentPoint) {
