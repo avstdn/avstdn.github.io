@@ -1,6 +1,9 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var objectsArray = [];
+var colorsArray = ['yellow', 'green', 'blue', 'red', 'pink', 'teal', 'turquoise', 'orange', 'purple', 'maroon'];
+var clr = 0;
+var notReached = false;
 
 var radius = 7;
 
@@ -11,33 +14,51 @@ canvas.height = 400;
 
 var putPoint = function(e) {
 
-  addToObjectsArray(e.offsetX, e.offsetY, 'undefined');
-
-  // context.beginPath();
-  // context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
-  // context.strokeStyle = 'yellow';
-  // context.stroke();
-  // context.closePath();
+  addToObjectsArray(e.offsetX, e.offsetY, colorsArray[clr]);
 
   context.beginPath();
-  context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
-  context.fillStyle = 'black';
-  context.fill();
+  context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
+  context.strokeStyle = 'yellow';
+  context.stroke();
   context.closePath();
 
-  if(objectsArray.length > 0) { // В массиве должно быть больше 2-х элементов
-    for(var i = 0; i < objectsArray.length - 1; i++) { 
-      if(isOwned(objectsArray[i].x, objectsArray[i].y, objectsArray[objectsArray.length-1].x, objectsArray[objectsArray.length-1].y)) { // Если ф-ия вернула true, то объединяем точки в кластер
-        if(setColor(objectsArray[i], objectsArray[objectsArray.length-1])) { // Если ф-ия вернула true, то красим обе точки
+
+///////////////////////////// MAIN //////////////////////////////////////////////
+  if(objectsArray.length > 1) { // В массиве должно быть больше 2-х элементов
+
+    notReached = true;
+
+    for(var i = objectsArray.length - 2; i >= 0 ; i--) {
+      if(isOwned(objectsArray[i].x, objectsArray[i].y, objectsArray[objectsArray.length-1].x, objectsArray[objectsArray.length-1].y)) { // Если ф-ия вернула true, то точка досигаема
+        if(isCurrentColor(objectsArray[i], objectsArray[objectsArray.length-1])) {
+          drawPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
+        } else {
           redrawPoints(objectsArray[i], objectsArray[objectsArray.length-1]);
-        } else { // Иначе, красим только одну точку
-          drawPoint(objectsArray[objectsArray.length-1]);
         }
+        notReached = false;
       }
     }
-  }
+    if(notReached) {
+      clr %= colorsArray.length - 1;
+      clr++;
+      objectsArray[objectsArray.length-1].color = colorsArray[clr];
+      context.beginPath();
+      context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
+      context.fillStyle = colorsArray[clr];
+      context.fill();
+      context.closePath();
+      console.log('Is not owned');
+    }
 
-  console.log(e.offsetX, e.offsetY);
+  } else { // Если в массиве один элемент
+    context.beginPath();
+    context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
+    context.fillStyle = colorsArray[clr];
+    context.fill();
+    context.closePath();
+    console.log('length = 1');
+
+  } ///////////////////////////////////////////////////////////////////////
 }
 
 canvas.addEventListener('mousedown', putPoint);
@@ -57,37 +78,35 @@ function isOwned(x1, y1, x2, y2) {
   }
 }
 
-function setColor(obj1, obj2) {
-  if(obj1.color == 'undefined') {
-    obj1.color = 'red';
-    obj2.color = 'red';
-    console.log('setColor', true);
+function isCurrentColor(obj1, obj2) {
+  if(obj1.color == obj2.color) {
     return true;
   } else {
-    obj2.color = 'red';
-    console.log('setColor', false);
     return false;
   }
 }
 
-function drawPoint(obj2) {
+function drawPoint(reachedPoint, currentPoint) {
+  // currentPoint.color = reachedPoint.color;
   context.beginPath();
-  context.fillStyle = obj2.color;
-  context.arc(obj2.x, obj2.y, radius/2, 0, Math.PI*2);
+  context.arc(currentPoint.x, currentPoint.y, radius/2, 0, Math.PI*2);
+  context.fillStyle = currentPoint.color;
   context.fill();
   context.closePath();
 }
 
-function redrawPoints(obj1, obj2) {
-  context.beginPath();
-  context.arc(obj1.x, obj1.y, radius/2, 0, Math.PI*2);
-  context.fillStyle = obj2.color;
-  context.fill();
-  context.closePath();
-  context.beginPath();
-  context.arc(obj2.x, obj2.y, radius/2, 0, Math.PI*2);
-  context.fill();
-  context.closePath();
+function redrawPoints(reachedPoint, currentPoint) {
+  for(var i = 0; i < objectsArray.length - 1; i++) {
+    if(objectsArray[i].color == currentPoint.color) {
+      objectsArray[i].color = reachedPoint.color;
+
+      context.beginPath();
+      context.arc(objectsArray.x, objectsArray.y, radius/2, 0, Math.PI*2);
+      context.fillStyle = reachedPoint.color;
+      context.fill();
+      context.closePath();
+    }
+  }
 }
 
 
