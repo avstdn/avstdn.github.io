@@ -34,6 +34,7 @@ var putPoint = function(e) {
           drawPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
         } else {
           redrawPoints(objectsArray[i], objectsArray[objectsArray.length-1]);
+          console.log('is not current color');
         }
         notReached = false;
       }
@@ -99,14 +100,19 @@ function redrawPoints(reachedPoint, currentPoint) {
   for(var i = 0; i < objectsArray.length - 1; i++) {
     if(objectsArray[i].color == currentPoint.color) {
       objectsArray[i].color = reachedPoint.color;
-
       context.beginPath();
-      context.arc(objectsArray.x, objectsArray.y, radius/2, 0, Math.PI*2);
+      context.arc(objectsArray[i].x, objectsArray[i].y, radius/2, 0, Math.PI*2);
       context.fillStyle = reachedPoint.color;
       context.fill();
       context.closePath();
     }
   }
+  currentPoint.color = reachedPoint.color;
+  context.beginPath();
+  context.arc(currentPoint.x, currentPoint.y, radius/2, 0, Math.PI*2);
+  context.fillStyle = reachedPoint.color;
+  context.fill();
+  context.closePath();
 }
 
 
