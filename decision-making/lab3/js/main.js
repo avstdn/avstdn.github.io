@@ -4,6 +4,7 @@ var objectsArray = [];
 var colorsArray = ['yellow', 'green', 'blue', 'red', 'pink', 'teal', 'turquoise', 'orange', 'purple', 'maroon'];
 var clr = 0;
 var notReached = false;
+var otherColors = false;
 
 var radius = 7;
 
@@ -33,11 +34,12 @@ var putPoint = function(e) {
         if(isCurrentColor(objectsArray[i], objectsArray[objectsArray.length-1])) {
           drawPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
         } else {
-          // Если есть связь с точкой другого цвета
-          if(false) {
+          // Если есть связь с точкой текущего цвета
+
+          if(isReached(objectsArray[objectsArray.length-1])) {
           redrawPoints(objectsArray[i], objectsArray[objectsArray.length-1]);
           console.log('is not current color');
-          // Если связь только с точками нового цвета
+          // Если связь только с досягаемыми точками
           } else {
             drawCurrentPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
           }
@@ -85,12 +87,24 @@ function isOwned(x1, y1, x2, y2) {
   }
 }
 
-function isCurrentColor(obj1, obj2) {
-  if(obj1.color == obj2.color) {
+function isCurrentColor(reachedPoint, currentPoint) {
+  if(reachedPoint.color == currentPoint.color) {
     return true;
   } else {
     return false;
   }
+}
+
+function isReached(currentPoint) {
+  for(var i = 0; i < objectsArray.length - 1; i++) {
+    if(isOwned(currentPoint.x, currentPoint.y, objectsArray[i].x, objectsArray[i].y)) {
+        console.log('I see you!');
+      if(isCurrentColor(objectsArray[i], currentPoint)) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 function drawPoint(reachedPoint, currentPoint) {
