@@ -115,38 +115,38 @@
 
   /* Awesome burger scaled */
 
-  var pathD = document.getElementById('pathD'),
-    pathE = document.getElementById('pathE'),
-    pathF = document.getElementById('pathF'),
-    segmentD = new Segment(pathD, beginAC, endAC),
-    segmentE = new Segment(pathE, beginB, endB),
-    segmentF = new Segment(pathF, beginAC, endAC),
-    wrapper2 = document.getElementById('menu-icon-wrapper2'),
-    trigger2 = document.getElementById('menu-icon-trigger2'),
-    toCloseIcon2 = true,
-    dummy2 = document.getElementById('dummy2');
+  // var pathD = document.getElementById('pathD'),
+  //   pathE = document.getElementById('pathE'),
+  //   pathF = document.getElementById('pathF'),
+  //   segmentD = new Segment(pathD, beginAC, endAC),
+  //   segmentE = new Segment(pathE, beginB, endB),
+  //   segmentF = new Segment(pathF, beginAC, endAC),
+  //   wrapper2 = document.getElementById('menu-icon-wrapper2'),
+  //   trigger2 = document.getElementById('menu-icon-trigger2'),
+  //   toCloseIcon2 = true,
+  //   dummy2 = document.getElementById('dummy2');
 
-  wrapper2.style.visibility = 'visible';
+  // wrapper2.style.visibility = 'visible';
 
-  trigger2.onclick = function() {
-    addScale(wrapper2);
-    if (toCloseIcon2) {
-      inAC(segmentD);
-      inB(segmentE);
-      inAC(segmentF);
+  // trigger2.onclick = function() {
+  //   addScale(wrapper2);
+  //   if (toCloseIcon2) {
+  //     inAC(segmentD);
+  //     inB(segmentE);
+  //     inAC(segmentF);
 
-      dummy2.className = 'dummy dummy--active';
-    } else {
-      outAC(segmentD);
-      outB(segmentE);
-      outAC(segmentF);
+  //     dummy2.className = 'dummy dummy--active';
+  //   } else {
+  //     outAC(segmentD);
+  //     outB(segmentE);
+  //     outAC(segmentF);
 
-      dummy2.className = 'dummy';
-    }
-    toCloseIcon2 = !toCloseIcon2;
-    setTimeout(function() {
-      removeScale(wrapper2)
-    }, 450);
-  };
+  //     dummy2.className = 'dummy';
+  //   }
+  //   toCloseIcon2 = !toCloseIcon2;
+  //   setTimeout(function() {
+  //     removeScale(wrapper2)
+  //   }, 450);
+  // };
 
 })();
