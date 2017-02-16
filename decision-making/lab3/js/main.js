@@ -1,10 +1,13 @@
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var objectsArray = [];
-var colorsArray = ['yellow', 'green', 'blue', 'red', 'pink', 'teal', 'turquoise', 'orange', 'purple', 'maroon'];
+var colorsArray = [
+                    'teal', 'green', 'blue', 'red', 'pink', 'turquoise', 'orange', 'purple', 'maroon',
+                    'GreenYellow', 'MediumSpringGreen', 'LightCoral', 'DeepPink', 'LightSalmon', 'PeachPuff',
+                    'Aquamarine', 'Magenta', 'Chocolate', 'LightSlateGrey', 'Lime'
+                  ];
 var clr = 0;
 var notReached = false;
-var otherColors = false;
 
 var radius = 7;
 
@@ -14,14 +17,13 @@ canvas.width = window.innerWidth - 50;
 canvas.height = 400;
 
 var putPoint = function(e) {
+  addToObjectsArray(e.offsetX, e.offsetY, colorsArray[clr % (colorsArray.length - 1)]);
 
-  addToObjectsArray(e.offsetX, e.offsetY, colorsArray[clr]);
-
-  context.beginPath();
-  context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
-  context.strokeStyle = 'yellow';
-  context.stroke();
-  context.closePath();
+  // context.beginPath();
+  // context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
+  // context.strokeStyle = 'yellow';
+  // context.stroke();
+  // context.closePath();
 
 
 ///////////////////////////// MAIN //////////////////////////////////////////////
@@ -48,24 +50,21 @@ var putPoint = function(e) {
       }
     }
     if(notReached) {
-      clr %= colorsArray.length - 1;
       clr++;
-      objectsArray[objectsArray.length-1].color = colorsArray[clr];
+      objectsArray[objectsArray.length-1].color = colorsArray[clr % (colorsArray.length - 1)];
       context.beginPath();
       context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
-      context.fillStyle = colorsArray[clr];
+      context.fillStyle = colorsArray[clr % (colorsArray.length - 1)];
       context.fill();
       context.closePath();
-      console.log('Is not owned');
     }
 
   } else { // Если в массиве один элемент
     context.beginPath();
     context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
-    context.fillStyle = colorsArray[clr];
+    context.fillStyle = colorsArray[clr % (colorsArray.length - 1)];
     context.fill();
     context.closePath();
-    console.log('length = 1');
 
   } ///////////////////////////////////////////////////////////////////////
 }
@@ -98,7 +97,6 @@ function isCurrentColor(reachedPoint, currentPoint) {
 function isReached(currentPoint) {
   for(var i = 0; i < objectsArray.length - 1; i++) {
     if(isOwned(currentPoint.x, currentPoint.y, objectsArray[i].x, objectsArray[i].y)) {
-        console.log('I see you!');
       if(isCurrentColor(objectsArray[i], currentPoint)) {
         return true;
       }
@@ -144,13 +142,3 @@ function redrawPoints(reachedPoint, currentPoint) {
   context.fill();
   context.closePath();
 }
-
-
-
-  // } else {
-  //   if(Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)) <= outerRadius * 2) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
