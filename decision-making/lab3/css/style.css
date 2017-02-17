@@ -24,12 +24,13 @@
   margin: 0 25px;
   background: #eee; }
 
-.start {
-  position: absolute;
-  width: 150px;
-  margin-top: 10px;
-  margin-left: -75px;
-  left: 50%; }
+#clear {
+  margin: 25px;
+  width: 120px; }
+
+#show-radius {
+  margin-top: 25px;
+  width: 120px; }
 
 #coords {
   margin: 10px auto;
