@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  // display: none;
+  overflow: auto;
+  // background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7);
+    // background: #2c2f36;
+    transition: all ease .5s;
+}
+
+.hide {
+  opacity: 0;
+  transition: all ease .5s;
+}
+
+.container {
+  position: relative;
+  transition: all ease .5s;
+  // height: 300px;
+  // width: 90%;
+  // margin: 0 auto;
+  // padding: 0 50px;
+}
+
+#canvas {
+  margin: 0 25px;
+  background: #eee;
+}
+
+#clear {
+  // position: absolute;
+  margin:25px;
+  width: 120px;
+  // margin-top: 10px;
+  // margin-left: -75px;
+  // bottom: 10%;
+  // left: 50%;
+}
+
+#show-radius {
+  // position: absolute;
+  margin-top:25px;
+  width: 120px;
+  // margin-top: 10px;
+  // margin-left: -75px;
+  // bottom: 10%;
+  // left: 50%;
+}
+
+#coords {
+  margin: 10px auto;
+  text-align: center;
+  // height: 50px;
+  width: 200px;
+  background: #eee;
+  color: #000;
+}

@@ -160,68 +160,6 @@ function clearCanvas() {
 }
 
 
-
-
-var putPointWithRadius = function(e) {
-  addToObjectsArray(e.offsetX, e.offsetY, colorsArray[clr % (colorsArray.length - 1)]);
-
-  context.beginPath();
-  context.arc(e.offsetX, e.offsetY, outerRadius, 0, Math.PI*2);
-  context.strokeStyle = 'yellow';
-  context.stroke();
-  context.closePath();
-
-   // В массиве должно быть больше 2-х элементов
-  if(objectsArray.length > 1) {
-    notReached = true;
-
-    for(var i = objectsArray.length - 2; i >= 0 ; i--) {
-
-      // Находится ли точка с зоне досягаемости
-      if(isOwned(objectsArray[i].x, objectsArray[i].y, objectsArray[objectsArray.length-1].x, objectsArray[objectsArray.length-1].y)) { // Если ф-ия вернула true, то точка досигаема
-
-        // Обе точки одинакового цвета
-        if(isCurrentColor(objectsArray[i], objectsArray[objectsArray.length-1])) {
-          drawPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
-
-        // Точки разного цвета
-        } else {
-
-          // Если есть связь с точкой текущего цвета
-          if(isReached(objectsArray[objectsArray.length-1])) {
-          redrawPoints(objectsArray[i], objectsArray[objectsArray.length-1]);
-
-          // Иначе, есть ли связь только с досягаемыми точками
-          } else {
-            drawCurrentPoint(objectsArray[i], objectsArray[objectsArray.length-1]);
-          }
-        }
-        notReached = false;
-      }
-    }
-
-    // Если текущая точка не касается других точек
-    if(notReached) {
-      clr++;
-      objectsArray[objectsArray.length-1].color = colorsArray[clr % (colorsArray.length - 1)];
-      context.beginPath();
-      context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
-      context.fillStyle = colorsArray[clr % (colorsArray.length - 1)];
-      context.fill();
-      context.closePath();
-    }
-
-  // Если в массиве один элемент
-  } else {
-    context.beginPath();
-    context.arc(e.offsetX, e.offsetY, radius/2, 0, Math.PI*2);
-    context.fillStyle = colorsArray[clr % (colorsArray.length - 1)];
-    context.fill();
-    context.closePath();
-
-  } ///////////////////////////////////////////////////////////////////////
-}
-
 // ВТ ГЗ  в 12:00, ауд 423с 425с
 
 // ЧТ с 14:00 Числитель - УЛК, в 17:30 в ГЗ
