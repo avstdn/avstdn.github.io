@@ -31,7 +31,7 @@ body {
 }
 
 .wrapperClear {
-  filter: blur(0);
+  /*filter: blur(0);*/
   transition: all 1s ease;
   pointer-events: auto;
   z-index: 1;
@@ -358,7 +358,8 @@ li.criterion {
 
 .containerShift {
   transform: translateX(-420px);
-  filter: blur(2px);
+  /*filter: blur(2px);*/
+  opacity: .4;
   transition-duration: .5s;
 }
 
