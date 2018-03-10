@@ -5,3 +5,12 @@
 html, body {
   height: 100%;
   margin: 0 auto; }
+
+#sample {
+  width: 500px;
+  height: 200px;
+}
+
+#div-sample {
+  white-space: pre;
+}
