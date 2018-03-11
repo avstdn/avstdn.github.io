@@ -69,3 +69,7 @@ label {
 #sample-select> label {
   padding-right: 10px;
 }
+
+select {
+  padding-bottom: 3px;
+}
