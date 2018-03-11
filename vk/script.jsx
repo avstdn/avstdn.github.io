@@ -28,16 +28,20 @@ class Content extends React.Component {
                   <h1 className="App-title">VK code converter</h1>
                 </header>
             </div>
-            <div id="wrapper">
-                <Textarea
-                    handleSubmit={this.handleSubmit}
-                    handleChange={this.handleChange}
-                    handleSelectChange={this.handleSelectChange}
-                />
-                <Result
-                     value={this.state.value}
-                     select={this.state.select}
-                />
+            <div className="container">
+                <div className="row">
+                    <div className="offset-md-2 col-md-8" id="wrapper">
+                        <Textarea
+                            handleSubmit={this.handleSubmit}
+                            handleChange={this.handleChange}
+                            handleSelectChange={this.handleSelectChange}
+                        />
+                        <Result
+                             value={this.state.value}
+                             select={this.state.select}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     }

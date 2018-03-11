@@ -8,8 +8,14 @@ html, body {
   margin: 0 auto;
 }
 
+label {
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: baseline;
+}
+
 #sample {
-  width: 500px;
+  width: 100%;
   height: 200px;
 }
 
@@ -52,7 +58,7 @@ html, body {
 }
 
 #div-sample {
-  width: 500px;
+  /*width: 500px;*/
   margin: 0 auto;
 }
 

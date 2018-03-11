@@ -55,11 +55,11 @@ function generate() {
   }
 
 function checkForEmpty(i) {
-  if(workerObject.queue == 0 && workerObject.isBusy == false) {
-    return true;
-  } else {
-    return false;
-  }
+    if(workerObject.queue == 0 && workerObject.isBusy == false) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 worker.onmessage = function(e) {
