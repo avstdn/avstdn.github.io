@@ -1,9 +1,10 @@
 class Content extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {value: '', select: 'two'};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {value: ''};
+        this.handleSelectChange = this.handleSelectChange.bind(this);
     }
 
     handleChange(event) {
@@ -13,6 +14,10 @@ class Content extends React.Component {
     handleSubmit(event) {
         alert('An essay was submitted: ' + this.state.value);
         event.preventDefault();
+    }
+
+    handleSelectChange(event) {
+        this.setState({select: event.target.value});
     }
 
     render() {
@@ -27,9 +32,11 @@ class Content extends React.Component {
                 <Textarea
                     handleSubmit={this.handleSubmit}
                     handleChange={this.handleChange}
+                    handleSelectChange={this.handleSelectChange}
                 />
                 <Result
                      value={this.state.value}
+                     select={this.state.select}
                 />
             </div>
         </div>
@@ -41,6 +48,15 @@ class Textarea extends React.Component {
     render() {
         return (
             <form onSubmit={this.props.handleSubmit}>
+                <div id="sample-select">
+                    <label>
+                        Choose number of spaces:
+                    </label>
+                    <select onChange={this.props.handleSelectChange}>
+                      <option value="two">two</option>
+                      <option value="four">four</option>
+                    </select>
+                </div>
                 <textarea id="sample" onChange={this.props.handleChange} />
             </form>
         );
@@ -49,13 +65,15 @@ class Textarea extends React.Component {
 
 class Result extends React.Component {
     parseInput() {
-        console.log(this.props.value);
-        return this.props.value.replace(/    /g, '&#12288;');
+        let select = this.props.select;
+        return select === 'two' ?
+        this.props.value.replace(/  /g, '&#12288;') :
+        this.props.value.replace(/    /g, '&#12288;');
     }
     render() {
         return <div id="div-sample">
-        <span>
-            {this.parseInput()}
+            <span>
+                {this.parseInput()}
             </span>
         </div>
     }

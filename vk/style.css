@@ -55,3 +55,11 @@ html, body {
   width: 500px;
   margin: 0 auto;
 }
+
+#sample-select {
+  padding-bottom: 20px;
+}
+
+#sample-select> label {
+  padding-right: 10px;
+}
