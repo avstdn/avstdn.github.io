@@ -17,13 +17,21 @@ class Content extends React.Component {
 
     render() {
         return <div>
-            <Textarea
-                handleSubmit={this.handleSubmit}
-                handleChange={this.handleChange}
-            />
-            <Result
-                 value={this.state.value}
-            />
+            <div className="App">
+                <header className="App-header">
+                  <img src="logo.svg" className="App-logo" alt="logo" />
+                  <h1 className="App-title">VK code converter</h1>
+                </header>
+            </div>
+            <div id="wrapper">
+                <Textarea
+                    handleSubmit={this.handleSubmit}
+                    handleChange={this.handleChange}
+                />
+                <Result
+                     value={this.state.value}
+                />
+            </div>
         </div>
     }
 }
@@ -46,7 +54,9 @@ class Result extends React.Component {
     }
     render() {
         return <div id="div-sample">
+        <span>
             {this.parseInput()}
+            </span>
         </div>
     }
 }
